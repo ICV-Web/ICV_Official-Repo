@@ -1,3 +1,6 @@
+require('dotenv').config({
+  path:`.env.${process.env.NODE_ENV}`
+})
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
@@ -11,7 +14,7 @@ module.exports = {
       options: {
         spaceId: `mobi4te0npts`,
         // Learn about environment variables: https://gatsby.dev/env-vars
-        accessToken: `aywRVEw_INgkIk995xHkdw0X2YmHKAzjlx2daIbAqKo`,
+        accessToken: `Fw49coGp_zcnPCDJ83VgzdxIGhBp9af1XtHpqZTe2CY`,
       },
     },
 
