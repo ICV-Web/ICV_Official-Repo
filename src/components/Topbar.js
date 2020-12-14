@@ -47,7 +47,6 @@ const Topbar = () => {
 					<Col sm={5} md={6}>
 						<div className="topbar-left">
 							<div className="welcome-text">
-							Language: 
 							<Button className="lang-button">
                             	<img src={links.allContentfulHeader.nodes[0].pakLang.fluid.src}></img>
                             </Button>
@@ -63,6 +62,7 @@ const Topbar = () => {
 					<Col  sm={7} md={6}>
 						<div className="topbar-right">
 							<ul className="topbar-menu">
+								<li><Link to="/imprints" title="Career">Imprints</Link></li>
 								<li><Link to="/careers" title="Career">Careers</Link></li>
 							</ul>
 							<ul className="topbar-sosmed">

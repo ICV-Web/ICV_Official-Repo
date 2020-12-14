@@ -2,6 +2,8 @@ import React from 'react'
 import {Container, Row, Col} from 'react-bootstrap'
 import { useStaticQuery, graphql } from "gatsby"
 import statbannerimg from '../images/bgoverlay-1.jpg'
+import CountUp from 'react-countup';
+
 
 const Stats = () => {
 
@@ -45,7 +47,7 @@ const { allContentfulStatistics: {nodes: Statistics}, } = getstats
                 <Col sm={3} md={3}>
 					<div className="counter-1">
 			            <div className="counter-number">
-			              {allstats.number}
+                    <CountUp end={allstats.number} duration={10}   />
 			            </div>
 			            <div className="counter-title">Offices<br/> {allstats.title} </div>
 		          	</div>

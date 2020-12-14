@@ -55,17 +55,14 @@ const Navbar = () => {
 							
 														
 							<li className="dropdown">
-							  <Link to="#"  data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false">NEWS / PRESS RELEASE</Link>
+							  <Link to="/blogs"  data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false">NEWS / PRESS RELEASE</Link>
 							</li>						
 																					
 														
 							<li className="dropdown">
-							  <Link to="#"  data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PRODUCTS & SOLUTIONS<span className="caret"></span></Link>
+							  <Link to="/products"  data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PRODUCTS<span className="caret"></span></Link>
 							</li>
 							
-							<li className="dropdown">
-							  <Link to="#"  data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false">CAREERS</Link>
-							</li>
 							
 							<li className="dropdown">
 							  <Link to="/downloads"  data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false">DOWNLOADS</Link>

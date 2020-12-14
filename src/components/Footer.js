@@ -134,12 +134,20 @@ const Footer = () => {
 							{/* <li><Link to="" title="">The Best in dolor sit amet consectetur adipisicing elit sed</Link>
 							<span className="date"><i className="fa fa-clock-o"></i> September 1, 2020</span></li><li><Link to="" title="">The Best in dolor sit amet consectetur adipisicing elit sed</Link>
 							<span className="date"><i className="fa fa-clock-o"></i> September 1, 2020</span></li> */}
-							<li><Link to="#" title="">Industrial Complex</Link></li>
-							<li><Link to="#" title="">The Gas Company</Link></li>
-							<li><Link to="#" title="">Warehouse Industry</Link></li>
-							<li><Link to="#" title="">Iron Industry</Link></li>
-							<li><Link to="#" title="">Gear Manufacturing</Link></li>
-							<li><Link to="#" title="">Oil Pipeline Industry</Link></li>
+							<li><Link to="#" title="">Fumed Silica</Link></li>
+							<li><Link to="#" title="">Resorcinol</Link></li>
+							<li><Link to="#" title="">Mannitol</Link></li>
+							<li><Link to="#" title="">NaOH Pellets</Link></li>
+							<li><Link to="#" title="">KOH Pellets</Link></li>
+							<li><Link to="#" title="">Ferrous Sulphate</Link></li>
+							<li><Link to="#" title="">NMP</Link></li>
+							<li><Link to="#" title="">EP</Link></li>
+							<li><Link to="#" title="">2P</Link></li>
+							<li><Link to="#" title="">2-EHA</Link></li>
+							<li><Link to="#" title="">Lanolin and Lanolin AlcoholsPottassium iodide</Link></li>
+							<li><Link to="#" title="">NPG</Link></li>
+							<li><Link to="#" title="">Thioglycolic Acid</Link></li>
+							<li><Link to="#" title="">Tetrahydrofuran</Link></li>
 						</ul>
 					</div>
 				</Col>

@@ -3,6 +3,19 @@
   font-weight: 600;
 }
 
+.section-projects button {
+  font-size: 14px;
+  padding: 14px 15px;
+}
+
+.section.cta h3 {
+  font-size: 20px;
+}
+
+body span.comments {
+  display: none !important;
+}
+
 .testimony ol.carousel-indicators li {
   width: 10px;
   height: 10px;
@@ -14,8 +27,8 @@
 .testimony .carousel-control-next {
   display: none;
 }
-.carousel-indicators{
-  top:100%;
+.carousel-indicators {
+  top: 100%;
 }
 .testimony ol.carousel-indicators li.active {
   /* background: purple; */
@@ -645,7 +658,7 @@ dfn {
   line-height: 1.2em;
   letter-spacing: -0.05em;
   font-weight: 800;
-  color:#2b3990;
+  color: #2b3990;
   margin-bottom: 20px;
   border-top: 1px solid #dedede;
   padding-top: 20px;
@@ -809,7 +822,6 @@ blockquote {
 .banner-page .jumbo-heading .title-page {
   position: relative;
   z-index: 2;
-  
 }
 .jumbo-heading .fa {
   font-size: 200px;
@@ -1149,9 +1161,8 @@ Back To Top Section
   background-color: #2b3990;
 }
 
-
 .btn-cta {
-  background-color: #51C0B7;
+  background-color: #51c0b7;
   color: #ffffff;
   padding: 15px 25px;
   border: 0;
@@ -1173,14 +1184,13 @@ Back To Top Section
 }
 
 .btn-primary {
-  padding: 15px 35px ;
+  padding: 15px 35px;
   background-color: #262626;
 }
 button.lang-button {
-  padding: 0px ;
-  
+  padding: 0px;
 }
-button.lang-button:hover{
+button.lang-button:hover {
   text-decoration: underline;
   background-color: transparent !important;
 }
@@ -1200,7 +1210,7 @@ button.lang-button:hover{
   background-color: #262626;
 }
 .btn-secondary:hover {
-  background-color: #46C2CA;
+  background-color: #46c2ca;
   color: #ffffff;
 }
 
@@ -1311,7 +1321,7 @@ button.lang-button:hover{
   color: #222222;
 }
 .box-icon-2 .body-content .heading {
-  color: #51C0B7;
+  color: #51c0b7;
   font-size: 18px;
   margin-bottom: 15px;
   text-transform: uppercase;
@@ -2893,7 +2903,7 @@ button.lang-button:hover{
   background-color: #ffffff;
   border-top: 1px solid #ccc;
   border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
+  border-bottom-right-radius: 15px;
   width: 100%;
 }
 
@@ -3630,26 +3640,26 @@ dl.hiw dd .lead {
 }
 
 /* 6.10 - Testimony */
-#msgblog-id{
-  padding-left:0px !important; 
+#msgblog-id {
+  padding-left: 0px !important;
   text-align: left !important;
 }
-#msgblog-id .titleheader{
+#msgblog-id .titleheader {
   font-weight: 700;
   color: #232323;
-  font-family: 'Montserrat', sans-serif;
-  text-transform: uppercase!important;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase !important;
   font-size: 32px;
   line-height: 40px;
 }
-#msgblog-id p{
+#msgblog-id p {
   width: 90%;
   font-size: 14px;
   color: #6f6f6f;
   font-weight: 400;
   line-height: 24px;
 }
-#msgblog-id .title{
+#msgblog-id .title {
   margin-bottom: 0px !important;
   margin-top: 30px;
   font-weight: 600;
@@ -3657,11 +3667,11 @@ dl.hiw dd .lead {
   font-size: 18px;
   line-height: 26px;
 }
-#msgblog-id .company{
+#msgblog-id .company {
   margin-top: 0px !important;
   margin-bottom: 0px !important;
-  display: block!important;
-  font-family: 'Roboto', sans-serif;
+  display: block !important;
+  font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   font-size: 14px;
   color: #6f6f6f;
@@ -3862,7 +3872,7 @@ dl.hiw dd .lead {
   padding: 0;
   cursor: pointer;
   text-align: center;
- 
+
   background: none;
   color: #ffffff;
   outline: 0 !important;
@@ -3912,7 +3922,6 @@ dl.hiw dd .lead {
   padding: 30px 0px 10px 0px;
   font-size: 14px;
   background-color: #0d132b;
-  
 }
 
 .list-info {
@@ -3962,7 +3971,6 @@ dl.hiw dd .lead {
 
   .topbar {
     height: auto;
-    
   }
 
   .topbar-left {
@@ -4118,7 +4126,7 @@ button.lang-button {
   background: transparent;
   color: #fff;
 }
-.topbar{
+.topbar {
   background-color: #2b3990 !important;
 }
 
@@ -4126,7 +4134,7 @@ button.lang-button {
   list-style: none !important;
   margin: 5px 0 !important;
 }
-.topbar-right.topbar-menu li{
+.topbar-right.topbar-menu li {
   margin: 0px !important;
 }
 .fcopy .topbar-right .topbar-menu li a:hover {
@@ -4136,7 +4144,6 @@ button.lang-button {
   display: inline-table;
   margin-bottom: 0;
   vertical-align: top;
-  
 }
 .fcopy .topbar-right {
   text-align: right;

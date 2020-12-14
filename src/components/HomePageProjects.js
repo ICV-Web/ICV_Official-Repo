@@ -33,7 +33,7 @@ const getprojects = useStaticQuery(graphql`
     return (
         <>
 
-				<div class="section">
+				<div class="section section-projects">
 
 					<Container>
 
@@ -52,7 +52,7 @@ const getprojects = useStaticQuery(graphql`
 									<Form.Group>
                                         <div id="success"></div>
                                         <Button variant="primary" type="submit" className="btn btn-secondary btn-block btn-sidebar">
-                                        Ask A Quote
+                                            Fumed Silica
                                         </Button>
                                     </Form.Group>
                                 </Form>
@@ -62,7 +62,7 @@ const getprojects = useStaticQuery(graphql`
 									<Form.Group>
                                         <div id="success"></div>
                                         <Button variant="primary" type="submit" className="btn btn-secondary btn-block btn-sidebar">
-                                        Ask A Quote
+                                            Resorcinol
                                         </Button>
                                     </Form.Group>
                                 </Form>
@@ -73,7 +73,7 @@ const getprojects = useStaticQuery(graphql`
 									<Form.Group>
                                         <div id="success"></div>
                                         <Button variant="primary" type="submit" className="btn btn-secondary btn-block btn-sidebar">
-                                        Ask A Quote
+                                            Mannitol
                                         </Button>
                                     </Form.Group>
                                 </Form>
@@ -83,7 +83,7 @@ const getprojects = useStaticQuery(graphql`
 									<Form.Group>
                                         <div id="success"></div>
                                         <Button variant="primary" type="submit" className="btn btn-secondary btn-block btn-sidebar">
-                                        Ask A Quote
+                                            NaOH Pellets
                                         </Button>
                                     </Form.Group>
                                 </Form>
@@ -93,7 +93,7 @@ const getprojects = useStaticQuery(graphql`
 									<Form.Group>
                                         <div id="success"></div>
                                         <Button variant="primary" type="submit" className="btn btn-secondary btn-block btn-sidebar">
-                                        Ask A Quote
+                                            KOH Pellets
                                         </Button>
                                     </Form.Group>
                                 </Form>
@@ -103,7 +103,7 @@ const getprojects = useStaticQuery(graphql`
 									<Form.Group>
                                         <div id="success"></div>
                                         <Button variant="primary" type="submit" className="btn btn-secondary btn-block btn-sidebar">
-                                        Ask A Quote
+                                            Pottassium iodide
                                         </Button>
                                     </Form.Group>
                                 </Form>
@@ -113,7 +113,7 @@ const getprojects = useStaticQuery(graphql`
 									<Form.Group>
                                         <div id="success"></div>
                                         <Button variant="primary" type="submit" className="btn btn-secondary btn-block btn-sidebar">
-                                        Ask A Quote
+                                            Ferrous Sulphate
                                         </Button>
                                     </Form.Group>
                                 </Form>
@@ -123,7 +123,7 @@ const getprojects = useStaticQuery(graphql`
 									<Form.Group>
                                         <div id="success"></div>
                                         <Button variant="primary" type="submit" className="btn btn-secondary btn-block btn-sidebar">
-                                        Ask A Quote
+                                            NMP
                                         </Button>
                                     </Form.Group>
                                 </Form>
@@ -133,7 +133,7 @@ const getprojects = useStaticQuery(graphql`
 									<Form.Group>
                                         <div id="success"></div>
                                         <Button variant="primary" type="submit" className="btn btn-secondary btn-block btn-sidebar">
-                                        Ask A Quote
+                                            EP
                                         </Button>
                                     </Form.Group>
                                 </Form>
@@ -143,7 +143,7 @@ const getprojects = useStaticQuery(graphql`
 									<Form.Group>
                                         <div id="success"></div>
                                         <Button variant="primary" type="submit" className="btn btn-secondary btn-block btn-sidebar">
-                                        Ask A Quote
+                                            2P
                                         </Button>
                                     </Form.Group>
                                 </Form>
@@ -153,7 +153,7 @@ const getprojects = useStaticQuery(graphql`
 									<Form.Group>
                                         <div id="success"></div>
                                         <Button variant="primary" type="submit" className="btn btn-secondary btn-block btn-sidebar">
-                                        Ask A Quote
+                                            2-EHA
                                         </Button>
                                     </Form.Group>
                                 </Form>
@@ -163,7 +163,7 @@ const getprojects = useStaticQuery(graphql`
 									<Form.Group>
                                         <div id="success"></div>
                                         <Button variant="primary" type="submit" className="btn btn-secondary btn-block btn-sidebar">
-                                        Ask A Quote
+                                            Lanolin and Lanolin Alcohols
                                         </Button>
                                     </Form.Group>
                                 </Form>
@@ -173,7 +173,7 @@ const getprojects = useStaticQuery(graphql`
 									<Form.Group>
                                         <div id="success"></div>
                                         <Button variant="primary" type="submit" className="btn btn-secondary btn-block btn-sidebar">
-                                        Ask A Quote
+                                            NPG
                                         </Button>
                                     </Form.Group>
                                 </Form>
@@ -183,7 +183,7 @@ const getprojects = useStaticQuery(graphql`
 									<Form.Group>
                                         <div id="success"></div>
                                         <Button variant="primary" type="submit" className="btn btn-secondary btn-block btn-sidebar">
-                                        Ask A Quote
+                                            Thioglycolic Acid
                                         </Button>
                                     </Form.Group>
                                 </Form>
@@ -193,7 +193,7 @@ const getprojects = useStaticQuery(graphql`
 									<Form.Group>
                                         <div id="success"></div>
                                         <Button variant="primary" type="submit" className="btn btn-secondary btn-block btn-sidebar">
-                                        Ask A Quote
+                                            Tetrahydrofuran
                                         </Button>
                                     </Form.Group>
                                 </Form>
