@@ -1,7 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { Carousel, Container , Row , Col } from 'react-bootstrap'
-
+import Fade from 'react-reveal/Fade';
 const Testimonials = () => {
 
 
@@ -31,7 +31,7 @@ const { allContentfulTestimonials: {nodes: testimonial}, } =  alltestimonials
         <>
         <div class="section testimony bglight">
             <Container>
-
+                <Fade bottom>
                 <Row>
 
                     <Col sm={12} md={{span: 10,offset: 1}}>
@@ -67,7 +67,7 @@ const { allContentfulTestimonials: {nodes: testimonial}, } =  alltestimonials
                     </Col>
                 
                 </Row>
-
+                </Fade>
             </Container>
         </div>
         </>

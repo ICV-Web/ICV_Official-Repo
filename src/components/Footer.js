@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import {Container,Row,Col} from "react-bootstrap"
 import { FaEnvelope,FaFacebookF,FaInstagram,FaLinkedinIn,FaTwitter } from "react-icons/fa";
 import { Link } from 'gatsby'
-
+import Fade from 'react-reveal/Fade';
 
 const Footer = () => {
 
@@ -48,8 +48,10 @@ const Footer = () => {
 
     return (
         <>
+		
 	<div className="section info overlap-bottom">
 		<Container>
+		<Fade right>
 			<Row>
 				
 				<Col md={4} sm={4}>
@@ -87,7 +89,7 @@ const Footer = () => {
 				</Col>
 				
 			</Row>
-
+			</Fade>
 		</Container>
 	</div>
 

@@ -2,7 +2,7 @@ import React from 'react'
 import {Container,Row,Col,Form, Button} from "react-bootstrap"
 import { FaMapMarkerAlt,FaPhoneAlt,FaEnvelope } from "react-icons/fa";
 import { useStaticQuery, graphql , Link} from "gatsby"
-
+import Fade from 'react-reveal/Fade';
 
 
 
@@ -27,6 +27,7 @@ const Pagecontent = () => {
            <Container>
                <Row>
                     <Col sm={8} md={8}>
+                        <Fade left>
                         <div className="content">
                                 <p className="section-heading-3">{contentdata.allContentfulContact.nodes[0].contentDesc.contentDesc}</p>
                                 <div className="margin-bottom-30"></div>
@@ -71,12 +72,16 @@ const Pagecontent = () => {
                                 </Form>
                                 <div className="margin-bottom-50"></div>
                                 <p><em>Note: Consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</em></p>
-                        </div>                        
+                        </div>   
+                        </Fade>                     
                    </Col>
                    <Col sm={4} md={4}>
+                       <Fade right>
                     <div class="widget download">
                             <Link to="#" class="btn btn-secondary btn-block btn-sidebar"><span class="fa  fa-file-pdf-o"></span> Company Brochure</Link>
                     </div>
+                    </Fade>
+                    <Fade top>
                     <div class="widget contact-info-sidebar">
                             <div class="widget-title">
                                 Contact Info
@@ -154,6 +159,7 @@ const Pagecontent = () => {
                                 </li>
                             </ul>
                         </div> 
+                        </Fade>
                    </Col>
                </Row>
             </Container>

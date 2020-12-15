@@ -2,6 +2,8 @@ import React from 'react'
 import { Container , Row , Col  } from 'react-bootstrap'
 import { useStaticQuery, graphql } from "gatsby"
 import { Link } from "gatsby"
+import Fade from 'react-reveal/Fade';
+import Rotate from 'react-reveal/Rotate';
 
 
 
@@ -32,10 +34,13 @@ const { allContentfulHomeServices: {nodes: services }, } = getservicesdata;
             <div className="section service section-border bglight">
 		<Container>
 			<Row>
+				
 				<Col sm={12} md={12}>
-					<h2 className="section-heading">
-						SERVICES
-					</h2>
+					<Fade left>
+						<h2 className="section-heading">
+							SERVICES
+						</h2>
+					</Fade>
 				</Col>
 			</Row>
 
@@ -45,17 +50,19 @@ const { allContentfulHomeServices: {nodes: services }, } = getservicesdata;
 
 				return (
 				<Col sm={6} md={4}>
-					<div className="feature-box-8">
-		              <div className="media">
-		                <img src={service.serviceBoxImage.fluid.src} alt="rud" className="img-responsive"/>
-		              </div>
-		              <div className="body">
-		                <div className="icon-holder">
-		                  <span className={service.serviceIcon}></span>
-		                </div>
-		                <Link to="services-detail.html" className="title">{service.servicesHeading}</Link>
-		              </div>
-		            </div>
+					<Fade bottom>
+						<div className="feature-box-8">
+							<div className="media">
+								<img src={service.serviceBoxImage.fluid.src} alt="rud" className="img-responsive"/>
+							</div>
+							<div className="body">
+								<div className="icon-holder">
+									<span className={service.serviceIcon}></span>
+								</div>
+								<Link to="services-detail.html" className="title">{service.servicesHeading}</Link>
+							</div>
+						</div>
+					</Fade>
 				</Col>
 				)
 

@@ -2,9 +2,8 @@ import React from 'react'
 import { Container , Row , Col } from 'react-bootstrap'
 import { Link } from 'gatsby'
 import { useStaticQuery, graphql } from "gatsby"
-
 import ctabannerimg from '../images/bgoverlay-2.jpg'
-
+import Fade from 'react-reveal/Fade';
 
 const HomeCTA = () => {
 
@@ -42,9 +41,15 @@ const getctadata = useStaticQuery(graphql`
 
                                return(
                                      <div className="cta-info">
-                                        <h3>{ctadata.ctaHeading}</h3>
-                                        <p>{ctadata.ctaDescription.ctaDescription}</p>
-                                        <Link to={ctadata.ctaLink} title="" className="btn btn-cta">{ctadata.ctaText}</Link>
+                                        <Fade left>
+                                          <h3>{ctadata.ctaHeading}</h3>
+                                        </Fade>
+                                        <Fade right>
+                                          <p>{ctadata.ctaDescription.ctaDescription}</p>
+                                        </Fade>
+                                        <Fade bottom>
+                                          <Link to={ctadata.ctaLink} title="" className="btn btn-cta">{ctadata.ctaText}</Link>
+                                        </Fade>
                                     </div>
                                )
                            })} 

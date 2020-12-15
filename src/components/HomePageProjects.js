@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, Row, Col, Form, Button } from 'react-bootstrap'
-
+import Slide from 'react-reveal/Slide';
 
 
 
@@ -19,12 +19,14 @@ const HomePageProjects = () => {
 
 						<Row>
 							<Col sm={12} md={12}>
+                                <Slide left>
 								<h2 className="section-heading">
 									PRODUCTS
 								</h2>
+                                </Slide>
 							</Col>
 						</Row>
-
+                        <Slide right>
 						<Row>
 
 							<Col sm={6} md={3}>
@@ -182,7 +184,7 @@ const HomePageProjects = () => {
 
 
 						</Row>
-						
+						</Slide>
 
 					</Container>
 				

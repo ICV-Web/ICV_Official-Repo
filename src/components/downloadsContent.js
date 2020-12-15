@@ -2,7 +2,7 @@ import React from 'react'
 import {Container,Row,Col} from "react-bootstrap"
 import { Link } from "gatsby"
 import { useStaticQuery, graphql } from "gatsby"
-
+import Fade from 'react-reveal/Fade';
 const DownloadContent = () => {
     const downloaddata = useStaticQuery(graphql`
     {
@@ -63,13 +63,16 @@ const DownloadContent = () => {
            <Container>
                <Row>
                    <Col md={12} sm={12}>
+                   <Fade left>
                        <div className="content">
                             <p className="section-heading-4">
                                 {downloaddata.allContentfulDownloads.nodes[0].downloadsDesc.downloadsDesc}
                             </p>
                        </div>
+                       </Fade>
                    </Col>
                    <Col md={3} sm={6}>
+                   <Fade bottom>
                         <div className="box-news-1">
                             <div className="media gbr">
                                 <img src={downloaddata.allContentfulDownloads.nodes[0].downloadsDescImg1.fluid.src} alt="" className="img-responsive"></img>
@@ -82,9 +85,11 @@ const DownloadContent = () => {
                                     <span className="date"><i className="fa fa-file"></i> Click below to Download PDF</span>
                                 </div>
                             </div>
-					    </div>
+					              </div>
+                        </Fade>
                    </Col>
                    <Col md={3} sm={6}>
+                   <Fade bottom>
                         <div className="box-news-1">
                             <div className="media gbr">
                                 <img src={downloaddata.allContentfulDownloads.nodes[0].downloadsDescImg2.fluid.src} alt="" className="img-responsive"></img>
@@ -98,8 +103,10 @@ const DownloadContent = () => {
                                 </div>
                             </div>
 					    </div>
+              </Fade>
                    </Col>
                    <Col md={3} sm={6}>
+                   <Fade bottom>
                         <div className="box-news-1">
                             <div className="media gbr">
                                 <img src={downloaddata.allContentfulDownloads.nodes[0].downloadsDescImg3.fluid.src} alt="" className="img-responsive"></img>
@@ -113,8 +120,10 @@ const DownloadContent = () => {
                                 </div>
                             </div>
 					    </div>
+              </Fade>
                    </Col>
                    <Col md={3} sm={6}>
+                   <Fade bottom>
                         <div className="box-news-1">
                             <div className="media gbr">
                                 <img src={downloaddata.allContentfulDownloads.nodes[0].downloadsDescImg4.fluid.src} alt="" className="img-responsive"></img>
@@ -128,8 +137,10 @@ const DownloadContent = () => {
                                 </div>
                             </div>
 					    </div>
+              </Fade>
                    </Col>
                    <Col md={3} sm={6}>
+                   <Fade bottom>
                         <div className="box-news-1">
                             <div className="media gbr">
                                 <img src={downloaddata.allContentfulDownloads.nodes[0].downloadsDescImg5.fluid.src} alt="" className="img-responsive"></img>
@@ -143,8 +154,10 @@ const DownloadContent = () => {
                                 </div>
                             </div>
 					    </div>
+              </Fade>
                    </Col>
                    <Col md={3} sm={6}>
+                   <Fade bottom>
                         <div className="box-news-1">
                             <div className="media gbr">
                                 <img src={downloaddata.allContentfulDownloads.nodes[0].downloadsDescImg6.fluid.src} alt="" className="img-responsive"></img>
@@ -158,8 +171,10 @@ const DownloadContent = () => {
                                 </div>
                             </div>
 					    </div>
+              </Fade>
                    </Col>
                    <Col md={3} sm={6}>
+                   <Fade bottom>
                         <div className="box-news-1">
                             <div className="media gbr">
                                 <img src={downloaddata.allContentfulDownloads.nodes[0].downloadsDescImg7.fluid.src} alt="" className="img-responsive"></img>
@@ -173,8 +188,10 @@ const DownloadContent = () => {
                                 </div>
                             </div>
 					    </div>
+              </Fade>
                    </Col>
                    <Col md={3} sm={6}>
+                   <Fade bottom>
                         <div className="box-news-1">
                             <div className="media gbr">
                                 <img src={downloaddata.allContentfulDownloads.nodes[0].downloadsDescImg8.fluid.src} alt="" className="img-responsive"></img>
@@ -188,6 +205,7 @@ const DownloadContent = () => {
                                 </div>
                             </div>
 					    </div>
+              </Fade>
                    </Col>
                   
                 </Row>

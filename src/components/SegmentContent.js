@@ -1,7 +1,7 @@
 import React from 'react'
 import {Container,Row,Col} from "react-bootstrap"
 import { useStaticQuery, graphql, Link } from "gatsby"
-
+import Fade from 'react-reveal/Fade';
 
 const SegmentContent = () => {
     
@@ -56,16 +56,19 @@ const SegmentContent = () => {
            <Container>
                <Row>
                    <Col md={12} sm={12}>
-                       <div className="content">
-                            <p>
-			                {Segmentdata.allContentfulBusinessSegment.nodes[0].desc1.desc1}
-                            </p>
-                            <p>
-                            {Segmentdata.allContentfulBusinessSegment.nodes[0].desc2.desc2}
-                            </p>
-                       </div>
+                        <Fade left>
+                        <div className="content">
+                              <p>
+                              {Segmentdata.allContentfulBusinessSegment.nodes[0].desc1.desc1}
+                              </p>
+                              <p>
+                              {Segmentdata.allContentfulBusinessSegment.nodes[0].desc2.desc2}
+                              </p>
+                        </div>
+                        </Fade>
                    </Col>
                    <Col md={4} sm={6}>
+                      <Fade bottom>
                         <div className="feature-box-8">
                             <div className="media">
                                 <img src={Segmentdata.allContentfulBusinessSegment.nodes[0].descImg1.fluid.src} alt="rud" className="img-responsive"></img>
@@ -79,8 +82,10 @@ const SegmentContent = () => {
                                 <Link to="services-detail.html" className="readmore">READ MORE</Link>
                             </div>
                         </div>
+                        </Fade>
                    </Col>
                    <Col md={4} sm={6}>
+                   <Fade bottom>
                         <div className="feature-box-8">
                             <div className="media">
                                 <img src={Segmentdata.allContentfulBusinessSegment.nodes[0].descImg2.fluid.src} alt="rud" className="img-responsive"></img>
@@ -94,8 +99,10 @@ const SegmentContent = () => {
                                 <Link to="services-detail.html" className="readmore">READ MORE</Link>
                             </div>
                         </div>
+                        </Fade>
                    </Col>
                    <Col md={4} sm={6}>
+                   <Fade bottom>
                         <div className="feature-box-8">
                             <div className="media">
                                 <img src={Segmentdata.allContentfulBusinessSegment.nodes[0].descImg3.fluid.src} alt="rud" className="img-responsive"></img>
@@ -109,8 +116,10 @@ const SegmentContent = () => {
                                 <Link to="services-detail.html" className="readmore">READ MORE</Link>
                             </div>
                         </div>
+                        </Fade>
                    </Col>
                    <Col md={4} sm={6}>
+                   <Fade bottom>
                         <div className="feature-box-8">
                             <div className="media">
                                 <img src={Segmentdata.allContentfulBusinessSegment.nodes[0].descImg4.fluid.src} alt="rud" className="img-responsive"></img>
@@ -124,8 +133,10 @@ const SegmentContent = () => {
                                 <Link to="services-detail.html" className="readmore">READ MORE</Link>
                             </div>
                         </div>
+                        </Fade>
                    </Col>
                    <Col md={4} sm={6}>
+                   <Fade bottom>
                         <div className="feature-box-8">
                             <div className="media">
                                 <img src={Segmentdata.allContentfulBusinessSegment.nodes[0].descImg5.fluid.src} alt="rud" className="img-responsive"></img>
@@ -139,21 +150,24 @@ const SegmentContent = () => {
                                 <Link to="services-detail.html" className="readmore">READ MORE</Link>
                             </div>
                         </div>
+                        </Fade>
                    </Col>
                    <Col md={4} sm={6}>
-                        <div class="feature-box-8">
-                        <div class="media">
-                            <img src={Segmentdata.allContentfulBusinessSegment.nodes[0].descImg6.fluid.src} alt="rud" class="img-responsive"></img>
+                   <Fade bottom>
+                        <div className="feature-box-8">
+                        <div className="media">
+                            <img src={Segmentdata.allContentfulBusinessSegment.nodes[0].descImg6.fluid.src} alt="rud" className="img-responsive"></img>
                         </div>
-                        <div class="body">
-                            <div class="icon-holder">
-                                <span class="fa fa-cubes"></span>
+                        <div className="body">
+                            <div className="icon-holder">
+                                <span className="fa fa-cubes"></span>
                             </div>
-                            <Link to="services-detail.html" class="title">MATERIAL ENGINEERING</Link>
+                            <Link to="services-detail.html" className="title">MATERIAL ENGINEERING</Link>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed</p>
-                            <Link to="services-detail.html" class="readmore">READ MORE</Link>
+                            <Link to="services-detail.html" className="readmore">READ MORE</Link>
                         </div>
                         </div>
+                        </Fade>
                    </Col>
                   
                 </Row>

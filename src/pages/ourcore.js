@@ -2,7 +2,7 @@ import React from 'react'
 import {graphql,Link } from "gatsby"
 import * as propTypes from "prop-types"
 import {Container,Row,Col} from "react-bootstrap"
-
+import Fade from 'react-reveal/Fade';
 import loadable from '@loadable/component'
 
 
@@ -41,7 +41,7 @@ const Layout = loadable(() => import('../components/layout'))
               <Row>
 
                 <Col sm={12} md={12}>
-
+                  <Fade left>
                   <div className="box-partner">
 
                     <div className="box-info">
@@ -51,7 +51,7 @@ const Layout = loadable(() => import('../components/layout'))
                    </div>
 
                   </div>
-
+                  </Fade>
                 </Col>
 
               </Row>
