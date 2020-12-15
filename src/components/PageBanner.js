@@ -1,26 +1,12 @@
 import React from 'react'
 import {Container,Row,Col} from "react-bootstrap"
 import { Link } from "gatsby"
-import { useStaticQuery, graphql } from "gatsby"
 import pagebannerimg from '../images/banner-page.jpg'
 
 
 const PageBanner = () => {
 
-    const bannerdata = useStaticQuery(graphql`
-    {
-      allContentfulContact {
-        nodes {
-          bannerImg {
-            fluid {
-              src
-        
-            }
-          }
-        }
-      }
-    }
-  `)
+
   
     return (
         <>
@@ -30,7 +16,7 @@ const PageBanner = () => {
                     <Col sm={12} md={12}>
                         <div className="title-page">Contact Us</div>
                         <ol className="breadcrumb">
-                            <li><Link to="index.html">Contact</Link></li>
+                            <li><Link to="#">Contact</Link></li>
                             <li className="active">Contact Us</li>
                         </ol>
                     </Col>

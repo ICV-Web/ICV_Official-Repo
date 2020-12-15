@@ -1,6 +1,10 @@
 import React from 'react'
-import Layout from '../components/layout'
-import HomeProjects from '../components/HomePageProjects'
+import loadable from '@loadable/component'
+
+const Layout = loadable(() => import('../components/layout'))
+const HomeProjects = loadable(() => import('../components/HomePageProjects'))
+
+
 
 
 const products = () => {

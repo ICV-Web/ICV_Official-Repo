@@ -2,7 +2,6 @@ import React from 'react'
 import { Container , Row , Col  } from 'react-bootstrap'
 import { useStaticQuery, graphql } from "gatsby"
 import { Link } from "gatsby"
-import { FaWrench } from "react-icons/fa";
 
 
 

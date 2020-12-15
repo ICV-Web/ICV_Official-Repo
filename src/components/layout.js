@@ -1,8 +1,10 @@
 import React from "react"
+import loadable from '@loadable/component'
 import "bootstrap/dist/css/bootstrap.min.css"
 import "../assets/style.css"
-import Header from "./header"
-import Footer from "./Footer"
+const Header = loadable(() => import('./header'))
+const Footer = loadable(() => import('./Footer'))
+
 
 const layout = ({children}) => {
     return (

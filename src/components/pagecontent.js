@@ -1,7 +1,7 @@
 import React from 'react'
 import {Container,Row,Col,Form, Button} from "react-bootstrap"
 import { FaMapMarkerAlt,FaPhoneAlt,FaEnvelope } from "react-icons/fa";
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql , Link} from "gatsby"
 
 
 
@@ -75,7 +75,7 @@ const Pagecontent = () => {
                    </Col>
                    <Col sm={4} md={4}>
                     <div class="widget download">
-                            <a href="#" class="btn btn-secondary btn-block btn-sidebar"><span class="fa  fa-file-pdf-o"></span> Company Brochure</a>
+                            <Link to="#" class="btn btn-secondary btn-block btn-sidebar"><span class="fa  fa-file-pdf-o"></span> Company Brochure</Link>
                     </div>
                     <div class="widget contact-info-sidebar">
                             <div class="widget-title">

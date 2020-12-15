@@ -42,7 +42,7 @@ const Navbar = () => {
 					<nav className="navbar-collapse ">
 						<ul className="nav navbar-nav navbar-left">
 							<li className="dropdown">
-							  <Link to="/"  data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false">HOME</Link>
+							  <Link to="#"  data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false">HOME</Link>
 							</li>
 							
 							<li className="dropdown">

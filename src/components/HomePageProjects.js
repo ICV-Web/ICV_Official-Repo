@@ -1,8 +1,5 @@
 import React from 'react'
-import { Container, Row, Col, Tabs , Tab, Form, Button } from 'react-bootstrap'
-import { Link } from 'gatsby'
-import img1 from '../images/slide-1.jpg'
-import { useStaticQuery, graphql } from "gatsby"
+import { Container, Row, Col, Form, Button } from 'react-bootstrap'
 
 
 
@@ -11,24 +8,7 @@ const HomePageProjects = () => {
 
 
 
-const getprojects = useStaticQuery(graphql`
-    {
-      allContentfulProjects {
-        nodes {
-          projectTitle
-          projectSubtitle
-          projectImage {
-            fluid {
-              src
-            }
-          }
-        }
-      }
-	}
-`)
 
-
-  const { allContentfulProjects: { nodes: allprojects }, } = getprojects
 
     return (
         <>

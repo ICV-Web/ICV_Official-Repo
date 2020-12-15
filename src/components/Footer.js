@@ -157,11 +157,11 @@ const Footer = () => {
 							Company
 						</div>
 						<ul className="list">
-							<li><Link to="" title="">Our Core</Link></li>
-							<li><Link to="" title="">Business Segments</Link></li>
-							<li><Link to="" title="">News / Press Release</Link></li>
-							<li><Link to="" title="">Careers</Link></li>
-							<li><Link to="" title="">Downloads</Link></li>
+							<li><Link to="#" title="">Our Core</Link></li>
+							<li><Link to="#" title="">Business Segments</Link></li>
+							<li><Link to="#" title="">News / Press Release</Link></li>
+							<li><Link to="#" title="">Careers</Link></li>
+							<li><Link to="#" title="">Downloads</Link></li>
 						</ul>
 					</div>
 				</Col>
@@ -190,9 +190,9 @@ const Footer = () => {
 					<Col md={6} sm={5}>
 					<div className="topbar-right">
 						<ul className="topbar-menu">
-								<li><Link to="imprint.html" title="Career">Imprint</Link></li> 
+								<li><Link to="#" title="Career">Imprint</Link></li> 
 								<li><Link to="#" title="">Cookie Policy</Link></li>
-								<li><Link to="data-protection.html" title="">Data Protection</Link></li>
+								<li><Link to="#" title="">Data Protection</Link></li>
 						</ul>
 					</div>
 					</Col>

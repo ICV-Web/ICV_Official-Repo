@@ -1,13 +1,17 @@
 import React from 'react'
-import {useStaticQuery, graphql,Link } from "gatsby"
+import {graphql,Link } from "gatsby"
 import * as propTypes from "prop-types"
 import {Container,Row,Col} from "react-bootstrap"
 
+import loadable from '@loadable/component'
+
+
 // Import the new rendering and the render node definitions
 import { renderRichText } from "gatsby-source-contentful/rich-text"
-import Layout from "../components/layout"
-import { BLOCKS, INLINES } from "@contentful/rich-text-types"
 import corebannerimg from '../images/banner-page.jpg'
+
+const Layout = loadable(() => import('../components/layout'))
+
 
 
   function PageTemplate({data}) {
@@ -22,7 +26,7 @@ import corebannerimg from '../images/banner-page.jpg'
               <div class="col-sm-12 col-md-12">
                 <div class="title-page"> Our Core</div>
                   <ol class="breadcrumb">
-                    <li><a href="/en/">Home /  &nbsp; </a></li>
+                    <li><Link to="/">Home /  &nbsp; </Link></li>
                       <li class="active"> Our Core</li>
                   </ol>
                 </div>

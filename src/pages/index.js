@@ -1,15 +1,17 @@
 import React from "react"
-import Layout from "../components/layout"
-import HomeAboutSectionarea from '../components/HomeAboutSection'
-import HomeSlider from '../components/Slider'
-import ServiceSection from '../components/HomeServices'
-import StatisticsSection from '../components/Stats'
-import Gallery from '../components/HomePageProjects'
-import {fetcheco} from '../components/ecoprojects'
-import Testimonials from '../components/Testimonials'
-import CTA from '../components/HomeCTA'
-import Blogs from '../components/Blogs'
-import Partners from '../components/Partners'
+
+import loadable from '@loadable/component'
+
+const Layout = loadable(() => import('../components/layout'))
+const HomeAboutSectionarea = loadable(() => import('../components/HomeAboutSection'))
+const HomeSlider = loadable(() => import('../components/Slider'))
+const ServiceSection = loadable(() => import('../components/HomeServices'))
+const StatisticsSection = loadable(() => import('../components/Stats'))
+const Gallery = loadable(() => import('../components/HomePageProjects'))
+const Testimonials = loadable(() => import('../components/Testimonials'))
+const Ctaa = loadable(() => import('../components/HomeCTA'))
+const Blogs = loadable(() => import('../components/Blogs'))
+
 
 const IndexPage = () => (
   
@@ -20,7 +22,7 @@ const IndexPage = () => (
     <StatisticsSection/>
     <Gallery/>
     <Testimonials/>
-    <CTA/>
+    <Ctaa/>
     <Blogs/>
   </Layout>
 )

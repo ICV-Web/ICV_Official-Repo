@@ -1,8 +1,12 @@
 import React from "react"
-import Slider from "./Slider"
-import Topbar from './Topbar'
-import HeaderMiddle from './HeaderMiddle'
-import Navbar from './Navbar'
+import loadable from '@loadable/component'
+
+const Topbar = loadable(() => import('./Topbar'))
+const HeaderMiddle = loadable(() => import('./HeaderMiddle'))
+const Navbar = loadable(() => import('./Navbar'))
+
+
+
 
 const Header = ({ siteTitle }) => (
   <header>
