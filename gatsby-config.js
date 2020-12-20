@@ -19,6 +19,7 @@ module.exports = {
     },
 
     `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-inline-svg`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

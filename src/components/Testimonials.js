@@ -34,15 +34,13 @@ const { allContentfulTestimonials: {nodes: testimonial}, } =  alltestimonials
                 <Fade bottom>
                 <Row>
 
-                    <Col sm={12} md={{span: 10,offset: 1}}>
+                    <Col sm={12} md={{span: 12}}>
 
-                        <Carousel >
 
                             {testimonial.map((testimony)=> {
 
                                 return(
 
-                                    <Carousel.Item>
                                         <div className="testimonial-3">
                                             <div className="media">
                                           
@@ -56,13 +54,11 @@ const { allContentfulTestimonials: {nodes: testimonial}, } =  alltestimonials
                                               <div className="company">{testimony.userDesignation}</div>
                                             </div>
                                         </div>
-                                    </Carousel.Item>
                                 )
 
                             })}
 
                                 
-                        </Carousel>
 
                     </Col>
                 

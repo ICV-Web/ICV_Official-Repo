@@ -17,17 +17,18 @@ const Layout = loadable(() => import('../components/layout'))
   function PageTemplate({data}) {
     
     const {content} = data.contentfulOurCorePage
+    const banner = data.allContentfulOurCorePage.nodes[0].ourCoreBanner.fluid.src
     
     return (
       <Layout>
 
-          <div class="section banner-page imprint about" style={{ backgroundImage:   `url(${corebannerimg})`  }}>
-            <div class="container"><div class="row">
-              <div class="col-sm-12 col-md-12">
-                <div class="title-page"> Our Core</div>
-                  <ol class="breadcrumb">
+          <div className="section banner-page imprint about" style={{ backgroundImage:   `url(${banner})`  }}>
+            <div className="container"><div className="row">
+              <div className="col-sm-12 col-md-12">
+                <div className="title-page"> Our Core</div>
+                  <ol className="breadcrumb">
                     <li><Link to="/">Home /  &nbsp; </Link></li>
-                      <li class="active"> Our Core</li>
+                      <li className="active"> Our Core</li>
                   </ol>
                 </div>
               </div>

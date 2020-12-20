@@ -1,12 +1,57 @@
 import React from 'react'
-import { Container, Row, Col, Form, Button } from 'react-bootstrap'
+import { Container, Row, Col} from 'react-bootstrap'
 import Slide from 'react-reveal/Slide';
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+import { useStaticQuery, graphql, Link } from "gatsby"
+import Fade from 'react-reveal/Fade';
+
 
 
 
 const HomePageProjects = () => {
 
+    const gethomepageprojects = useStaticQuery(graphql`
+    {
+      allContentfulProjects {
+        nodes {
+          projectTitle
+          projectImage {
+            fluid {
+              src
+            }
+          }
+          productText {
+            productText
+          }
+        }
+      }
+    }
+  `)
 
+  const { allContentfulProjects: {nodes: projects }, } = gethomepageprojects;
+
+
+
+    const responsive = {
+        superLargeDesktop: {
+            // the naming can be any, depends on you.
+            breakpoint: { max: 4000, min: 3000 },
+            items: 5
+        },
+        desktop: {
+            breakpoint: { max: 3000, min: 1024 },
+            items: 3
+        },
+        tablet: {
+            breakpoint: { max: 1024, min: 464 },
+            items: 2
+        },
+        mobile: {
+            breakpoint: { max: 464, min: 0 },
+            items: 1
+        }
+    };
 
 
 
@@ -28,162 +73,46 @@ const HomePageProjects = () => {
 						</Row>
                         <Slide right>
 						<Row>
-
-							<Col sm={6} md={3}>
-								<Form action="#" class="form-contact" id="contactForm" data-toggle="validator" novalidate="true">
-									<Form.Group>
-                                        <div id="success"></div>
-                                        <Button variant="primary" type="submit" className="btn btn-secondary btn-block btn-sidebar">
-                                            Fumed Silica
-                                        </Button>
-                                    </Form.Group>
-                                </Form>
-							</Col>
-							<Col sm={6} md={3}>
-								<Form action="#" class="form-contact" id="contactForm" data-toggle="validator" novalidate="true">
-									<Form.Group>
-                                        <div id="success"></div>
-                                        <Button variant="primary" type="submit" className="btn btn-secondary btn-block btn-sidebar">
-                                            Resorcinol
-                                        </Button>
-                                    </Form.Group>
-                                </Form>
-							</Col>
-
-							<Col sm={6} md={3}>
-								<Form action="#" class="form-contact" id="contactForm" data-toggle="validator" novalidate="true">
-									<Form.Group>
-                                        <div id="success"></div>
-                                        <Button variant="primary" type="submit" className="btn btn-secondary btn-block btn-sidebar">
-                                            Mannitol
-                                        </Button>
-                                    </Form.Group>
-                                </Form>
-							</Col>
-							<Col sm={6} md={3}>
-								<Form action="#" class="form-contact" id="contactForm" data-toggle="validator" novalidate="true">
-									<Form.Group>
-                                        <div id="success"></div>
-                                        <Button variant="primary" type="submit" className="btn btn-secondary btn-block btn-sidebar">
-                                            NaOH Pellets
-                                        </Button>
-                                    </Form.Group>
-                                </Form>
-							</Col>
-							<Col sm={6} md={3}>
-								<Form action="#" class="form-contact" id="contactForm" data-toggle="validator" novalidate="true">
-									<Form.Group>
-                                        <div id="success"></div>
-                                        <Button variant="primary" type="submit" className="btn btn-secondary btn-block btn-sidebar">
-                                            KOH Pellets
-                                        </Button>
-                                    </Form.Group>
-                                </Form>
-							</Col>
-							<Col sm={6} md={3}>
-								<Form action="#" class="form-contact" id="contactForm" data-toggle="validator" novalidate="true">
-									<Form.Group>
-                                        <div id="success"></div>
-                                        <Button variant="primary" type="submit" className="btn btn-secondary btn-block btn-sidebar">
-                                            Pottassium iodide
-                                        </Button>
-                                    </Form.Group>
-                                </Form>
-							</Col>
-							<Col sm={6} md={3}>
-								<Form action="#" class="form-contact" id="contactForm" data-toggle="validator" novalidate="true">
-									<Form.Group>
-                                        <div id="success"></div>
-                                        <Button variant="primary" type="submit" className="btn btn-secondary btn-block btn-sidebar">
-                                            Ferrous Sulphate
-                                        </Button>
-                                    </Form.Group>
-                                </Form>
-							</Col>
-							<Col sm={6} md={3}>
-								<Form action="#" class="form-contact" id="contactForm" data-toggle="validator" novalidate="true">
-									<Form.Group>
-                                        <div id="success"></div>
-                                        <Button variant="primary" type="submit" className="btn btn-secondary btn-block btn-sidebar">
-                                            NMP
-                                        </Button>
-                                    </Form.Group>
-                                </Form>
-							</Col>
-							<Col sm={6} md={3}>
-								<Form action="#" class="form-contact" id="contactForm" data-toggle="validator" novalidate="true">
-									<Form.Group>
-                                        <div id="success"></div>
-                                        <Button variant="primary" type="submit" className="btn btn-secondary btn-block btn-sidebar">
-                                            EP
-                                        </Button>
-                                    </Form.Group>
-                                </Form>
-							</Col>
-							<Col sm={6} md={3}>
-								<Form action="#" class="form-contact" id="contactForm" data-toggle="validator" novalidate="true">
-									<Form.Group>
-                                        <div id="success"></div>
-                                        <Button variant="primary" type="submit" className="btn btn-secondary btn-block btn-sidebar">
-                                            2P
-                                        </Button>
-                                    </Form.Group>
-                                </Form>
-							</Col>
-							<Col sm={6} md={3}>
-								<Form action="#" class="form-contact" id="contactForm" data-toggle="validator" novalidate="true">
-									<Form.Group>
-                                        <div id="success"></div>
-                                        <Button variant="primary" type="submit" className="btn btn-secondary btn-block btn-sidebar">
-                                            2-EHA
-                                        </Button>
-                                    </Form.Group>
-                                </Form>
-							</Col>
-							<Col sm={6} md={3}>
-								<Form action="#" class="form-contact" id="contactForm" data-toggle="validator" novalidate="true">
-									<Form.Group>
-                                        <div id="success"></div>
-                                        <Button variant="primary" type="submit" className="btn btn-secondary btn-block btn-sidebar">
-                                            Lanolin and Lanolin Alcohols
-                                        </Button>
-                                    </Form.Group>
-                                </Form>
-							</Col>
-							<Col sm={6} md={3}>
-								<Form action="#" class="form-contact" id="contactForm" data-toggle="validator" novalidate="true">
-									<Form.Group>
-                                        <div id="success"></div>
-                                        <Button variant="primary" type="submit" className="btn btn-secondary btn-block btn-sidebar">
-                                            NPG
-                                        </Button>
-                                    </Form.Group>
-                                </Form>
-							</Col>
-							<Col sm={6} md={3}>
-								<Form action="#" class="form-contact" id="contactForm" data-toggle="validator" novalidate="true">
-									<Form.Group>
-                                        <div id="success"></div>
-                                        <Button variant="primary" type="submit" className="btn btn-secondary btn-block btn-sidebar">
-                                            Thioglycolic Acid
-                                        </Button>
-                                    </Form.Group>
-                                </Form>
-							</Col>
-							<Col sm={6} md={3}>
-								<Form action="#" class="form-contact" id="contactForm" data-toggle="validator" novalidate="true">
-									<Form.Group>
-                                        <div id="success"></div>
-                                        <Button variant="primary" type="submit" className="btn btn-secondary btn-block btn-sidebar">
-                                            Tetrahydrofuran
-                                        </Button>
-                                    </Form.Group>
-                                </Form>
-							</Col>
+                            <Col md={12}>
+                                <Carousel infinite={true}    transitionDuration={500}
+ autoPlay={true} autoPlaySpeed={4000} responsive={responsive}>
 
 
 
+                                    {projects.map((project) => {
+
+                                        return(
+                                            <div className="item">
+                                                <div class="flip-box">
+                                                    <div class="flip-box-inner">
+                                                        <div class="flip-box-front" style={{ background: `url(${project.projectImage.fluid.src})`  }}>
+                                                            <div  className="project-image-wrapper">
+
+                                                            </div>
+                                                            <span  className="title">{project.projectTitle}</span>
+                                                        </div>
+                                                        <div class="flip-box-back">
+                                                            <p>{project.productText.productText}</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        )
+
+                                    })}
+        
+                                </Carousel>
+                            </Col>
 						</Row>
+                        <Row>
+                            <Col>
+                                <Fade bottom>
+                                    <div className="text-center" style={{marginTop: "40px"}}>
+                                        <Link to="" title="" className="btn btn-cta bgblue">Click Here</Link>
+                                    </div>
+                                </Fade>
+                            </Col>
+		                </Row>
 						</Slide>
 
 					</Container>

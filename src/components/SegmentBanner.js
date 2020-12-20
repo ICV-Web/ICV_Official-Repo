@@ -1,27 +1,29 @@
 import React from 'react'
 import {Container,Row,Col} from "react-bootstrap"
 import { Link } from "gatsby"
-//import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 import segmentbannerimg from '../images/banner-page.jpg'
 
-const SegmentBanner = () => {
-//     const data = useStaticQuery(graphql`
-//     {
-//       allContentfulBusinessSegment {
-//         nodes {
-//           bannerImg {
-//             fluid {
-//               src
-//             }
-//           }
-//         }
-//       }
-//     }
-//   `)
+const SegmentBanner = (  ) => {
+
+
+    const SegmentBannerimg = useStaticQuery(graphql`
+    {
+      allContentfulBusinessSegment {
+        nodes {
+          bannerImg {
+            fluid {
+              src
+            }
+          }
+        }
+      }
+    }
+  `)
   
     return (
         <>
-        <div className="section banner-page about" style={{ backgroundImage:   `url(${segmentbannerimg})`  }}>
+        <div className="section banner-page about" style={{ backgroundImage:   `url(${SegmentBannerimg.allContentfulBusinessSegment.nodes[0].bannerImg.fluid.src})`  }}>
             <Container>
                 <Row>
                     <Col sm={12} md={12}>

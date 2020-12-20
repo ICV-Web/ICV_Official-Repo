@@ -3,11 +3,6 @@
   font-weight: 600;
 }
 
-.section-projects button {
-  font-size: 14px;
-  padding: 14px 15px;
-}
-
 .section.cta h3 {
   font-size: 20px;
 }
@@ -662,8 +657,9 @@ dfn {
   margin-bottom: 20px;
   border-top: 1px solid #dedede;
   padding-top: 20px;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
   position: relative;
+  text-transform: uppercase;
 }
 .section-heading:before {
   content: "";
@@ -1702,6 +1698,27 @@ button.lang-button:hover {
   width: 100%;
   margin-bottom: 30px;
 }
+
+.icon-holder img {
+  max-width: 47px !important;
+  position: relative !important;
+  top: -16px;
+}
+
+.feature-box-8 .media img {
+  height: 250px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.bgblue {
+  background: #51c0b7 !important;
+}
+
+.bgblue:hover {
+  background: #2b3990 !important;
+}
+
 .feature-box-8 .body {
   position: relative;
   text-align: center;
@@ -3698,7 +3715,7 @@ dl.hiw dd .lead {
   }
 }
 .testimony {
-  padding: 50px 0;
+  padding: 0px 0 60px;
 }
 .testimony .owl-controls .owl-nav [class*="owl-"] {
   color: #2b3990;
@@ -4159,4 +4176,117 @@ button.lang-button {
   font-size: 12px;
 }
 
+.flip-box {
+  background-color: transparent;
+  width: 100%;
+  height: 300px;
+  border: 11px solid #fff;
+  perspective: 1000px;
+  /* margin: 0px 20px !important; */
+  border-left: 0px;
+  border-top: 0px;
+  border-bottom: 0px;
+}
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateX(180deg);
+}
+
+.flip-box-front,
+.flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-box-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-box-back {
+  background-color: #3f51b5;
+  color: white;
+  transform: rotateX(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateX(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #3f51b5;
+  color: white;
+  transform: rotateX(180deg);
+}
+
+.flip-box:nth-child(3n + 3) {
+  border-right: 0px;
+}
+
+.flip-box-front {
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+.flip-box-front span {
+  width: 100%;
+  background: #3f51b5;
+  bottom: 0;
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  height: 55px;
+  line-height: 3.5;
+  color: #fff;
+  font-weight: bold;
+  font-size: 15px;
+}
 /*# sourceMappingURL=style.css.map */

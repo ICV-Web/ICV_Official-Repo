@@ -3,25 +3,27 @@ import { Container , Row , Col  } from 'react-bootstrap'
 import { useStaticQuery, graphql } from "gatsby"
 import { Link } from "gatsby"
 import Fade from 'react-reveal/Fade';
-import Rotate from 'react-reveal/Rotate';
-
-
-
 
 
 const HomeServices = () => {
 
 const getservicesdata = useStaticQuery(graphql`
-    {
-      allContentfulHomeServices {
+{
+      allContentfulHomeServices(limit: 3) {
         nodes {
-          serviceIcon
           servicesHeading
           serviceBoxImage {
             fluid {
               src
             }
-          }
+		  }
+		  
+		  svgicon {
+			file {
+				url
+			}
+		 }
+          
         }
       }
     }
@@ -38,7 +40,7 @@ const { allContentfulHomeServices: {nodes: services }, } = getservicesdata;
 				<Col sm={12} md={12}>
 					<Fade left>
 						<h2 className="section-heading">
-							SERVICES
+							Business Segments
 						</h2>
 					</Fade>
 				</Col>
@@ -57,7 +59,7 @@ const { allContentfulHomeServices: {nodes: services }, } = getservicesdata;
 							</div>
 							<div className="body">
 								<div className="icon-holder">
-									<span className={service.serviceIcon}></span>
+									<img src={service.svgicon.file.url} alt="svgicon"/>
 								</div>
 								<Link to="services-detail.html" className="title">{service.servicesHeading}</Link>
 							</div>
@@ -68,6 +70,15 @@ const { allContentfulHomeServices: {nodes: services }, } = getservicesdata;
 
 			})}
 
+			</Row>
+			<Row>
+				<Col>
+				<Fade bottom>
+					<div className="text-center">
+						<Link to="" title="" className="btn btn-cta bgblue">View All Business Segments</Link>
+					</div>
+				</Fade>
+				</Col>
 			</Row>
 		</Container>
 	</div>
