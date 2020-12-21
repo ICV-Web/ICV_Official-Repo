@@ -2937,10 +2937,6 @@ button.lang-button:hover {
   margin-left: 0px;
 }
 
-.navbar-header {
-  display: none;
-}
-
 .navbar-main {
   background-color: transparent;
   border-radius: 0;
@@ -4289,4 +4285,114 @@ button.lang-button {
   font-weight: bold;
   font-size: 15px;
 }
+
+button.navbar-toggle {
+  padding: 6px;
+  margin-top: 13px;
+  margin-bottom: 9px;
+}
+
+.navbar-toggle .icon-bar {
+  background: #2b3990;
+  display: block;
+  width: 24px;
+  height: 2px;
+  /* border-radius: 2px; */
+  margin-top: 3px;
+}
+
+section.services {
+  padding: 50px 0px;
+}
+
+section.services:nth-child(even) {
+  background: #fafafa;
+}
+
+section.services .description-wrapper h3 {
+  color: #2b3990;
+}
+
+.section.overlap-bottom {
+  margin-top: 90px;
+}
+
+@media (min-width: 768px) {
+  .navbar-collapse.collapse {
+    display: block !important;
+    height: auto !important;
+    padding-bottom: 0;
+    overflow: visible !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar-toggle {
+    display: none;
+  }
+}
+@media only screen and (max-width: 767px) {
+}
+
+.collapse.in {
+  display: block;
+}
+
+nav.navbar-collapse.collapse.in ul li {
+  padding-left: 0px;
+}
+nav.navbar-collapse.collapse.in {
+  margin-top: 50px;
+}
+
+@media only screen and (max-width: 767px) {
+  .carousel-item img {
+    height: 600px;
+  }
+
+  .section.cta .cta-info {
+    width: 100%;
+  }
+
+  .wrap-caption .btn-primary {
+    padding: 15px 20px;
+    background-color: #262626;
+  }
+
+  .wrap-caption link.btn.btn-secondary {
+    padding: 15;
+    padding: 15px;
+  }
+
+  .wrap-caption .btn {
+    display: inline;
+  }
+
+  .bannerslider .carousel-caption {
+    right: 15% !important;
+    top: 5% !important;
+    left: 3% !important;
+    z-index: 10 !important;
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+    color: #fff !important;
+    text-align: left !important;
+    width: 100%;
+  }
+
+  .carousel-control-next,
+  .carousel-control-prev {
+    width: 7%;
+    color: #fff;
+    text-align: center;
+    opacity: 0.5;
+    transition: opacity 0.15s ease;
+  }
+
+  [role="button"] {
+    cursor: pointer;
+    margin: 0px;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */

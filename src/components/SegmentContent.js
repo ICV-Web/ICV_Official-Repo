@@ -15,40 +15,28 @@ const SegmentContent = () => {
           desc2 {
             desc2
           }
-          descImg1 {
-            fluid {
-              src
-            }
-          }
-          descImg2 {
-            fluid {
-              src
-            }
-          }
-          descImg3 {
-            fluid {
-              src
-            }
-          }
-          descImg4 {
-            fluid {
-              src
-            }
-          }
-          descImg5 {
-            fluid {
-              src
-            }
-          }
-          descImg6 {
-            fluid {
-              src
-            }
-          }
+          
         }
       }
+
+      allContentfulHomeServices {
+      nodes {
+          description {
+            description
+          }
+
+          servicesHeading
+        }
+      }
+
     }
   `)
+
+
+    const { allContentfulHomeServices: {nodes: getallservices} } = Segmentdata;
+
+    console.log(getallservices)
+
 
     return (
         <>
@@ -67,111 +55,40 @@ const SegmentContent = () => {
                         </div>
                         </Fade>
                    </Col>
-                   <Col md={4} sm={6}>
-                      <Fade bottom>
-                        <div className="feature-box-8">
-                            <div className="media">
-                                <img src={Segmentdata.allContentfulBusinessSegment.nodes[0].descImg1.fluid.src} alt="rud" className="img-responsive"></img>
-                            </div>
-                            <div className="body">
-                                <div className="icon-holder">
-                                <span className="fa fa-gears"></span>
-                                </div>
-                                <Link to="services-detail.html" className="title">MECHANICAL ENGINEERING</Link>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed</p>
-                                <Link to="services-detail.html" className="readmore">READ MORE</Link>
-                            </div>
-                        </div>
-                        </Fade>
-                   </Col>
-                   <Col md={4} sm={6}>
-                   <Fade bottom>
-                        <div className="feature-box-8">
-                            <div className="media">
-                                <img src={Segmentdata.allContentfulBusinessSegment.nodes[0].descImg2.fluid.src} alt="rud" className="img-responsive"></img>
-                            </div>
-                            <div className="body">
-                                <div className="icon-holder">
-                                    <span className="fa fa-leaf"></span>
-                                </div>
-                                <Link to="services-detail.html" className="title">AGRICULTURAL PROCESSING</Link>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed</p>
-                                <Link to="services-detail.html" className="readmore">READ MORE</Link>
-                            </div>
-                        </div>
-                        </Fade>
-                   </Col>
-                   <Col md={4} sm={6}>
-                   <Fade bottom>
-                        <div className="feature-box-8">
-                            <div className="media">
-                                <img src={Segmentdata.allContentfulBusinessSegment.nodes[0].descImg3.fluid.src} alt="rud" className="img-responsive"></img>
-                            </div>
-                            <div className="body">
-                                <div className="icon-holder">
-                                    <span className="fa fa-fire"></span>
-                                </div>
-                                <Link to="services-detail.html" className="title">OILS AND LUBRICANTS</Link>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed</p>
-                                <Link to="services-detail.html" className="readmore">READ MORE</Link>
-                            </div>
-                        </div>
-                        </Fade>
-                   </Col>
-                   <Col md={4} sm={6}>
-                   <Fade bottom>
-                        <div className="feature-box-8">
-                            <div className="media">
-                                <img src={Segmentdata.allContentfulBusinessSegment.nodes[0].descImg4.fluid.src} alt="rud" className="img-responsive"></img>
-                            </div>
-                            <div className="body">
-                                <div className="icon-holder">
-                                    <span className="fa fa-flash"></span>
-                                </div>
-                                <Link to="services-detail.html" className="title">POWER AND ENERGY</Link>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed</p>
-                                <Link to="services-detail.html" className="readmore">READ MORE</Link>
-                            </div>
-                        </div>
-                        </Fade>
-                   </Col>
-                   <Col md={4} sm={6}>
-                   <Fade bottom>
-                        <div className="feature-box-8">
-                            <div className="media">
-                                <img src={Segmentdata.allContentfulBusinessSegment.nodes[0].descImg5.fluid.src} alt="rud" className="img-responsive"></img>
-                            </div>
-                            <div className="body">
-                                <div className="icon-holder">
-                                    <span className="fa fa-flask"></span>
-                                </div>
-                                <Link to="services-detail.html" className="title">CHEMICAL RESEARCH</Link>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed</p>
-                                <Link to="services-detail.html" className="readmore">READ MORE</Link>
-                            </div>
-                        </div>
-                        </Fade>
-                   </Col>
-                   <Col md={4} sm={6}>
-                   <Fade bottom>
-                        <div className="feature-box-8">
-                        <div className="media">
-                            <img src={Segmentdata.allContentfulBusinessSegment.nodes[0].descImg6.fluid.src} alt="rud" className="img-responsive"></img>
-                        </div>
-                        <div className="body">
-                            <div className="icon-holder">
-                                <span className="fa fa-cubes"></span>
-                            </div>
-                            <Link to="services-detail.html" className="title">MATERIAL ENGINEERING</Link>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed</p>
-                            <Link to="services-detail.html" className="readmore">READ MORE</Link>
-                        </div>
-                        </div>
-                        </Fade>
-                   </Col>
-                  
-                </Row>
+
+             </Row>
             </Container>
+
+            {getallservices.map((service) => {
+
+              return(
+
+                <>
+                <Fade bottom>
+                   <section className="services">
+                      <Container>
+                        <Row>
+                          <Col md={12}>
+                              <div className="description-wrapper">
+                                  <h3>{service.servicesHeading}</h3>
+                                  <p>{service.description.description}</p>
+                              </div>
+                          </Col>
+                        </Row>
+                      </Container>
+                   </section>
+                </Fade>
+                </>
+
+              )
+
+            })}
+                   
+                  
+
+                  
+                  
+               
         </div>    
         </>
     )

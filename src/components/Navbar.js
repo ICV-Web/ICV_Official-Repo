@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link  } from "gatsby"
 import { useStaticQuery, graphql } from "gatsby"
+import $ from 'jquery'
 
 
 const logosrc = graphql`
@@ -17,17 +18,33 @@ const logosrc = graphql`
 }
 `
 
+ 
+
 const Navbar = () => {
 
+	
+  useEffect(() => {
+  		$( ".navbar-toggle" ).click(function() {
+			$(this).toggleClass("collapsed")
+			$(".navbar-collapse").toggleClass("in")
+		});
+  });
+	
+
+	
 	const logourl = useStaticQuery(logosrc);
     return (
+
+	
+
+
         <>
           <div className="navbar navbar-main">
 			<div className="container container-nav">
 				<div className="rowe">
 						
 					<div className="navbar-header">
-						<button type="button" className="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
 							<span className="icon-bar"></span>
 							<span className="icon-bar"></span>
 							<span className="icon-bar"></span>
@@ -35,11 +52,11 @@ const Navbar = () => {
 						
 					</div>
 
-					<Link className="navbar-brand" to="#">
+					<Link className="navbar-brand" to="/">
                         <img src={logourl.allContentfulHeader.nodes[0].logo.fluid.src	} />
 					</Link>
 
-					<nav className="navbar-collapse ">
+					<nav className="navbar-collapse collapse">
 						<ul className="nav navbar-nav navbar-left">
 							<li className="dropdown">
 							  <Link to="/"  data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false">HOME</Link>

@@ -108,7 +108,7 @@ const HomePageProjects = () => {
                             <Col>
                                 <Fade bottom>
                                     <div className="text-center" style={{marginTop: "40px"}}>
-                                        <Link to="" title="" className="btn btn-cta bgblue">Click Here</Link>
+                                        <Link to="/products" title="" className="btn btn-cta bgblue">View All Products</Link>
                                     </div>
                                 </Fade>
                             </Col>

@@ -75,7 +75,7 @@ const { allContentfulHomeServices: {nodes: services }, } = getservicesdata;
 				<Col>
 				<Fade bottom>
 					<div className="text-center">
-						<Link to="" title="" className="btn btn-cta bgblue">View All Business Segments</Link>
+						<Link to="/businesssegment" title="" className="btn btn-cta bgblue">View All Business Segments</Link>
 					</div>
 				</Fade>
 				</Col>
