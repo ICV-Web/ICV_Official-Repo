@@ -149,7 +149,7 @@ const { allContentfulProjects: {nodes: footerprojects }, } = footerdata;
 
 								return(
 									<>
-										<li><Link to="#" title="">{footerprojectlink.projectTitle}</Link></li>
+										<li><Link to="/products" title="">{footerprojectlink.projectTitle}</Link></li>
 
 									</>
 								)

@@ -1,0 +1,91 @@
+import React from 'react'
+import loadable from '@loadable/component'
+import { Container, Row, Col } from 'react-bootstrap'
+import { renderRichText } from "gatsby-source-contentful/rich-text"
+import * as propTypes from "prop-types"
+import {graphql,Link } from "gatsby"
+import Fade from 'react-reveal/Fade';
+
+const Layout = loadable(() => import('../components/layout'))
+
+function blogTemplate({data}) {
+    
+    const {description1} = data.contentfulBlogs
+    // const banner = data.allContentfulBlogs.nodes[0].bannerImg.fluid.src
+
+    return (
+        <>
+        <Layout>
+            <div className="section banner-page imprint about">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-sm-12 col-md-12">
+                           <div className="body blog-main">
+                                <div className="title">
+                                    <h1 title="">{data.contentfulBlogs.title}</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <Container>
+                <Row>
+                    <Col sm={12} md={12}>
+                        <Fade left>
+                        <div className="box-partner">
+                            <div className="box-info">
+                                <div className="box-news-1 blog-img">
+                                    <img src={data.contentfulBlogs.featuredImage.fluid.src} alt="" className="img-responsive"/>  
+                                </div>
+                                {description1 && renderRichText(description1)}
+                                <div className="box-news-1 blog-img">
+                                    <img src={data.contentfulBlogs.footerImg.fluid.src} alt="" className="img-responsive"/>  
+                                </div>
+                            </div>
+                        </div>
+                        </Fade>
+                    </Col>
+                </Row>
+            </Container>
+        </Layout>    
+       </>
+    )
+}
+blogTemplate.propTypes = {
+    data: propTypes.object.isRequired,
+  }
+
+
+
+export const pageQuery = graphql`
+    query pageQueryAndPageQuery($slug: String) {
+       contentfulBlogs(slug: {eq: $slug}) {
+            title
+            featuredImage {
+                fluid {
+                    src
+                }
+            }
+            description1 {
+                raw
+            }
+            footerImg {
+                fluid {
+                    src
+                }
+            }
+        }
+        allContentfulBlogs {
+            nodes {
+            bannerImg {
+                fluid {
+                    src
+                }
+            }
+            }
+        }
+    }
+  `
+
+  export default blogTemplate

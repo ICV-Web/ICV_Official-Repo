@@ -70,15 +70,15 @@ const Navbar = () => {
 							  <Link to="/businesssegment"  data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false">BUSINESS SEGMENTS<span className="caret"></span></Link>
 							</li>
 							
-														
+
+				 			<li className="dropdown">
+							  <Link to="/products"  data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PRODUCTS<span className="caret"></span></Link>
+							</li>
+
+
 							<li className="dropdown">
 							  <Link to="/blogs"  data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false">NEWS / PRESS RELEASE</Link>
 							</li>						
-																					
-														
-							<li className="dropdown">
-							  <Link to="/products"  data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PRODUCTS<span className="caret"></span></Link>
-							</li>
 							
 							
 							<li className="dropdown">
