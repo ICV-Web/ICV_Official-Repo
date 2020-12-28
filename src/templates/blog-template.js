@@ -8,15 +8,15 @@ import Fade from 'react-reveal/Fade';
 
 const Layout = loadable(() => import('../components/layout'))
 
-function blogTemplate({data}) {
+const blogTemplate = ({data}) => {
     
     const {description1} = data.contentfulBlogs
-    // const banner = data.allContentfulBlogs.nodes[0].bannerImg.fluid.src
+
 
     return (
         <>
         <Layout>
-            <div className="section banner-page imprint about">
+            <div className="section banner-page imprint about" style={{ backgroundImage:   `url(${data.contentfulBlogs.bannerImg.fluid.src})`  }}>
                 <div className="container">
                     <div className="row">
                         <div className="col-sm-12 col-md-12">
@@ -52,14 +52,10 @@ function blogTemplate({data}) {
        </>
     )
 }
-blogTemplate.propTypes = {
-    data: propTypes.object.isRequired,
-  }
 
 
-
-export const pageQuery = graphql`
-    query pageQueryAndPageQuery($slug: String) {
+export const query = graphql`
+    query query ($slug: String) {
        contentfulBlogs(slug: {eq: $slug}) {
             title
             featuredImage {
@@ -75,16 +71,13 @@ export const pageQuery = graphql`
                     src
                 }
             }
-        }
-        allContentfulBlogs {
-            nodes {
-            bannerImg {
+             bannerImg {
                 fluid {
                     src
                 }
             }
-            }
         }
+        
     }
   `
 

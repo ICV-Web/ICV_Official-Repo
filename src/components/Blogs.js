@@ -53,15 +53,11 @@ const { allContentfulBlogs: {nodes: blogs}, } = getblogsdata
                           <article key={blog.id}>
                                 <Slide right>
                                   <div className="box-news-1">
-                                  
-                                    
                                       <div className="media gbr">
-                                          
                                           <img src={blog.featuredImage.fluid.src} alt="" className="img-responsive"/>
                                           <div className="overlay">
                                               <i><FaExternalLinkAlt/></i>
-                                          </div>
-                                          
+                                          </div>        
                                       </div>
                                       <div className="body">
                                           <div className="title"><Link to={`/blogs/${blog.slug}`} title="">{blog.title}</Link></div>

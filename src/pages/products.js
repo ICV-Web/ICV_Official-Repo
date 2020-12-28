@@ -13,8 +13,6 @@ const products = ({data}) => {
 
     const {allContentfulProjects:{nodes: allprojects},} = data
 
-    console.log(data);
-
     const getbannerimage = data.allContentfulProductsPages.nodes[0].bannerImage.fluid.src
 
 
@@ -48,7 +46,7 @@ const products = ({data}) => {
                                         <div className="description-wrapper">
                                             <h3>{projects.projectTitle}</h3>
                                             <p>{projects.description.description}</p>
-                                            <button type="button" class="btn btn-danger">Download PDF</button>
+                                            <Link  target="_blank" to={projects.addPdf.file.url} class="btn btn-danger">Download PDF</Link>
                                         </div>
                                     </Col>
                                     </Row>
@@ -73,6 +71,11 @@ export const query = graphql`
         projectTitle
         description {
           description
+        }
+        addPdf {
+          file {
+            url
+          }
         }
       }
     }

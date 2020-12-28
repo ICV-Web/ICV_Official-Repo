@@ -6,7 +6,7 @@ import {Link} from 'gatsby'
 
 
 
-const blogs = () => {
+const blogs = ({data}) => {
 
 
 
@@ -14,7 +14,7 @@ const blogs = () => {
     return (
         <>
             <Layout>
-                <div className="section banner-page about" style={{  }}>
+                <div className="section banner-page about" style={{backgroundImage:   `url(${data.allContentfulBlogPageBanner.nodes[0].bannerIamge.fluid.src})`  }}>
                     <Container>
                         <Row>
                             <Col sm={12} md={12}>
@@ -34,3 +34,16 @@ const blogs = () => {
 }
 
 export default blogs
+export const query = graphql`
+  {
+    allContentfulBlogPageBanner {
+      nodes {
+        bannerIamge {
+          fluid {
+            src
+          }
+        }
+      }
+    }
+  }
+`

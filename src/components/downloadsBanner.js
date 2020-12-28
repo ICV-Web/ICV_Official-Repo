@@ -1,30 +1,30 @@
 import React from 'react'
 import {Container,Row,Col} from "react-bootstrap"
 import { Link } from "gatsby"
-// import { useStaticQuery, graphql } from "gatsby"
-import downloadbannerimg from '../images/banner-page.jpg'
+import { useStaticQuery, graphql } from "gatsby"
 
 
-const downloadsBanner = () => {
-    
-  //   const data = useStaticQuery(graphql`
-  //   {
-  //     allContentfulDownloads {
-  //       nodes {
-  //         downloadsBanner {
-  //           fluid {
-  //             src
-  //           }
-  //         }
-  //       }
-  //     }
-  //   }
-  // `)
-   
+
+const DownloadsBanner = () => {
+
+   const data = useStaticQuery(graphql`
+    {
+      allContentfulDownloads {
+        nodes {
+          downloadsBanner {
+            fluid {
+              src
+            }
+          }
+        }
+      }
+    }
+  `)
+
   
     return (
         <>
-        <div className="section banner-page about" style={{ backgroundImage:   `url(${downloadbannerimg})`  }}>
+        <div className="section banner-page about" style={{ backgroundImage:   `url(${data.allContentfulDownloads.nodes[0].downloadsBanner.fluid.src})`  }}>
             <Container>
                 <Row>
                     <Col sm={12} md={12}>
@@ -41,4 +41,4 @@ const downloadsBanner = () => {
     )
 }
 
-export default downloadsBanner
+export default DownloadsBanner

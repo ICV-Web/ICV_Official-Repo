@@ -156,7 +156,7 @@ const { allContentfulProjects: {nodes: footerprojects }, } = footerdata;
 
 						})}
 
-							<li><Link to="#" title="">Read More</Link></li>
+							<li><Link to="/products" title="">Read More</Link></li>
 
 
 							{/* <ul className="recent-post"></ul> */}
@@ -173,11 +173,11 @@ const { allContentfulProjects: {nodes: footerprojects }, } = footerdata;
 							Company
 						</div>
 						<ul className="list">
-							<li><Link to="#" title="">Our Core</Link></li>
-							<li><Link to="#" title="">Business Segments</Link></li>
-							<li><Link to="#" title="">News / Press Release</Link></li>
-							<li><Link to="#" title="">Careers</Link></li>
-							<li><Link to="#" title="">Downloads</Link></li>
+							<li><Link to="/ourcore" title="">Our Core</Link></li>
+							<li><Link to="/businesssegment" title="">Business Segments</Link></li>
+							<li><Link to="/products" title="">News / Press Release</Link></li>
+							<li><Link to="/careers" title="">Careers</Link></li>
+							<li><Link to="/downloads" title="">Downloads</Link></li>
 						</ul>
 					</div>
 				</Col>
@@ -207,8 +207,8 @@ const { allContentfulProjects: {nodes: footerprojects }, } = footerdata;
 					<div className="topbar-right">
 						<ul className="topbar-menu">
 								<li><Link to="#" title="Career">Imprint</Link></li> 
-								<li><Link to="#" title="">Cookie Policy</Link></li>
-								<li><Link to="#" title="">Data Protection</Link></li>
+								<li><Link to="/cookiepolicy" title="">Cookie Policy</Link></li>
+								<li><Link to="/dataprotection" title="">Data Protection</Link></li>
 						</ul>
 					</div>
 					</Col>

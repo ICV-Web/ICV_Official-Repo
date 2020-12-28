@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import { useStaticQuery, graphql } from "gatsby"
 import segmentbannerimg from '../images/banner-page.jpg'
 
-const SegmentBanner = (  ) => {
+const SegmentBanner = () => {
 
 
     const SegmentBannerimg = useStaticQuery(graphql`
