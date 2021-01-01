@@ -81,9 +81,9 @@ const Navbar = () => {
 							</li>						
 							
 							
-							<li className="dropdown">
-							  <Link to="/downloads"  data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false">DOWNLOADS</Link>
-							</li>
+							{/* <li className="dropdown">
+							   <Link to="/downloads"  data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false">DOWNLOADS</Link>
+	</li>*/}
 							
 							
 							<li className="dropdown">

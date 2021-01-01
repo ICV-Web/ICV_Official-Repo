@@ -4477,5 +4477,10 @@ nav.navbar-collapse.collapse.in {
   width: 100%;
   height: 100%;
 }
+/*Update 1/1/2021*/
+.lang-button img {
+  max-width: 20px !important;
+  max-height: 20px !important;
+}
 
 /*# sourceMappingURL=style.css.map */

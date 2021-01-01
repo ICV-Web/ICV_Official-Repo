@@ -47,6 +47,7 @@ const products = ({data}) => {
                                             <h3>{projects.projectTitle}</h3>
                                             <p>{projects.description.description}</p>
                                             <Link  target="_blank" to={projects.addPdf.file.url} class="btn btn-danger">Download PDF</Link>
+                                            <Link  target="_blank" to="/contact" class="btn btn-danger">Request PDF</Link>
                                         </div>
                                     </Col>
                                     </Row>

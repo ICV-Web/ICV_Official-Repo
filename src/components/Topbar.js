@@ -27,11 +27,11 @@ import { useStaticQuery, graphql } from "gatsby"
 			  src
 			}
 		  }
+		  
       }
     }
   }
 `
-
 
   
 const Topbar = () => {
@@ -53,9 +53,10 @@ const Topbar = () => {
 							<Button className="lang-button">
 								<img src={links.allContentfulHeader.nodes[0].germanyLang.fluid.src}></img>
                             </Button>
+							
 							<Button className="lang-button">
 								<img src={links.allContentfulHeader.nodes[0].uaeLang.fluid.src}></img>
-                            </Button>
+							</Button>
 							</div>
 						</div>
 					</Col>

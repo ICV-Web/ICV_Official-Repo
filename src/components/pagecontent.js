@@ -42,22 +42,22 @@ const Pagecontent = () => {
                                     </Form.Group>
 
                                     <Form.Group>
-                                        <Form.Control id="p_email" type="email" placeholder="Enter Address..." required="" />
+                                        <Form.Control id="p_email" type="email" placeholder="Enter Email Address..." required="" />
                                         
                                         <div className="help-block with-errors"></div>
                                     </Form.Group>
 
-                                    <Form.Group>
+                                    {/*<Form.Group>
                                         <Form.Control id="p_subject" type="text" placeholder="Subject..." />
                                         
                                         <div className="help-block with-errors"></div>
-                                    </Form.Group>
+                                    </Form.Group>*/}
 
                                     <Form.Group>
                                         <textarea
                                             className="form-control"
                                             id="p_message"
-                                            rows="6"
+                                            rows="16"
                                             placeholder="Write message"
                                             />
                                         <div className="help-block with-errors"></div>
@@ -66,7 +66,7 @@ const Pagecontent = () => {
                                     <Form.Group>
                                         <div id="success"></div>
                                         <Button variant="primary" type="submit" className="btn btn-secondary disabled">
-                                        Ask A Quote
+                                        Submit
                                         </Button>
                                     </Form.Group>
                                 </Form>

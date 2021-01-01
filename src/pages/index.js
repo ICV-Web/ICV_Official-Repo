@@ -22,7 +22,6 @@ const IndexPage = () => (
     <StatisticsSection/>
     <Gallery/>
     <Testimonials/>
-    <Ctaa/>
     <Blogs/>
   </Layout>
 )

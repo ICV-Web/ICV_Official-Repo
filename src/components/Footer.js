@@ -209,6 +209,7 @@ const { allContentfulProjects: {nodes: footerprojects }, } = footerdata;
 								<li><Link to="#" title="Career">Imprint</Link></li> 
 								<li><Link to="/cookiepolicy" title="">Cookie Policy</Link></li>
 								<li><Link to="/dataprotection" title="">Data Protection</Link></li>
+								<li><Link to="/downloads"  title="">Downloads</Link></li>
 						</ul>
 					</div>
 					</Col>

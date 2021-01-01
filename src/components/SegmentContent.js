@@ -72,6 +72,7 @@ const SegmentContent = () => {
                               <div className="description-wrapper">
                                   <h3>{service.servicesHeading}</h3>
                                   <p>{service.description.description}</p>
+                                  <Link  target="_blank" to="/contact" class="btn btn-danger">Request PDF</Link>
                               </div>
                           </Col>
                         </Row>
