@@ -56,7 +56,7 @@ const { allContentfulProjects: {nodes: footerprojects }, } = footerdata;
 
 
 const [formState, setFormState] = useState({
-	email: ""
+	email: "",
 })
 const handleChange=e =>{
 	setFormState({
