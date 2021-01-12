@@ -68,7 +68,7 @@ const handleSubmit=e =>{
  fetch("/", {
 	 method: "POST",
 	 headers: { "Content-Type": "application/x-www-form-urlencoded" },
-	 body: encode({ "form-name": "contact", ...formState })
+	 body: encode({ "form-name": "subscription", ...formState })
    })
 	 .then(() => console.log("Success!"))
 	 .catch(error => console.log(error));
