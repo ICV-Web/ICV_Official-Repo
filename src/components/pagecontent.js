@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {Container,Row,Col,Form, Button} from "react-bootstrap"
 import { FaMapMarkerAlt,FaPhoneAlt,FaEnvelope } from "react-icons/fa";
 import { useStaticQuery, graphql , Link} from "gatsby"
@@ -19,10 +19,36 @@ const Pagecontent = () => {
       }
     }
   `)
-   
+   const [formState, setFormState] = useState({
+       name: "",
+       email: "",
+       message:""
+   })
+   const handleChange=e =>{
+       setFormState({
+           ...formState,
+           [e.target.name]:e.target.value,
+       })
+   }
+   const handleSubmit=e =>{
+    fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({ "form-name": "contact", ...formState })
+      })
+        .then(() => console.log("Success!"))
+        .catch(error => console.log(error));
 
+      e.preventDefault();
+   }
+   const encode = (data) => {
+    return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
+  }
     return (
         <>
+
         <div className="section contact">
            <Container>
                <Row>
@@ -34,16 +60,14 @@ const Pagecontent = () => {
                                 <h3 className="section-heading-2">
                                     Contact Details
                                 </h3>
-                                <Form action="#" class="form-contact" id="contactForm" data-toggle="validator" novalidate="true">
+                                <Form action="#" class="form-contact" id="contactForm" data-toggle="validator" noValidate="true" onSubmit={handleSubmit} name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+                                    <input type="hidden" name="form-name" value="contact" />
                                     <Form.Group>
-                                        <Form.Control id="p_name" type="text" placeholder="Full Name..." required="" />
-                                        
+                                        <Form.Control id="p_name" name="name" type="text" placeholder="Full Name..." required="" onChange={handleChange} value={formState.name}/>
                                         <div className="help-block with-errors"></div>
                                     </Form.Group>
-
                                     <Form.Group>
-                                        <Form.Control id="p_email" type="email" placeholder="Enter Email Address..." required="" />
-                                        
+                                        <Form.Control id="p_email" name="email" type="email" placeholder="Enter Email Address..." required="" onChange={handleChange} value={formState.email}/>                                      
                                         <div className="help-block with-errors"></div>
                                     </Form.Group>
 
@@ -59,6 +83,9 @@ const Pagecontent = () => {
                                             id="p_message"
                                             rows="16"
                                             placeholder="Write message"
+                                            name="message"
+                                            onChange={handleChange} 
+                                            value={formState.message}
                                             />
                                         <div className="help-block with-errors"></div>
                                     </Form.Group>
