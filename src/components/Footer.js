@@ -55,20 +55,20 @@ const Footer = () => {
 const { allContentfulProjects: {nodes: footerprojects }, } = footerdata;
 
 
-const [formStatef, setFormState] = useState({
+const [formState, setFormState] = useState({
        email: "",
 })
-const handleChangef=e =>{
+const handleChange=e =>{
 	setFormState({
-		...formStatef,
+		...formState,
 		[e.target.name]:e.target.value,
 	})
 }
-const handleSubmitf=e =>{
+const handleSubmit=e =>{
  fetch("/", {
 	 method: "POST",
 	 headers: { "Content-Type": "application/x-www-form-urlencoded" },
-	 body: encode({ "form-name": "subscription", ...formStatef })
+	 body: encode({ "form-name": "contact", ...formState })
    })
 	 .then(() => navigate("/validation"))
 	 .catch(error => console.log(error));
@@ -211,9 +211,9 @@ const encode = (data) => {
 							Subscribe
 						</div>
 						<p>{footerdata.allContentfulFooter.nodes[0].subscriptionText.subscriptionText}</p>
-						<form action="#" className="footer-subscribe" data-toggle="validator" noValidate="true" onSubmit={handleSubmitf} name="subscription" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
-							<input type="hidden" name="form-name" value="subscription" />
-							<input type="email" name="email" className="form-control" placeholder="enter your email" onChange={handleChangef} value={formStatef.email}/>
+						<form action="#" className="footer-subscribe" data-toggle="validator" noValidate="true" onSubmit={handleSubmit} name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+							<input type="hidden" name="form-name" value="contact" />
+							<input type="email" name="email" className="form-control" placeholder="enter your email" onChange={handleChange} value={formState.email}/>
 			              	<input id="p_submit" type="submit" value="send"/>
 			              	<label for="p_submit"><FaEnvelope/></label>
 			            </form>
