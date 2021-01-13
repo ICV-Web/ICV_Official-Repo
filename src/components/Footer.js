@@ -68,7 +68,7 @@ const handleSubmit=e =>{
  fetch("/", {
 	 method: "POST",
 	 headers: { "Content-Type": "application/x-www-form-urlencoded" },
-	 body: encode({ "form-name": "subscription", ...formState })
+	 body: encode({ "form-name2": "subscription", ...formState })
    })
 	 .then(() => console.log("SS"))
 	 .catch(error => console.log(error));
@@ -212,7 +212,7 @@ const encode = (data) => {
 						</div>
 						<p>{footerdata.allContentfulFooter.nodes[0].subscriptionText.subscriptionText}</p>
 						<form action="#" className="footer-subscribe" data-toggle="validator" noValidate="true" onSubmit={handleSubmit} name="subscription" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
-							<input type="hidden" name="form-name" value="subscription" />
+							<input type="hidden" name="form-name2" value="subscription" />
 							<input type="email" name="email" className="form-control" placeholder="enter your email" onChange={handleChange} value={formState.email}/>
 			              	<input id="p_submit" type="submit" value="send"/>
 			              	<label for="p_submit"><FaEnvelope/></label>
