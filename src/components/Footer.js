@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import { useStaticQuery, graphql,navigate } from "gatsby"
-import {Container,Row,Col} from "react-bootstrap"
+import {Container,Row,Col,Form} from "react-bootstrap"
 import { FaEnvelope,FaFacebookF,FaInstagram,FaLinkedinIn,FaTwitter } from "react-icons/fa";
 import { Link } from 'gatsby'
 import Fade from 'react-reveal/Fade';
@@ -211,12 +211,12 @@ const encode = (data) => {
 							Subscribe
 						</div>
 						<p>{footerdata.allContentfulFooter.nodes[0].subscriptionText.subscriptionText}</p>
-						<form action="#" className="footer-subscribe" data-toggle="validator" noValidate="true" onSubmit={handleSubmit} name="subscription" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+						<Form action="#" className="footer-subscribe" data-toggle="validator" noValidate="true" onSubmit={handleSubmit} name="subscription" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
 							<input type="hidden" name="form-name2" value="subscription" />
 							<input type="email" name="email" className="form-control" placeholder="enter your email" onChange={handleChange} value={formState.email}/>
 			              	<input id="p_submit" type="submit" value="send"/>
 			              	<label for="p_submit"><FaEnvelope/></label>
-			            </form>
+			            </Form>
 					</div>
 				</Col>
 			</Row>
