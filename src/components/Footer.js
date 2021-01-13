@@ -213,9 +213,14 @@ const encode = (data) => {
 						<p>{footerdata.allContentfulFooter.nodes[0].subscriptionText.subscriptionText}</p>
 						<Form action="#" className="footer-subscribe" data-toggle="validator" noValidate="true" onSubmit={handleSubmit} name="subscription" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
 							<input type="hidden" name="form-name2" value="subscription" />
-							<input type="email" name="email" className="form-control" placeholder="enter your email" onChange={handleChange} value={formState.email}/>
-			              	<input id="p_submit" type="submit" value="send"/>
-			              	<label for="p_submit"><FaEnvelope/></label>
+							<Form.Group>
+								<Form.Control type="email" name="email" className="form-control" placeholder="enter your email" onChange={handleChange} value={formState.email}/>
+							</Form.Group>
+							<Form.Group>
+								<Form.Control id="p_submit" type="submit" value="send"/>
+			              		<label for="p_submit"><FaEnvelope/></label>
+							</Form.Group>
+			              	
 			            </Form>
 					</div>
 				</Col>
