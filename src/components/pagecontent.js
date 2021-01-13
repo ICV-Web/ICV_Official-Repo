@@ -34,7 +34,7 @@ const Pagecontent = () => {
     fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({ "form-name": "contact", ...formState })
+        body: encode({ "form-name": "contact v2", ...formState })
       })
         .then(() => navigate("/validation"))
         .catch(error => console.log(error));
@@ -60,8 +60,8 @@ const Pagecontent = () => {
                                 <h3 className="section-heading-2">
                                     Contact Details
                                 </h3>
-                                <Form action="#" class="form-contact" id="contactForm" data-toggle="validator" noValidate="true" onSubmit={handleSubmit} name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
-                                    <input type="hidden" name="form-name" value="contact" />
+                                <Form action="#" class="form-contact" id="contactForm" data-toggle="validator" noValidate="true" onSubmit={handleSubmit} name="contact v2" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+                                    <input type="hidden" name="form-name" value="contact v2" />
                                     <Form.Group>
                                         <Form.Control id="p_name" name="name" type="text" placeholder="Full Name..." required="" onChange={handleChange} value={formState.name}/>
                                         <div className="help-block with-errors"></div>
