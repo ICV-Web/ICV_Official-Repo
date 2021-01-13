@@ -58,13 +58,13 @@ const { allContentfulProjects: {nodes: footerprojects }, } = footerdata;
 const [formState, setFormState] = useState({
        email: "",
 })
-const handleChangef=e =>{
+const handleChange=e =>{
 	setFormState({
 		...formState,
 		[e.target.name]:e.target.value,
 	})
 }
-const handleSubmitf=e =>{
+const handleSubmit=e =>{
  fetch("/", {
 	 method: "POST",
 	 headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -211,9 +211,9 @@ const encode = (data) => {
 							Subscribe
 						</div>
 						<p>{footerdata.allContentfulFooter.nodes[0].subscriptionText.subscriptionText}</p>
-						<form action="#" className="footer-subscribe" data-toggle="validator" noValidate="true" onSubmit={handleSubmitf} name="subscription" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+						<form action="#" className="footer-subscribe" data-toggle="validator" noValidate="true" onSubmit={handleSubmit} name="subscription" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
 							<input type="hidden" name="form-name" value="subscription" />
-							<input type="email" name="email" className="form-control" placeholder="enter your email" onChange={handleChangef} value={formState.email}/>
+							<input type="email" name="email" className="form-control" placeholder="enter your email" onChange={handleChange} value={formState.email}/>
 			              	<input id="p_submit" type="submit" value="send"/>
 			              	<label for="p_submit"><FaEnvelope/></label>
 			            </form>
