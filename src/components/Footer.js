@@ -1,5 +1,5 @@
-import React from 'react'
-import { useStaticQuery, graphql } from "gatsby"
+import React, {useState} from 'react'
+import { useStaticQuery, graphql,navigate } from "gatsby"
 import {Container,Row,Col} from "react-bootstrap"
 import { FaEnvelope,FaFacebookF,FaInstagram,FaLinkedinIn,FaTwitter } from "react-icons/fa";
 import { Link } from 'gatsby'
@@ -72,7 +72,7 @@ const handleSubmit=e =>{
 	 headers: { "Content-Type": "application/x-www-form-urlencoded" },
 	 body: encode({ "form-name": "subscription", ...formState })
    })
-	 .then(() => console.log("Success!"))
+	 .then(() => navigate("/validation"))
 	 .catch(error => console.log(error));
 
    e.preventDefault();
@@ -135,7 +135,7 @@ const encode = (data) => {
 		<Container>
 			
 			<Row>
-				<Col md={3} sm={3}>
+				<Col md={3} sm={12} xs={12}>
 					<div className="footer-item">
 						<img src={footerdata.allContentfulFooter.nodes[0].logo.fluid.src} alt="logo bottom" className="logo-bottom"/>
 						<p>{footerdata.allContentfulFooter.nodes[0].footerDesc.footerDesc}</p>
@@ -163,7 +163,7 @@ const encode = (data) => {
 						</div>
 					</div>
 				</Col>
-				<Col md={3} sm={3}>
+				<Col md={3} sm={3} xs={3}>
 					<div className="footer-item">
 						<div className="footer-title">
 						Product
@@ -193,7 +193,7 @@ const encode = (data) => {
 						</ul>
 					</div>
 				</Col>
-				<Col md={3} sm={3}>
+				<Col md={3} sm={3} xs={3}>
 					<div className="footer-item">
 						<div className="footer-title">
 							Company
@@ -207,13 +207,13 @@ const encode = (data) => {
 						</ul>
 					</div>
 				</Col>
-				<Col md={3} sm={3}>
+				<Col md={3} sm={6} xs={6}>
 					<div className="footer-item">
 						<div className="footer-title">
 							Subscribe
 						</div>
 						<p>{footerdata.allContentfulFooter.nodes[0].subscriptionText.subscriptionText}</p>
-						<form action="#" className="footer-subscribe" data-toggle="validator" noValidate="true" onSubmit={handleSubmit} name="subscription" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+						<form action="" className="footer-subscribe" data-toggle="validator" noValidate="true" onSubmit={handleSubmit} name="subscription" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
 							<input type="hidden" name="form-name" value="subscription" />
 							<input type="email" name="email" className="form-control" placeholder="enter your email" onChange={handleChange} value={formState.email}/>
 			              	<input id="p_submit" type="submit" value="send"/>

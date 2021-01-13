@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,%20600,700,800");
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 .bolder {
   font-weight: 600;
 }
@@ -42,17 +42,18 @@ body span.comments {
 }
 
 html {
-  font-family: sans-serif;
+  font-family: 'Raleway', sans-serif;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 }
 
 body {
+  font-family: 'Raleway', sans-serif !important;
   margin: 0;
 }
 
 .bannerslider .carousel-inner {
-  height: 650px;
+  height: 100%;
 }
 
 .bannerslider .carousel-caption {
@@ -271,7 +272,7 @@ input,
 select,
 textarea {
   color: #222222;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Raleway', sans-serif !important;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.7;
@@ -532,24 +533,24 @@ td {
 /* Placeholder text color -- selectors need to be separate to work. */
 ::-webkit-input-placeholder {
   color: #686868;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Raleway', sans-serif !important;
 }
 
 :-moz-placeholder {
   color: #686868;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Raleway', sans-serif !important;
 }
 
 ::-moz-placeholder {
   color: #686868;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Raleway', sans-serif !important;
   opacity: 1;
   /* Since FF19 lowers the opacity of the placeholder by default */
 }
 
 :-ms-input-placeholder {
   color: #686868;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Raleway', sans-serif !important;
 }
 
 html,
@@ -731,7 +732,7 @@ h4,
 .lead,
 h5,
 .section-subheading {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Raleway', sans-serif !important;
   font-weight: 700;
   margin-top: 10px;
   margin-bottom: 20px;
@@ -778,7 +779,7 @@ b {
 }
 
 .lead {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Raleway', sans-serif !important;
   font-weight: 500;
   color: #2b3990;
   line-height: 1.6;
@@ -1130,7 +1131,7 @@ Back To Top Section
 .btn,
 .btn-primary,
 .btn-secondary {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Raleway', sans-serif !important;
   font-size: 14px;
   color: #ffffff;
   padding: 15px 35px;
@@ -3019,7 +3020,7 @@ button.lang-button:hover {
   margin: 0 0;
   font-size: 12px;
   font-weight: 700;
-  padding: 10px 20px;
+  padding: 10px 12px;
 }
 .navbar-main .nav > li > a {
   color: #222222;
@@ -3647,7 +3648,7 @@ dl.hiw dd .lead {
   width: 60%;
   margin: 0 auto;
   text-align: center;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Raleway', sans-serif !important;
   color: #ffffff;
 }
 
@@ -3716,7 +3717,7 @@ dl.hiw dd .lead {
   margin-top: 0px !important;
   margin-bottom: 0px !important;
   display: block !important;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Raleway', sans-serif !important;
   -webkit-font-smoothing: antialiased;
   font-size: 14px;
   color: #6f6f6f;
@@ -4482,5 +4483,47 @@ nav.navbar-collapse.collapse.in {
   max-width: 20px !important;
   max-height: 20px !important;
 }
+/*Update 1/12/2021*/
+.validationP {
+  margin-top: 100px;
+  text-align: center;
+  border-radius: 10px;
+  padding: 50px;
+}
+.validationP h1{
+  color: #2b3990;
+  font-size: 30px;
+}
+nav.navbar-collapse.collapse.in li{
+  width: 100%;
+}
+.contact-resp .list-info li{
+  margin-bottom: 0px !important;
+}
+/*Update 1/13/2021*/
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+.btn-c{
+  margin: auto;
+}
+
+/*Line 3018(Menu bar),55(Carousal Height)*/
 
 /*# sourceMappingURL=style.css.map */

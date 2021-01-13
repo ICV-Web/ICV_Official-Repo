@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import {Container,Row,Col,Form, Button} from "react-bootstrap"
 import { FaMapMarkerAlt,FaPhoneAlt,FaEnvelope } from "react-icons/fa";
-import { useStaticQuery, graphql , Link} from "gatsby"
+import { useStaticQuery, graphql , Link,navigate} from "gatsby"
 import Fade from 'react-reveal/Fade';
 
 
@@ -36,7 +36,7 @@ const Pagecontent = () => {
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: encode({ "form-name": "contact", ...formState })
       })
-        .then(() => console.log("Success!"))
+        .then(() => navigate("/validation"))
         .catch(error => console.log(error));
 
       e.preventDefault();
@@ -109,7 +109,7 @@ const Pagecontent = () => {
                     </div>
                     </Fade>
                     <Fade top>
-                    <div class="widget contact-info-sidebar">
+                    <div class="widget contact-info-sidebar contact-resp">
                             <div class="widget-title">
                                 Contact Info
                             </div>
