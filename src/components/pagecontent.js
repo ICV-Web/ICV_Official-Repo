@@ -98,7 +98,7 @@ const Pagecontent = () => {
                                     </Form.Group>
                                 </Form>
                                 <div className="margin-bottom-50"></div>
-                                <p><em>Note: Consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</em></p>
+                
                         </div>   
                         </Fade>                     
                    </Col>
