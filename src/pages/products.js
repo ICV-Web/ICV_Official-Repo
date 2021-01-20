@@ -9,13 +9,13 @@ const Layout = loadable(() => import('../components/layout'))
 
 
 const products = ({data}) => {
-
+    
 
     const {allContentfulProjects:{nodes: allprojects},} = data
 
     const getbannerimage = data.allContentfulProductsPages.nodes[0].bannerImage.fluid.src
-
-
+    const linkpdf = data.contentfulRequestPdfProduct.downloadsPdf.file.url
+    const headingpdf = data.contentfulRequestPdfProduct.requestPdfHeading.requestPdfHeading
     return (
 
         <>
@@ -37,28 +37,53 @@ const products = ({data}) => {
                 {allprojects.map((projects) => {
 
                     return(
-
+                      <>
                          <Fade bottom>
-                            <section className="services">
+                            <section className="services banner-page about b1-segment" style={{ backgroundImage:   `url(${projects.imgDesk.fluid.src})`  }}>
                                 <Container>
                                     <Row>
                                     <Col md={12}>
                                         <div className="description-wrapper">
                                             <h3>{projects.projectTitle}</h3>
                                             <p>{projects.description.description}</p>
-                                            <Link  target="_blank" to={projects.addPdf.file.url} class="btn btn-danger">Download PDF</Link>
-                                            <Link  target="_blank" to="/contact" class="btn btn-danger">Request PDF</Link>
                                         </div>
                                     </Col>
                                     </Row>
                                 </Container>
                             </section>
                          </Fade>
+
+                         <Fade bottom>
+                         <section className="services banner-page about b2-segment" style={{ backgroundImage:   `url(${projects.imgMob.fluid.src})`  }}>
+                             <Container>
+                                 <Row>
+                                 <Col md={12}>
+                                     <div className="description-wrapper">
+                                         <h3>{projects.projectTitle}</h3>
+                                         <p>{projects.description.description}</p>
+                                     </div>
+                                 </Col>
+                                 </Row>
+                             </Container>
+                         </section>
+                      </Fade>
+                      </>
                     )
 
                 })}
-
-
+                <Fade bottom>
+                  <section className="request-wrapper">
+                      <Container>
+                          <Row>
+                            <Col md={12}>
+                              <h4>{headingpdf}</h4>
+                              <Link  target="_blank" to={linkpdf} class="btn btn-danger resp-btn">Download PDF</Link>
+                              <Link  target="_blank" to="/contact" class="btn btn-danger resp-btn">Request PDF</Link>
+                            </Col>
+                          </Row>
+                      </Container>
+                  </section>
+                </Fade>
             </Layout>
         </>
 
@@ -73,11 +98,26 @@ export const query = graphql`
         description {
           description
         }
-        addPdf {
-          file {
-            url
+        imgMob {
+          fluid {
+            src
           }
         }
+        imgDesk {
+          fluid {
+            src
+          }
+        }
+      }
+    }
+    contentfulRequestPdfProduct {
+      downloadsPdf {
+        file {
+          url
+        }
+      }
+      requestPdfHeading {
+        requestPdfHeading
       }
     }
 

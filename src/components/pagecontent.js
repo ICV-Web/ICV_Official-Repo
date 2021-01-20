@@ -57,6 +57,19 @@ const Pagecontent = () => {
                         <div className="content">
                                 <p className="section-heading-3">{contentdata.allContentfulContact.nodes[0].contentDesc.contentDesc}</p>
                                 <div className="margin-bottom-30"></div>
+                        </div>
+                        </Fade>
+                    </Col>
+                    <Col sm={4} md={4}>
+                    <Fade right>
+                         <div class="widget download">
+                                 <Link to="#" class="btn btn-secondary btn-block btn-sidebar"><span class="fa  fa-file-pdf-o"></span> Company Brochure</Link>
+                         </div>
+                     </Fade>
+                 </Col>
+                    <Col sm={8} md={8}>
+                        <Fade left>
+                        <div className="content">
                                 <h3 className="section-heading-2">
                                     Contact Details
                                 </h3>
@@ -81,7 +94,7 @@ const Pagecontent = () => {
                                         <textarea
                                             className="form-control"
                                             id="p_message"
-                                            rows="16"
+                                            rows="13"
                                             placeholder="Write message"
                                             name="message"
                                             onChange={handleChange} 
@@ -102,18 +115,14 @@ const Pagecontent = () => {
                         </div>   
                         </Fade>                     
                    </Col>
-                   <Col sm={4} md={4}>
-                       <Fade right>
-                    <div class="widget download">
-                            <Link to="#" class="btn btn-secondary btn-block btn-sidebar"><span class="fa  fa-file-pdf-o"></span> Company Brochure</Link>
-                    </div>
-                    </Fade>
+
+                    <Col sm={4} md={4}>
                     <Fade top>
                     <div class="widget contact-info-sidebar contact-resp">
-                            <div class="widget-title">
+                            <div class="widget-title title-change">
                                 Contact Info
                             </div>
-                            <ul class="list-info">
+                            <ul class="list-info list-change">
                                 <li>
                                     <h4>Pakistan</h4>
                                 </li>
@@ -137,7 +146,7 @@ const Pagecontent = () => {
                                     <div class="info-text">info@icvglobal.com</div>
                                 </li>
                             </ul>
-                            <ul class="list-info">
+                            <ul class="list-info list-change mar-list">
                                 <li>
                                     <h4 >Germany</h4>
                                 </li>
@@ -161,7 +170,7 @@ const Pagecontent = () => {
                                     <div class="info-text">info@icvglobal.com</div>
                                 </li>
                             </ul>
-                            <ul class="list-info">
+                            <ul class="list-info list-change mar-list">
                                 <li>
                                     <h4>UAE</h4>
                                 </li>

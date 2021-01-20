@@ -45,7 +45,7 @@ const HomeAboutSection = () => {
 		<Container>
 			<Row>
 				
-				<Col sm={4} md={4}>
+				<Col sm={12} md={4}>
 					<Fade right>
 						<div className="box-icon-2">
 							<div className="body-content">
@@ -55,7 +55,7 @@ const HomeAboutSection = () => {
 						</div>
 					</Fade>
 				</Col>
-				<Col sm={4} md={4}>
+				<Col sm={12} md={4}>
 					<Fade right>
 						<div className="box-icon-2">
 							<div className="body-content">
@@ -65,7 +65,7 @@ const HomeAboutSection = () => {
 						</div>
 					</Fade>	
 				</Col>
-				<Col sm={4} md={4}>
+				<Col sm={12} md={4}>
 					<Fade right>
 						<div className="box-icon-2">
 							<div className="body-content">

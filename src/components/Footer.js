@@ -89,7 +89,7 @@ const encode = (data) => {
 		<Fade right>
 			<Row>
 				
-				<Col md={4} sm={4}>
+				<Col md={4} sm={12}>
 					<div className="box-icon-4">
 						<div className="icon"><i className="fa fa-phone"></i></div>
 						<div className="body-content">
@@ -100,7 +100,7 @@ const encode = (data) => {
 						</div>
 					</div>
 				</Col>
-				<Col md={4} sm={4}>
+				<Col md={4} sm={12}>
 					<div className="box-icon-4">
 						<div className="icon"><i className="fa fa-map-marker"></i></div>
 						<div className="body-content">
@@ -111,7 +111,7 @@ const encode = (data) => {
 						</div>
 					</div>
 				</Col>
-				<Col md={4} sm={4}>
+				<Col md={4} sm={12}>
 					<div className="box-icon-4">
 						<div className="icon"><i className="fa fa-envelope"></i></div>
 						<div className="body-content">
@@ -161,7 +161,7 @@ const encode = (data) => {
 						</div>
 					</div>
 				</Col>
-				<Col md={3} sm={3} xs={3}>
+				<Col md={3} sm={3} xs={12}>
 					<div className="footer-item">
 						<div className="footer-title">
 						Product
@@ -191,7 +191,7 @@ const encode = (data) => {
 						</ul>
 					</div>
 				</Col>
-				<Col md={3} sm={3} xs={3}>
+				<Col md={3} sm={3} xs={12}>
 					<div className="footer-item">
 						<div className="footer-title">
 							Company
@@ -205,7 +205,7 @@ const encode = (data) => {
 						</ul>
 					</div>
 				</Col>
-				<Col md={3} sm={6} xs={6}>
+				<Col md={3} sm={6} xs={12}>
 					<div className="footer-item">
 						<div className="footer-title">
 							Subscribe
@@ -230,10 +230,10 @@ const encode = (data) => {
 		<div className="fcopy">
 			<Container>
 				<Row>
-					<Col md={6} sm={7}>
-						<p className="ftex">{footerdata.allContentfulFooter.nodes[0].copyright}</p> 
+					<Col md={6} sm={12}>
+						<p className="ftex resp-ftex">{footerdata.allContentfulFooter.nodes[0].copyright}</p> 
 					</Col>
-					<Col md={6} sm={5}>
+					<Col md={6} sm={12}>
 					<div className="topbar-right">
 						<ul className="topbar-menu">
 								<li><Link to="#" title="Career">Imprint</Link></li> 

@@ -681,7 +681,7 @@ dfn {
 
 .section-heading-2 {
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 700;
   color: #2b3990;
 }
 
@@ -706,7 +706,7 @@ dfn {
 /* 1.2. TEXT COLOR */
 /* 1.3. ANCHOR */
 a {
-  margin-right: 20px;
+  margin-right:15px;
   color: #666666;
   text-decoration: none;
 }
@@ -3831,7 +3831,7 @@ dl.hiw dd .lead {
 .footer .footer-item .footer-title:before {
   content: "";
   display: block;
-  width: 150px;
+  width: 100px;
   border-top: 2px solid #ed1c24;
   position: absolute;
   left: 0;
@@ -4035,7 +4035,7 @@ dl.hiw dd .lead {
   }
 
   .nav > li > a {
-    padding: 10px 6px;
+    padding: 10px 0px;
   }
 
   /*.navbar-main .dropdown-menu > li a{
@@ -4526,4 +4526,81 @@ nav.navbar-collapse.collapse.in li{
 
 /*Line 3018(Menu bar),55(Carousal Height)*/
 
+/*Update 1/19/2021*/
+.title-change{
+  margin-top: 15px;
+  margin-bottom: 0px;
+}
+.list-change li{
+  margin-bottom: 0px;
+}
+.list-change li h4 {
+    line-height:1px;
+}
+.mar-list li h4{
+    margin-top: 30px;
+}
+.request-wrapper{
+  text-align: center;
+  margin-top: 50px;
+}
+@media screen and (max-width: 480px) {
+  .resp-btn {
+    margin-top: 10px;
+    font-size: 10px;
+    width: 150px;
+  }
+
+}
+@media screen and (min-width:767.5px) {
+  .b1-segment{
+    display: block;
+    background-size: cover !important;
+    height: 100% !important;
+  }
+  .description-wrapper {
+    width: 50%;
+}
+  .b2-segment{
+    display: none;
+  }
+}
+@media screen and (max-width:767px) {
+  .request-wrapper h1{
+    font-size: 16px;
+  }
+  .b1-segment{
+    display: none;
+    
+  }
+  .b2-segment{
+    display: block;
+    background-size: cover !important;
+    height: 100% !important;
+  }
+  .resp-ftex{
+    text-align: center;
+    margin-right: 20px;
+  }
+  button.navbar-toggle:focus {
+    outline: 0px auto -webkit-focus-ring-color;
+  }
+  button.navbar-toggle {
+    border-color: white;
+  }
+}
+@media screen and (max-width:575px){
+  ul.topbar-menu {
+    display: flex !important;
+    flex-flow: column;
+  }
+}
+/*Update 1/20/2021*/
+@media screen and (max-width:1199px){
+  .box-icon-2{
+    min-height: 300px;
+    max-height: 300px;
+    overflow-x: auto;
+  }
+}
 /*# sourceMappingURL=style.css.map */
