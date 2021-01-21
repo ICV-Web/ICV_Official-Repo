@@ -38,9 +38,10 @@ const products = ({data}) => {
 
                     return(
                       <>
-                         <Fade bottom>
-                            <section className="services banner-page about b1-segment" style={{ backgroundImage:   `url(${projects.imgDesk.fluid.src})`  }}>
-                                <Container>
+                        
+                            <section className={ `services banner-page about  b1-segment bg-fx ${projects.addClassTestLefttestRight}`  } style={{ backgroundImage:   `url(${projects.imgDesk.fluid.src})`  }}>
+                            <Fade bottom>  
+                            <Container>
                                     <Row>
                                     <Col md={12}>
                                         <div className="description-wrapper">
@@ -50,23 +51,27 @@ const products = ({data}) => {
                                     </Col>
                                     </Row>
                                 </Container>
+                                </Fade>
                             </section>
-                         </Fade>
+                         
 
+                        
+                         <section className="services banner-page about b2-segment">
                          <Fade bottom>
-                         <section className="services banner-page about b2-segment" style={{ backgroundImage:   `url(${projects.imgMob.fluid.src})`  }}>
                              <Container>
                                  <Row>
                                  <Col md={12}>
                                      <div className="description-wrapper">
                                          <h3>{projects.projectTitle}</h3>
                                          <p>{projects.description.description}</p>
+                                         <img src={projects.imgMob.fluid.src}/>
                                      </div>
                                  </Col>
                                  </Row>
                              </Container>
+                             </Fade>
                          </section>
-                      </Fade>
+                     
                       </>
                     )
 
@@ -108,6 +113,8 @@ export const query = graphql`
             src
           }
         }
+        addClassTestLefttestRight
+        
       }
     }
     contentfulRequestPdfProduct {

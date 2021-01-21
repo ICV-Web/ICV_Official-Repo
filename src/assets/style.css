@@ -4354,7 +4354,7 @@ section.career-section {
 /* section.services:nth-child(even) {
   background: #fafafa;
 } */
-section.services:nth-child(4n + 1) {
+/* section.services:nth-child(4n + 1) {
   background: #e0f4ff;
 }
 section.services:nth-child(4n + 2) {
@@ -4365,7 +4365,7 @@ section.services:nth-child(4n + 3) {
 }
 section.services:nth-child(4n + 4) {
   background: #eafff4;
-}
+} */
 
 section.services .description-wrapper h3 {
   color: #2b3990;
@@ -4552,7 +4552,7 @@ nav.navbar-collapse.collapse.in li{
   }
 
 }
-@media screen and (min-width:767.5px) {
+@media screen and (min-width:768px) {
   .b1-segment{
     display: block;
     background-size: cover !important;
@@ -4575,8 +4575,12 @@ nav.navbar-collapse.collapse.in li{
   }
   .b2-segment{
     display: block;
-    background-size: cover !important;
+    color: white;
     height: 100% !important;
+    background-color: #262626;
+  }
+  .b2-segment h3{
+    color: white !important;
   }
   .resp-ftex{
     text-align: center;
@@ -4590,10 +4594,10 @@ nav.navbar-collapse.collapse.in li{
   }
 }
 @media screen and (max-width:575px){
-  ul.topbar-menu {
+  /* ul.topbar-menu {
     display: flex !important;
     flex-flow: column;
-  }
+  } */
 }
 /*Update 1/20/2021*/
 @media screen and (max-width:1199px){
@@ -4603,4 +4607,71 @@ nav.navbar-collapse.collapse.in li{
     overflow-x: auto;
   }
 }
+.banner-page-home{
+  /* max-height: 645px !important; */
+  height:645px !important;
+  /* background-attachment: fixed !important; */
+  background-size: cover !important;
+}
+
+.bg-fx{
+  background-attachment: inherit !important;
+}
+
+.test-left{
+  background: white;
+  color:black !important;
+}
+.test-left .description-wrapper h3{
+  color: black !important;
+}
+.test-right{
+  background: black;
+  color: white;
+}
+.test-right .description-wrapper{
+  float: right;
+  width: 50%;
+}
+.test-right .description-wrapper h3{
+  color: white !important;
+}
+
+.f-r{
+  float: right;
+}
+.t-wrapper h3{
+  font-size: 16px;
+  font-weight: 600;
+}
+.t-wrapper p{
+  font-size: 14px;
+}
+.Apply-btn .btn-apply{
+  width: 160px;
+  margin: 0 !important;
+  border-radius: 15px;
+  background-color: #51C0B7 !important;  
+}
+.Title-location h5{
+  border: 1px solid #DCDDE1;
+  border-radius: 15px;
+  padding: 15px 15px;
+  width: 160px;
+  text-align: center;
+  margin-top: 19px;
+}
+.Apply-btn {
+  margin-top: 25px;
+}
+.av-job {
+  border: 1px solid #DCDDE1;
+  padding: 15px 40px;
+  box-shadow: 5px 10px #DCDDE1;
+  margin-bottom: 25px;
+}
+.box-info-pad {
+  padding-bottom: 20px;
+}
+
 /*# sourceMappingURL=style.css.map */

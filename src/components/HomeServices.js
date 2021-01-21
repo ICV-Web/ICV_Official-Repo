@@ -61,7 +61,7 @@ const { allContentfulHomeServices: {nodes: services }, } = getservicesdata;
 								<div className="icon-holder">
 									<img src={service.svgicon.file.url} alt="svgicon"/>
 								</div>
-								<Link to="services-detail.html" className="title">{service.servicesHeading}</Link>
+								<Link to="/businesssegment" className="title">{service.servicesHeading}</Link>
 							</div>
 						</div>
 					</Fade>

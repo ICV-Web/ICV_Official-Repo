@@ -70,7 +70,7 @@ const handleSubmit=e =>{
 	 headers: { "Content-Type": "application/x-www-form-urlencoded" },
 	 body: encode({ "form-name": "contact", ...formState })
    })
-	 .then(() => console.log("SS"))
+	 .then(() => navigate("/validation"))
 	 .catch(error => console.log(error));
 
    e.preventDefault();
@@ -199,7 +199,7 @@ const encode = (data) => {
 						<ul className="list">
 							<li><Link to="/ourcore" title="">Our Core</Link></li>
 							<li><Link to="/businesssegment" title="">Business Segments</Link></li>
-							<li><Link to="/products" title="">News / Press Release</Link></li>
+							<li><Link to="/blogs" title="">News / Press Release</Link></li>
 							<li><Link to="/careers" title="">Careers</Link></li>
 							<li><Link to="/downloads" title="">Downloads</Link></li>
 						</ul>
@@ -236,7 +236,7 @@ const encode = (data) => {
 					<Col md={6} sm={12}>
 					<div className="topbar-right">
 						<ul className="topbar-menu">
-								<li><Link to="#" title="Career">Imprint</Link></li> 
+								<li><Link to="/imprints" title="Career">Imprint</Link></li> 
 								<li><Link to="/cookiepolicy" title="">Cookie Policy</Link></li>
 								<li><Link to="/dataprotection" title="">Data Protection</Link></li>
 								<li><Link to="/downloads"  title="">Downloads</Link></li>

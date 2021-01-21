@@ -17,7 +17,7 @@ const Slider = () => {
           sliderHeading
           sliderImage {
             fluid {
-              src
+              ...GatsbyContentfulFluid
             }
           }
         }
@@ -34,23 +34,25 @@ const Slider = () => {
             {Sliders.map((Slider) =>{
                 return (
                     <Carousel.Item>
-                    <img
-                    className="d-block w-100"
-                    src={Slider.sliderImage.fluid.src}
-                    alt="First slide"
-                    />
-                    <Carousel.Caption>
-                        <Container>
-                            <div className="wrap-caption">
-                                <h2 className="caption-heading">
-                                   {Slider.sliderHeading}
-                                </h2>
-                                <p className="excerpt">{Slider.sliderCaption}</p>	
-                                <linK to={Slider.sliderButton1LInk} className="btn btn-primary" title="LEARN MORE">{Slider.sliderButton1Text}</linK> <linK to={Slider.sliderButton2Link} class="btn btn-secondary" title="CONTACT US">{Slider.sliderButton2Text}</linK>
-                            </div>
-                        </Container>
-                    </Carousel.Caption>
-                </Carousel.Item>
+                     {/*} <img
+                      className="d-block w-100"
+                      src={Slider.sliderImage.fluid.src}
+                      alt="First slide"
+                      />*/}
+                      <div className="d-block w-100 section banner-page-home about" style={{ backgroundImage:   `url(${Slider.sliderImage.fluid.src})` }}>
+                        <Carousel.Caption>
+                            <Container>
+                                <div className="wrap-caption">
+                                    <h2 className="caption-heading">
+                                      {Slider.sliderHeading}
+                                    </h2>
+                                    <p className="excerpt">{Slider.sliderCaption}</p>	
+                                    <linK to={Slider.sliderButton1LInk} className="btn btn-primary" title="LEARN MORE">{Slider.sliderButton1Text}</linK> <linK to={Slider.sliderButton2Link} class="btn btn-secondary" title="CONTACT US">{Slider.sliderButton2Text}</linK>
+                                </div>
+                            </Container>
+                        </Carousel.Caption>
+                      </div>
+                    </Carousel.Item>
                     )
             })}
         </Carousel>

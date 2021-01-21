@@ -26,16 +26,17 @@ const SegmentContent = () => {
           }
 
           servicesHeading
+          addClassTestLefttestRight
           imgDesk {
-        fluid {
-          src
+            fluid {
+              src
+            }
+          }
+        imgMob {
+          fluid {
+            src
+          }
         }
-      }
-      imgMob {
-        fluid {
-          src
-        }
-      }
         }
       }
       contentfulRequestPdfIdentifierBs {
@@ -76,40 +77,40 @@ const SegmentContent = () => {
             {getallservices.map((service) => {
 
               return(
-
                 <>
-                <Fade bottom>
-                   <section className="services banner-page about  b1-segment" style={{ backgroundImage:   `url(${service.imgDesk.fluid.src})` }}>
+               
+                   <section className={ `services banner-page about  b1-segment bg-fx ${service.addClassTestLefttestRight}`  } style={{ backgroundImage:   `url(${service.imgDesk.fluid.src})` }}>
+                    <Fade bottom>   
                       <Container>
-                        <Row>
-                          <Col md={12}>
-                              <div className="description-wrapper">
-                                  <h3>{service.servicesHeading}</h3>
-                                  <p>{service.description.description}</p>
-                                  
-                              </div>
-                          </Col>
-                        
-                        </Row>
-                      </Container>
+                            <Row>
+                              <Col md={12}>
+                                  <div className="description-wrapper">
+                                      <h3>{service.servicesHeading}</h3>
+                                      <p>{service.description.description}</p>      
+                                  </div>
+                              </Col>
+                            </Row>
+                        </Container>
+                      </Fade>
                    </section>
-                </Fade>
-                <Fade bottom>
-                <section className="services banner-page about  b2-segment" style={{ backgroundImage:   `url(${service.imgMob.fluid.src})` }}>
+                
+                
+                <section className="services banner-page about  b2-segment">
+                  <Fade bottom>
                    <Container>
                      <Row>
                        <Col md={12}>
                            <div className="description-wrapper">
                                <h3>{service.servicesHeading}</h3>
                                <p>{service.description.description}</p>
-                               
+                               <img src={service.imgMob.fluid.src}/>
                            </div>
                        </Col>
-                     
                      </Row>
                    </Container>
+                   </Fade>
                 </section>
-             </Fade>
+
                 </>
 
               )
@@ -125,6 +126,8 @@ const SegmentContent = () => {
                 </Col>
               </Row>
             </Container>   
+
+      
         </div>    
         </>
     )
