@@ -86,7 +86,7 @@ const encode = (data) => {
 		
 	<div className="section info overlap-bottom">
 		<Container>
-		<Fade right>
+		
 			<Row>
 				
 				<Col md={4} sm={12}>
@@ -124,7 +124,6 @@ const encode = (data) => {
 				</Col>
 				
 			</Row>
-			</Fade>
 		</Container>
 	</div>
 

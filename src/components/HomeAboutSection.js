@@ -46,34 +46,34 @@ const HomeAboutSection = () => {
 			<Row>
 				
 				<Col sm={12} md={4}>
-					<Fade right>
+					
 						<div className="box-icon-2">
 							<div className="body-content">
 								<div className="heading">{getdata.allContentfulHomeAboutSection.nodes[0].aboutBox1Heading}</div>
 							{getdata.allContentfulHomeAboutSection.nodes[0].aboutBox1Description.aboutBox1Description}
 							</div>
 						</div>
-					</Fade>
+					
 				</Col>
 				<Col sm={12} md={4}>
-					<Fade right>
+					
 						<div className="box-icon-2">
 							<div className="body-content">
 								<div className="heading">{getdata.allContentfulHomeAboutSection.nodes[0].aboutBox2Heading}</div>
 	{getdata.allContentfulHomeAboutSection.nodes[0].aboutBox2Description.aboutBox2Description}
 							</div>
 						</div>
-					</Fade>	
+						
 				</Col>
 				<Col sm={12} md={4}>
-					<Fade right>
+					
 						<div className="box-icon-2">
 							<div className="body-content">
 								<div className="heading">{getdata.allContentfulHomeAboutSection.nodes[0].aboutBox3Heading}</div>
 	{getdata.allContentfulHomeAboutSection.nodes[0].aboutBox3Description.aboutBox3Description}
 							</div>
 						</div>
-					</Fade>
+					
 				</Col>
 				
 			</Row>
