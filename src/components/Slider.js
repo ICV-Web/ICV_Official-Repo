@@ -1,7 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { Carousel, Container } from 'react-bootstrap'
-
+import Img from "gatsby-image"
 const Slider = () => {
 
 
@@ -16,7 +16,7 @@ const Slider = () => {
           sliderCaption
           sliderHeading
           sliderImage {
-            fluid {
+            fluid(maxWidth: 1600) {
               ...GatsbyContentfulFluid
             }
           }
@@ -34,12 +34,17 @@ const Slider = () => {
             {Sliders.map((Slider) =>{
                 return (
                     <Carousel.Item>
-                     {/*} <img
-                      className="d-block w-100"
-                      src={Slider.sliderImage.fluid.src}
-                      alt="First slide"
-                      />*/}
-                      <div className="d-block w-100 section banner-page-home about" style={{ backgroundImage:   `url(${Slider.sliderImage.fluid.src})` }}>
+                   { /* <img
+                    //   className="d-block w-100"
+                    //   src={Slider.sliderImage.fluid.src}
+                    //   alt="First slide"
+                   //   />*/}
+                      <Img className="d-block w-100 section banner-page-home about"
+                          fluid={Slider.sliderImage.fluid} 
+                          key={Slider.sliderImage.fluid.src}
+                          alt={Slider.sliderHeading}
+                      /> 
+                      <div>
                         <Carousel.Caption>
                             <Container>
                                 <div className="wrap-caption">

@@ -8,7 +8,6 @@ import loadable from '@loadable/component'
 
 // Import the new rendering and the render node definitions
 import { renderRichText } from "gatsby-source-contentful/rich-text"
-import corebannerimg from '../images/banner-page.jpg'
 
 const Layout = loadable(() => import('../components/layout'))
 
@@ -77,8 +76,8 @@ const Layout = loadable(() => import('../components/layout'))
          allContentfulOurCorePage {
         nodes {
           ourCoreBanner {
-            fluid {
-              src
+            fluid(maxWidth:1600) {
+              ...GatsbyContentfulFluid
             }
           }
         }

@@ -2,7 +2,7 @@ import React from 'react'
 import {Container,Row,Col} from "react-bootstrap"
 import { Link } from "gatsby"
 import { useStaticQuery, graphql } from "gatsby"
-import segmentbannerimg from '../images/banner-page.jpg'
+import Img from "gatsby-image"
 
 const SegmentBanner = () => {
 
@@ -12,8 +12,8 @@ const SegmentBanner = () => {
       allContentfulBusinessSegment {
         nodes {
           bannerImg {
-            fluid {
-              src
+            fluid(maxWidth: 1600) {
+              ...GatsbyContentfulFluid
             }
           }
         }
@@ -23,7 +23,8 @@ const SegmentBanner = () => {
   
     return (
         <>
-        <div className="section banner-page about" style={{ backgroundImage:   `url(${SegmentBannerimg.allContentfulBusinessSegment.nodes[0].bannerImg.fluid.src})`  }}>
+      
+        <div className="section banner-page about" style={{ backgroundImage:    `url(${SegmentBannerimg.allContentfulBusinessSegment.nodes[0].bannerImg.fluid.src})`  }}>
         <Container>
                 <Row>
                     <Col sm={12} md={12}>

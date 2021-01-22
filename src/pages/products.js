@@ -109,8 +109,8 @@ export const query = graphql`
           }
         }
         imgDesk {
-          fluid {
-            src
+          fluid(maxWidth:1600) {
+            ...GatsbyContentfulFluid
           }
         }
         addClassTestLefttestRight
@@ -131,8 +131,8 @@ export const query = graphql`
     allContentfulProductsPages {
       nodes {
         bannerImage {
-          fluid {
-            src
+          fluid(maxWidth:1600) {
+            ...GatsbyContentfulFluid
           }
         }
       }

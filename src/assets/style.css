@@ -942,6 +942,7 @@ ul.circle li:before {
 }
 
 .banner-page {
+  background-position: center !important;
   height: 275px !important;
   display: block;
   background-color: #000;
@@ -3199,7 +3200,7 @@ button.lang-button:hover {
 /* 6.1 - About */
 .banner-page.about {
   /* background: url("../images/banner-page.jpg") bottom center no-repeat; */
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   background-size: cover;
 }
 
@@ -4674,4 +4675,9 @@ nav.navbar-collapse.collapse.in li{
   padding-bottom: 20px;
 }
 
+/*Update 1/22/2021*/
+.img-div {
+  height: 350px;
+  background-size: cover;
+}
 /*# sourceMappingURL=style.css.map */

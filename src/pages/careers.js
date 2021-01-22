@@ -103,8 +103,8 @@ export const query = graphql`
       }
       careerTitle
       bannerImg {
-        fluid {
-          src
+        fluid(maxWidth:1600) {
+          ...GatsbyContentfulFluid
         }
       }
     }

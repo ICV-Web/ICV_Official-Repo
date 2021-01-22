@@ -12,8 +12,8 @@ const DownloadsBanner = () => {
       allContentfulDownloads {
         nodes {
           downloadsBanner {
-            fluid {
-              src
+            fluid(maxWidth:1600) {
+              ...GatsbyContentfulFluid
             }
           }
         }

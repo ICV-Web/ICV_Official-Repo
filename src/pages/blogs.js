@@ -39,8 +39,8 @@ export const query = graphql`
     allContentfulBlogPageBanner {
       nodes {
         bannerIamge {
-          fluid {
-            src
+          fluid(maxWidth:1600) {
+            ...GatsbyContentfulFluid
           }
         }
       }

@@ -11,8 +11,8 @@ const data = useStaticQuery(graphql`
       allContentfulContact {
         nodes {
           bannerImg {
-            fluid {
-              src
+            fluid(maxWidth:1600) {
+              ...GatsbyContentfulFluid
             }
           }
         }
