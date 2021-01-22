@@ -39,7 +39,7 @@ const products = ({data}) => {
                     return(
                       <>
                         
-                            <section className={ `services banner-page about  b1-segment bg-fx ${projects.addClassTestLefttestRight}`  } style={{ backgroundImage:   `url(${projects.imgDesk.fluid.src})`  }}>
+                            <section className={ `services banner-page about  b1-segment bg-fx sz-bg ${projects.addClassTestLefttestRight}`  } style={{ backgroundImage:   `url(${projects.imgDesk.fluid.src})`  }}>
                             <Fade bottom>  
                             <Container>
                                     <Row>
