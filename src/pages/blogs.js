@@ -20,7 +20,7 @@ const blogs = ({data}) => {
                             <Col sm={12} md={12}>
                                 <div className="title-page">News</div>
                                 <ol className="breadcrumb">
-                                    <li><Link to="index.html">Home</Link></li>
+                                    <li><Link to="index.html">Home/</Link></li>
                                     <li className="active">News</li>
                                 </ol>
                             </Col>

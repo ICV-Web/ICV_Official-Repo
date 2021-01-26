@@ -26,7 +26,7 @@ const products = ({data}) => {
                             <Col sm={12} md={12}>
                                 <div className="title-page">Products</div>
                                 <ol className="breadcrumb">
-                                    <li><Link to="/">Home</Link></li>
+                                    <li><Link to="/">Home/</Link></li>
                                     <li className="active">Products</li>
                                 </ol>
                             </Col>

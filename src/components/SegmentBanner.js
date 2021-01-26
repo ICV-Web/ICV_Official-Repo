@@ -30,7 +30,7 @@ const SegmentBanner = () => {
                     <Col sm={12} md={12}>
                         <div className="title-page">Business Segments</div>
                         <ol className="breadcrumb">
-                            <li><Link to="index.html">Home</Link></li>
+                            <li><Link to="index.html">Home/</Link></li>
                             <li className="active">Business Segments</li>
                         </ol>
                     </Col>

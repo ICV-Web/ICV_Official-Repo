@@ -30,7 +30,7 @@ const DownloadsBanner = () => {
                     <Col sm={12} md={12}>
                         <div className="title-page">Downloads</div>
                         <ol className="breadcrumb">
-                            <li><Link to="index.html">Home</Link></li>
+                            <li><Link to="index.html">Home/</Link></li>
                             <li className="active">Downloads</li>
                         </ol>
                     </Col>

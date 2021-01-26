@@ -21,7 +21,7 @@ const imprints = ( { data } ) => {
                             <Col sm={12} md={12}>
                                 <div className="title-page">Imprints</div>
                                 <ol className="breadcrumb">
-                                    <li><Link to="index.html">Home</Link></li>
+                                    <li><Link to="index.html">Home/</Link></li>
                                     <li className="active">Imprints</li>
                                 </ol>
                             </Col>

@@ -28,7 +28,7 @@ const data = useStaticQuery(graphql`
                     <Col sm={12} md={12}>
                         <div className="title-page">Contact Us</div>
                         <ol className="breadcrumb">
-                            <li><Link to="#">Contact</Link></li>
+                            <li><Link to="#">Contact/</Link></li>
                             <li className="active">Contact Us</li>
                         </ol>
                     </Col>

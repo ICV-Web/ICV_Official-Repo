@@ -15,10 +15,11 @@ const Layout = loadable(() => import('../components/layout'))
 
   function PageTemplate({data}) {
     
-    const {content} = data.contentfulOurCorePage
+    const { allContentfulOurCorePageDescription: {nodes: getallcores} } = data;
     const banner = data.allContentfulOurCorePage.nodes[0].ourCoreBanner.fluid.src
     
     return (
+      <>
       <Layout>
 
           <div className="section banner-page imprint about" style={{ backgroundImage:   `url(${banner})`  }}>
@@ -33,8 +34,10 @@ const Layout = loadable(() => import('../components/layout'))
               </div>
             </div>
           </div>
-
-          <div className="section why">
+          {getallcores.map((core) => {
+          return(
+            <>
+          {/*<div className="section why">
 
             <Container className="padding-40">
         
@@ -46,10 +49,9 @@ const Layout = loadable(() => import('../components/layout'))
 
                     <div className="box-info">
 
-                      {content && renderRichText(content)}
-
+                       {content && renderRichText(content)}
+                      
                    </div>
-
                   </div>
                   </Fade>
                 </Col>
@@ -57,9 +59,44 @@ const Layout = loadable(() => import('../components/layout'))
               </Row>
 
             </Container>
-          </div>
-           
+          </div>*/}
+                   
+          <section className={ `services banner-page about  b1-segment sz-bg bg-fx ${core.addClassTestLefttestRight}`  } style={{ backgroundImage:   `url(${core.imgDesk.fluid.src})` }}>
+          <Fade bottom>   
+            <Container>
+                  <Row>
+                    <Col md={12}>
+                        <div className="description-wrapper">
+                            <h3>{core.coreTitle}</h3>
+                            <p>{core.coreDescription.coreDescription}</p>      
+                        </div>
+                    </Col>
+                  </Row>
+              </Container>
+            </Fade>
+         </section>
+      
+      
+      <section className="services banner-page about  b2-segment">
+        <Fade bottom>
+         <Container>
+           <Row>
+             <Col md={12}>
+                 <div className="description-wrapper">
+                     <h3>{core.coreTitle}</h3>
+                     <p>{core.coreDescription.coreDescription}</p>
+                     <img src={core.imgMob.fluid.src}/>
+                 </div>
+             </Col>
+           </Row>
+         </Container>
+         </Fade>
+        </section>
+          </>
+          )
+        })}
       </Layout>
+      </>
     )
   }
   PageTemplate.propTypes = {
@@ -68,12 +105,26 @@ const Layout = loadable(() => import('../components/layout'))
   export default PageTemplate
   export const pageQuery = graphql`
     query pageQuery{
-        contentfulOurCorePage {
-            content {
-              raw
+      allContentfulOurCorePageDescription {
+        nodes {
+          addClassTestLefttestRight
+          coreDescription {
+            coreDescription
+          }
+          coreTitle
+          imgDesk {
+            fluid(maxWidth:1600)  {
+              ...GatsbyContentfulFluid
             }
+          }
+          imgMob {
+            fluid {
+              src
+            }
+          }
         }
-         allContentfulOurCorePage {
+      }
+      allContentfulOurCorePage {
         nodes {
           ourCoreBanner {
             fluid(maxWidth:1600) {
