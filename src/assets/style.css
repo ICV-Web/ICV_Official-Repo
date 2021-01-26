@@ -4680,5 +4680,10 @@ nav.navbar-collapse.collapse.in li{
   height: 350px;
   background-size: cover;
 }
+/*Update 1/26/2021*/
+a.navbar-brand img {
+  max-width: 170px;
+}
+
 
 /*# sourceMappingURL=style.css.map */
