@@ -4567,6 +4567,9 @@ nav.navbar-collapse.collapse.in li{
   }
 }
 @media screen and (max-width:767px) {
+  .contact-info > div {
+    display: none;
+}
   .request-wrapper h1{
     font-size: 16px;
   }
@@ -4610,7 +4613,7 @@ nav.navbar-collapse.collapse.in li{
 }
 .banner-page-home{
   /* max-height: 645px !important; */
-  height:645px !important;
+  height:100% !important;
   /* background-attachment: fixed !important; */
   background-size: cover !important;
 }
