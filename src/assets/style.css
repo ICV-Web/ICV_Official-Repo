@@ -4569,7 +4569,16 @@ nav.navbar-collapse.collapse.in li{
 @media screen and (max-width:767px) {
   .contact-info > div {
     display: none;
-}
+  }
+  .footer .footer-item .footer-sosmed {
+    width: 100%;
+  }
+  .navbar-main .navbar-brand {
+    left:0px;
+  }
+  .topbar-left .welcome-text {
+    float: left;
+  }
   .request-wrapper h1{
     font-size: 16px;
   }
@@ -4597,12 +4606,7 @@ nav.navbar-collapse.collapse.in li{
     border-color: white;
   }
 }
-@media screen and (max-width:575px){
-  /* ul.topbar-menu {
-    display: flex !important;
-    flex-flow: column;
-  } */
-}
+
 /*Update 1/20/2021*/
 @media screen and (max-width:1199px){
   .box-icon-2{
@@ -4687,6 +4691,22 @@ nav.navbar-collapse.collapse.in li{
 a.navbar-brand img {
   max-width: 170px;
 }
+/*Update 1/27/2021*/
+@media screen and (max-width:575px){
+  .fcopy .topbar-right .topbar-menu {
+    display: flex;
+    flex-flow: column;
+  }
 
+  .topbar-left .welcome-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .topbar .topbar-right .topbar-menu li a {
+    margin-right: 10px;
+  }
+}
+/*Line 4573*/
 
 /*# sourceMappingURL=style.css.map */

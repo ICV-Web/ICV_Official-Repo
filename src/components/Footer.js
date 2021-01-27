@@ -137,26 +137,36 @@ const encode = (data) => {
 						<img src={footerdata.allContentfulFooter.nodes[0].logo.fluid.src} alt="logo bottom" className="logo-bottom"/>
 						<p>{footerdata.allContentfulFooter.nodes[0].footerDesc.footerDesc}</p>
 						<div className="footer-sosmed">
-							<Link to={footerdata.allContentfulFooter.nodes[0].socialLink1} title="">
-								<div className="item">
-									<FaFacebookF/>
-								</div>
-							</Link>
-							<Link to={footerdata.allContentfulFooter.nodes[0].socialLink3} title="">
-								<div className="item">
-									<FaInstagram/>
-								</div>
-							</Link>
-							<Link to={footerdata.allContentfulFooter.nodes[0].socialLink2} title="">
-								<div className="item">
-									<FaLinkedinIn/>
-								</div>
-							</Link>
-							<Link to={footerdata.allContentfulFooter.nodes[0].socialLink4} title="">
-								<div className="item">
-									<FaTwitter/>
-								</div>
-							</Link>
+							<Row>
+								<Col md={6} sm={3} xs={3}>
+									<Link to={footerdata.allContentfulFooter.nodes[0].socialLink1} title="">
+										<div className="item">
+											<FaFacebookF/>
+										</div>
+									</Link>
+								</Col>
+								<Col md={6} sm={3} xs={3}>
+									<Link to={footerdata.allContentfulFooter.nodes[0].socialLink3} title="">
+										<div className="item">
+											<FaInstagram/>
+										</div>
+									</Link>
+								</Col>
+								<Col md={6} sm={3} xs={3}>	
+									<Link to={footerdata.allContentfulFooter.nodes[0].socialLink2} title="">
+										<div className="item">
+											<FaLinkedinIn/>
+										</div>
+									</Link>
+								</Col>
+								<Col md={6} sm={3} xs={3}>
+									<Link to={footerdata.allContentfulFooter.nodes[0].socialLink4} title="">
+										<div className="item">
+											<FaTwitter/>
+										</div>
+									</Link>
+								</Col>	
+							</Row>
 						</div>
 					</div>
 				</Col>
