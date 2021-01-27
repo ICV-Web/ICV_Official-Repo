@@ -4565,6 +4565,9 @@ nav.navbar-collapse.collapse.in li{
   .b2-segment{
     display: none;
   }
+  .false {
+    visibility: hidden;
+  }
 }
 @media screen and (max-width:767px) {
   .contact-info > div {
@@ -4578,6 +4581,9 @@ nav.navbar-collapse.collapse.in li{
   }
   .topbar-left .welcome-text {
     float: left;
+  }
+  .false {
+    display: none;
   }
   .request-wrapper h1{
     font-size: 16px;
@@ -4707,6 +4713,10 @@ a.navbar-brand img {
     margin-right: 10px;
   }
 }
+.footer .footer-item .footer-sosmed {
+  text-align: center !important;
+}
+
 /*Line 4573*/
 
 /*# sourceMappingURL=style.css.map */
