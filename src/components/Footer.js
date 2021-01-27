@@ -137,40 +137,40 @@ const encode = (data) => {
 						<img src={footerdata.allContentfulFooter.nodes[0].logo.fluid.src} alt="logo bottom" className="logo-bottom"/>
 						<p>{footerdata.allContentfulFooter.nodes[0].footerDesc.footerDesc}</p>
 						<div className="footer-sosmed">
-							<Row>
-								<Col md={12} sm={3} xs={3}>
+							
+								
 									<Link to={footerdata.allContentfulFooter.nodes[0].socialLink1} title="">
 										<div className="item">
 											<FaFacebookF/>
 										</div>
 									</Link>
-									<div className="false">panik</div>
-								</Col>
+									
 								
-								<Col md={12} sm={3} xs={3}>
+								
+								
 									<Link to={footerdata.allContentfulFooter.nodes[0].socialLink3} title="">
 										<div className="item">
 											<FaInstagram/>
 										</div>
 									</Link>
-								</Col>
-								<div className="false">panik</div>
-								<Col md={12} sm={3} xs={3}>	
+								
+								
+									
 									<Link to={footerdata.allContentfulFooter.nodes[0].socialLink2} title="">
 										<div className="item">
 											<FaLinkedinIn/>
 										</div>
 									</Link>
-								</Col>
-								<div className="false">panik</div>
-								<Col md={12} sm={3} xs={3}>
+								
+								
+								
 									<Link to={footerdata.allContentfulFooter.nodes[0].socialLink4} title="">
 										<div className="item">
 											<FaTwitter/>
 										</div>
 									</Link>
-								</Col>	
-							</Row>
+									
+							
 						</div>
 					</div>
 				</Col>
