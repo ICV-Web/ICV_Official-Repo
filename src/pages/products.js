@@ -33,6 +33,24 @@ const products = ({data}) => {
                         </Row>
                     </Container>
                 </div>
+                <div className="section why">
+                  <Container>
+                    <Row>
+                        <Col md={12} sm={12}>
+                            <Fade left>
+                            <div className="content">
+                                  <p>
+                                  {data.allContentfulProductsPages.nodes[0].desc1.desc1}
+                                  </p>
+                                  <p>
+                                  {data.allContentfulProductsPages.nodes[0].desc2.desc2}
+                                  </p>
+                            </div>
+                            </Fade>
+                        </Col>
+                    </Row>
+                  </Container>
+                </div>
                 
                 {allprojects.map((projects) => {
 
@@ -109,7 +127,7 @@ export const query = graphql`
           }
         }
         imgDesk {
-          fluid(maxWidth:1600) {
+          fluid(maxWidth:1356, quality: 100) {
             ...GatsbyContentfulFluid
           }
         }
@@ -131,9 +149,15 @@ export const query = graphql`
     allContentfulProductsPages {
       nodes {
         bannerImage {
-          fluid(maxWidth:1600) {
+          fluid(maxWidth:1356, maxHeight: 275,quality: 100)  {
             ...GatsbyContentfulFluid
           }
+        }
+        desc1 {
+          desc1
+        }
+        desc2 {
+          desc2
         }
       }
     }

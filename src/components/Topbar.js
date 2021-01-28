@@ -30,7 +30,13 @@ import { useStaticQuery, graphql } from "gatsby"
 		  
       }
     }
+	contentfulHeader {
+    showIcon1
+    showIcon2
+    showIcon3
   }
+  }
+ 
 `
 
   
@@ -38,34 +44,41 @@ const Topbar = () => {
 
 	const links = useStaticQuery(socialmedialinks);
 	console.log(links)
-	
+
     return (
         <>
            <div className="topbar">
 			<Container>
 				<Row>
-					<Col sm={5} md={6}>
+					<Col sm={5} md={6} xs={6}>
 						<div className="topbar-left">
-							<div className="welcome-text">
-							<Button className="lang-button">
-                            	<img src={links.allContentfulHeader.nodes[0].pakLang.fluid.src}></img>
-                            </Button>
-							<Button className="lang-button">
-								<img src={links.allContentfulHeader.nodes[0].germanyLang.fluid.src}></img>
-                            </Button>
 							
-							<Button className="lang-button">
-								<img src={links.allContentfulHeader.nodes[0].uaeLang.fluid.src}></img>
-							</Button>
+							<div className="welcome-text">
+
+								<div className={links.contentfulHeader.showIcon1 === true ? `tr` : `fal`}>
+									<Button className="lang-button">
+											<img src={links.allContentfulHeader.nodes[0].pakLang.fluid.src}/>
+									</Button>
+								</div>
+								<div className={links.contentfulHeader.showIcon2 === true ? `tr` : `fal`}>
+									<Button className="lang-button">
+										<img src={links.allContentfulHeader.nodes[0].germanyLang.fluid.src}/>										
+									</Button>
+								</div>	
+								<div className={links.contentfulHeader.showIcon3 === true ? `tr` : `fal`}>
+									<Button className="lang-button">
+										<img src={links.allContentfulHeader.nodes[0].uaeLang.fluid.src}/>
+									</Button>
+								</div>
 							</div>
 						</div>
 					</Col>
-					<Col  sm={7} md={6}>
+					<Col  sm={7} md={6} xs={6}>
 						<div className="topbar-right">
-							<ul className="topbar-menu">
+							{/*<ul className="topbar-menu">
 								<li><Link to="/imprints" title="Career">Imprints</Link></li>
 								<li><Link to="/careers" title="Career">Careers</Link></li>
-							</ul>
+							</ul>*/}
 							<ul className="topbar-sosmed">
 							<li>
 								<Link to={links.allContentfulHeader.nodes[0].facebookLink}><FaFacebookF/></Link>

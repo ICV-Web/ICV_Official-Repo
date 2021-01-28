@@ -52,7 +52,7 @@ const Pagecontent = () => {
         <div className="section contact">
            <Container>
                <Row>
-                    <Col sm={8} md={8}>
+                    <Col sm={12} md={8}>
                         <Fade left>
                         <div className="content">
                                 <p className="section-heading-3">{contentdata.allContentfulContact.nodes[0].contentDesc.contentDesc}</p>
@@ -60,14 +60,14 @@ const Pagecontent = () => {
                         </div>
                         </Fade>
                     </Col>
-                    <Col sm={4} md={4}>
+                    <Col sm={12} md={4}>
                     <Fade right>
                          <div class="widget download">
                                  <Link to="#" class="btn btn-secondary btn-block btn-sidebar"><span class="fa  fa-file-pdf-o"></span> Company Brochure</Link>
                          </div>
                      </Fade>
                  </Col>
-                    <Col sm={8} md={8}>
+                    <Col sm={12} md={8}>
                         <Fade left>
                         <div className="content">
                                 <h3 className="section-heading-2">
@@ -94,7 +94,7 @@ const Pagecontent = () => {
                                         <textarea
                                             className="form-control"
                                             id="p_message"
-                                            rows="13"
+                                            rows="11"
                                             placeholder="Write message"
                                             name="message"
                                             onChange={handleChange} 
@@ -117,84 +117,86 @@ const Pagecontent = () => {
                    </Col>
 
                     <Col sm={4} md={4}>
-                    <Fade top>
-                    <div class="widget contact-info-sidebar contact-resp">
-                            <div class="widget-title title-change">
-                                Contact Info
-                            </div>
-                            <ul class="list-info list-change">
-                                <li>
-                                    <h4>Pakistan</h4>
-                                </li>
-                                <li>
-                                    <div class="info-icon">
-                                        <FaMapMarkerAlt/>
+                        <Fade top>
+                            <div className="widget contact-info-sidebar contact-resp">
+                                    <div className="cont-mob">
+                                        <div className="widget-title title-change">
+                                            Contact Info
+                                        </div>
+                                        <ul className="list-info list-change">
+                                            <li>
+                                                <h4>Pakistan</h4>
+                                            </li>
+                                            <li>
+                                                <div className="info-icon">
+                                                    <FaMapMarkerAlt/>
+                                                </div>
+                                                <div className="info-text">Suite 203, 59/3<br/>
+                                                    Marium Complex, Bahadurabad</div> 
+                                            </li>
+                                            <li>
+                                                <div className="info-icon">
+                                                    <FaPhoneAlt/>
+                                                </div>
+                                                <div className="info-text">(+92) 21 34144447</div>
+                                            </li>
+                                            <li>
+                                                <div className="info-icon">
+                                                    <FaEnvelope/>
+                                                </div>
+                                                <div className="info-text">info@icvglobal.com</div>
+                                            </li>
+                                        </ul>
+                                        <ul className="list-info list-change mar-list">
+                                            <li>
+                                                <h4 >Germany</h4>
+                                            </li>
+                                            <li>
+                                                <div className="info-icon">
+                                                    <FaMapMarkerAlt/>
+                                                </div>
+                                                <div className="info-text">Suite 203, 59/3<br/>
+                                                    Marium Complex, Bahadurabad</div> 
+                                            </li>
+                                            <li>
+                                                <div className="info-icon">
+                                                <FaPhoneAlt/>
+                                                </div>
+                                                <div className="info-text">(+92) 21 34144447</div>
+                                            </li>
+                                            <li>
+                                                <div className="info-icon">
+                                                    <FaEnvelope/>
+                                                </div>
+                                                <div className="info-text">info@icvglobal.com</div>
+                                            </li>
+                                        </ul>
+                                        <ul className="list-info list-change mar-list">
+                                            <li>
+                                                <h4>UAE</h4>
+                                            </li>
+                                            <li>
+                                                <div className="info-icon">
+                                                    <FaMapMarkerAlt/>
+                                                </div>
+                                                <div className="info-text">Suite 203, 59/3<br/>
+                                                    Marium Complex, Bahadurabad</div> 
+                                            </li>
+                                            <li>
+                                                <div className="info-icon">
+                                                    <FaPhoneAlt/>
+                                                </div>
+                                                <div className="info-text">(+92) 21 34144447</div>
+                                            </li>
+                                            <li>
+                                                <div className="info-icon">
+                                                    <FaEnvelope/>
+                                                </div>
+                                                <div className="info-text">info@icvglobal.com</div>
+                                            </li>
+                                        </ul>
                                     </div>
-                                    <div class="info-text">Suite 203, 59/3<br/>
-                                        Marium Complex, Bahadurabad</div> 
-                                </li>
-                                <li>
-                                    <div class="info-icon">
-                                        <FaPhoneAlt/>
-                                    </div>
-                                    <div class="info-text">(+92) 21 34144447</div>
-                                </li>
-                                <li>
-                                    <div class="info-icon">
-                                        <FaEnvelope/>
-                                    </div>
-                                    <div class="info-text">info@icvglobal.com</div>
-                                </li>
-                            </ul>
-                            <ul class="list-info list-change mar-list">
-                                <li>
-                                    <h4 >Germany</h4>
-                                </li>
-                                <li>
-                                    <div class="info-icon">
-                                        <FaMapMarkerAlt/>
-                                    </div>
-                                    <div class="info-text">Suite 203, 59/3<br/>
-                                        Marium Complex, Bahadurabad</div> 
-                                </li>
-                                <li>
-                                    <div class="info-icon">
-                                       <FaPhoneAlt/>
-                                    </div>
-                                    <div class="info-text">(+92) 21 34144447</div>
-                                </li>
-                                <li>
-                                    <div class="info-icon">
-                                        <FaEnvelope/>
-                                    </div>
-                                    <div class="info-text">info@icvglobal.com</div>
-                                </li>
-                            </ul>
-                            <ul class="list-info list-change mar-list">
-                                <li>
-                                    <h4>UAE</h4>
-                                </li>
-                                <li>
-                                    <div class="info-icon">
-                                        <FaMapMarkerAlt/>
-                                    </div>
-                                    <div class="info-text">Suite 203, 59/3<br/>
-                                        Marium Complex, Bahadurabad</div> 
-                                </li>
-                                <li>
-                                    <div class="info-icon">
-                                        <FaPhoneAlt/>
-                                    </div>
-                                    <div class="info-text">(+92) 21 34144447</div>
-                                </li>
-                                <li>
-                                    <div class="info-icon">
-                                        <FaEnvelope/>
-                                    </div>
-                                    <div class="info-text">info@icvglobal.com</div>
-                                </li>
-                            </ul>
-                        </div> 
+                            </div> 
                         </Fade>
                    </Col>
                </Row>

@@ -16,7 +16,7 @@ const Slider = () => {
           sliderCaption
           sliderHeading
           sliderImage {
-            fluid(maxWidth: 1600) {
+            fluid(maxWidth:1920, maxHeight:900,quality: 100) {
               ...GatsbyContentfulFluid
             }
           }

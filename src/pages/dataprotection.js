@@ -55,8 +55,8 @@ export const query = graphql`
         raw
       }
       bannerImg {
-        fluid {
-          src
+        fluid (maxWidth:1356,maxHeight:275,quality: 100){
+          ...GatsbyContentfulFluid
         }
       }
     }

@@ -34,6 +34,25 @@ const Layout = loadable(() => import('../components/layout'))
               </div>
             </div>
           </div>
+          <div className="section why">
+           <Container>
+               <Row>
+                   <Col md={12} sm={12}>
+                        <Fade left>
+                        <div className="content">
+                              <p>
+                              {data.allContentfulOurCorePage.nodes[0].desc1.desc1}
+                              </p>
+                              <p>
+                              {data.allContentfulOurCorePage.nodes[0].desc2.desc2}
+                              </p>
+                        </div>
+                        </Fade>
+                   </Col>
+
+             </Row>
+            </Container>
+          </div>
           {getallcores.map((core) => {
           return(
             <>
@@ -113,7 +132,7 @@ const Layout = loadable(() => import('../components/layout'))
           }
           coreTitle
           imgDesk {
-            fluid(maxWidth:1600)  {
+            fluid(maxWidth:1356,quality: 100)  {
               ...GatsbyContentfulFluid
             }
           }
@@ -127,9 +146,15 @@ const Layout = loadable(() => import('../components/layout'))
       allContentfulOurCorePage {
         nodes {
           ourCoreBanner {
-            fluid(maxWidth:1600) {
+            fluid(maxWidth:1356, maxHeight: 275,quality: 100) {
               ...GatsbyContentfulFluid
             }
+          }
+          desc1 {
+            desc1
+          }
+          desc2 {
+            desc2
           }
         }
       }

@@ -59,21 +59,21 @@ export const query = graphql`
        contentfulBlogs(slug: {eq: $slug}) {
             title
             featuredImage {
-                fluid {
-                    src
+                fluid(maxWidth:1110, maxHeight: 500,quality: 100)  {
+                    ...GatsbyContentfulFluid
                 }
             }
             description1 {
                 raw
             }
             footerImg {
-                fluid {
-                    src
+                fluid(maxWidth:1110, maxHeight: 500,quality: 100)  {
+                    ...GatsbyContentfulFluid
                 }
             }
              bannerImg {
-                fluid {
-                    src
+                fluid(maxWidth:1356, maxHeight: 275,quality: 100) {
+                    ...GatsbyContentfulFluid
                 }
             }
         }

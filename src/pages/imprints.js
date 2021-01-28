@@ -66,7 +66,7 @@ export const query = graphql`
             }
         }
         banner {
-            fluid(maxWidth:1600) {
+            fluid(maxWidth:1356,quality: 100) {
                 ...GatsbyContentfulFluid
             }
         }

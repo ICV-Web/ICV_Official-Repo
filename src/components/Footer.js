@@ -84,7 +84,7 @@ const encode = (data) => {
     return (
         <>
 		
-	<div className="section info overlap-bottom">
+	<div className="section info overlap-bottom cont-mob-foot">
 		<Container>
 		
 			<Row>
@@ -153,7 +153,7 @@ const encode = (data) => {
 											<FaInstagram/>
 										</div>
 									</Link>
-								
+									<div><p className="vis-fot">Visibility not shown</p></div>
 								
 									
 									<Link to={footerdata.allContentfulFooter.nodes[0].socialLink2} title="">

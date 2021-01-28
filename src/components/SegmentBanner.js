@@ -12,7 +12,7 @@ const SegmentBanner = () => {
       allContentfulBusinessSegment {
         nodes {
           bannerImg {
-            fluid(maxWidth: 1600) {
+            fluid(maxWidth:1356,quality: 100) {
               ...GatsbyContentfulFluid
             }
           }
