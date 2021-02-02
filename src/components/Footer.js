@@ -134,7 +134,10 @@ const encode = (data) => {
 			<Row>
 				<Col md={3} sm={12} xs={12}>
 					<div className="footer-item">
-						<img src={footerdata.allContentfulFooter.nodes[0].logo.fluid.src} alt="logo bottom" className="logo-bottom"/>
+						<div className="f-logo">
+							<img src={footerdata.allContentfulFooter.nodes[0].logo.fluid.src} alt="logo bottom" className="logo-bottom"/>
+						</div>
+						
 						<p>{footerdata.allContentfulFooter.nodes[0].footerDesc.footerDesc}</p>
 						<div className="footer-sosmed">
 							

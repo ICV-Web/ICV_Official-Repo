@@ -4806,4 +4806,11 @@ a.navbar-brand img {
 /*Line 3983*/
 /*Line 4571-9*/
 
+/*2/2/2021*/
+.footer .footer-item .logo-bottom {
+  max-width: 170px !important;
+}
+.f-logo {
+  text-align: center;
+}
 /*# sourceMappingURL=style.css.map */
