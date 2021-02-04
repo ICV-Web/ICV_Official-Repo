@@ -127,7 +127,7 @@ export const query = graphql`
           }
         }
         imgDesk {
-          fluid(maxWidth:1356, quality: 100) {
+          fluid(maxWidth:1356 quality: 100) {
             ...GatsbyContentfulFluid
           }
         }

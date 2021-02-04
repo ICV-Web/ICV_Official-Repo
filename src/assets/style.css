@@ -3818,9 +3818,7 @@ dl.hiw dd .lead {
 .footer > .container {
   padding-bottom: 50px;
 }
-.footer .footer-item .logo-bottom {
-  margin-bottom: 25px;
-}
+
 .footer .footer-item .footer-title {
   font-size: 24px;
   font-weight: 600;
@@ -4383,6 +4381,10 @@ section.services .description-wrapper h3 {
     padding-bottom: 0;
     overflow: visible !important;
   }
+  .navbar-main .navbar-brand {
+    left: 15px;
+    top: -79px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -4583,7 +4585,7 @@ nav.navbar-collapse.collapse.in li{
     width: 100%;
   }
   .navbar-main .navbar-brand {
-    left:0px;
+    left:15px;
   }
   .topbar-left .welcome-text {
     float: left;

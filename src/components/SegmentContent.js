@@ -28,7 +28,7 @@ const SegmentContent = () => {
           servicesHeading
           addClassTestLefttestRight
           imgDesk {
-            fluid(maxWidth: 1600) {
+            fluid(maxWidth:1356, quality: 100) {
               ...GatsbyContentfulFluid
             }
           }
