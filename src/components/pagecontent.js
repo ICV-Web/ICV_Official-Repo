@@ -17,6 +17,22 @@ const Pagecontent = () => {
           }
         }
       }
+      allContentfulContactInfo {
+        nodes {
+            address1
+            address2
+            address3
+            country1
+            country2
+            country3
+            mail1
+            mail2
+            mail3
+            phone1
+            phone2
+            phone3
+        }
+    }
     }
   `)
    const [formState, setFormState] = useState({
@@ -125,74 +141,71 @@ const Pagecontent = () => {
                                         </div>
                                         <ul className="list-info list-change">
                                             <li>
-                                                <h4>Pakistan</h4>
+                                                <h4>{contentdata.allContentfulContactInfo.nodes[0].country1}</h4>
                                             </li>
                                             <li>
                                                 <div className="info-icon">
                                                     <FaMapMarkerAlt/>
                                                 </div>
-                                                <div className="info-text">Suite 203, 59/3<br/>
-                                                    Marium Complex, Bahadurabad</div> 
+                                                <div className="info-text">{contentdata.allContentfulContactInfo.nodes[0].address1}</div> 
                                             </li>
                                             <li>
                                                 <div className="info-icon">
                                                     <FaPhoneAlt/>
                                                 </div>
-                                                <div className="info-text">(+92) 21 34144447</div>
+                                                <div className="info-text">{contentdata.allContentfulContactInfo.nodes[0].phone1}</div>
                                             </li>
                                             <li>
                                                 <div className="info-icon">
                                                     <FaEnvelope/>
                                                 </div>
-                                                <div className="info-text">info@icvglobal.com</div>
+                                                <div className="info-text">{contentdata.allContentfulContactInfo.nodes[0].mail1}</div>
                                             </li>
                                         </ul>
                                         <ul className="list-info list-change mar-list">
                                             <li>
-                                                <h4 >Germany</h4>
+                                                <h4 >{contentdata.allContentfulContactInfo.nodes[0].country2}</h4>
                                             </li>
                                             <li>
                                                 <div className="info-icon">
                                                     <FaMapMarkerAlt/>
                                                 </div>
-                                                <div className="info-text">Suite 203, 59/3<br/>
-                                                    Marium Complex, Bahadurabad</div> 
+                                                <div className="info-text">{contentdata.allContentfulContactInfo.nodes[0].address2}</div> 
                                             </li>
                                             <li>
                                                 <div className="info-icon">
                                                 <FaPhoneAlt/>
                                                 </div>
-                                                <div className="info-text">(+92) 21 34144447</div>
+                                                <div className="info-text">{contentdata.allContentfulContactInfo.nodes[0].phone2}</div>
                                             </li>
                                             <li>
                                                 <div className="info-icon">
                                                     <FaEnvelope/>
                                                 </div>
-                                                <div className="info-text">info@icvglobal.com</div>
+                                                <div className="info-text">{contentdata.allContentfulContactInfo.nodes[0].mail2}</div>
                                             </li>
                                         </ul>
                                         <ul className="list-info list-change mar-list">
                                             <li>
-                                                <h4>UAE</h4>
+                                                <h4>{contentdata.allContentfulContactInfo.nodes[0].country3}</h4>
                                             </li>
                                             <li>
                                                 <div className="info-icon">
                                                     <FaMapMarkerAlt/>
                                                 </div>
-                                                <div className="info-text">Suite 203, 59/3<br/>
-                                                    Marium Complex, Bahadurabad</div> 
+                                                <div className="info-text">{contentdata.allContentfulContactInfo.nodes[0].address3}</div> 
                                             </li>
                                             <li>
                                                 <div className="info-icon">
                                                     <FaPhoneAlt/>
                                                 </div>
-                                                <div className="info-text">(+92) 21 34144447</div>
+                                                <div className="info-text">{contentdata.allContentfulContactInfo.nodes[0].phone3}</div>
                                             </li>
                                             <li>
                                                 <div className="info-icon">
                                                     <FaEnvelope/>
                                                 </div>
-                                                <div className="info-text">info@icvglobal.com</div>
+                                                <div className="info-text">{contentdata.allContentfulContactInfo.nodes[0].mail3}</div>
                                             </li>
                                         </ul>
                                     </div>

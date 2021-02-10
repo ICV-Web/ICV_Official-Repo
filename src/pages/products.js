@@ -42,9 +42,7 @@ const products = ({data}) => {
                                   <p>
                                   {data.allContentfulProductsPages.nodes[0].desc1.desc1}
                                   </p>
-                                  <p>
-                                  {data.allContentfulProductsPages.nodes[0].desc2.desc2}
-                                  </p>
+                                  
                             </div>
                             </Fade>
                         </Col>
@@ -156,9 +154,7 @@ export const query = graphql`
         desc1 {
           desc1
         }
-        desc2 {
-          desc2
-        }
+       
       }
     }
 

@@ -43,9 +43,7 @@ const Layout = loadable(() => import('../components/layout'))
                               <p>
                               {data.allContentfulOurCorePage.nodes[0].desc1.desc1}
                               </p>
-                              <p>
-                              {data.allContentfulOurCorePage.nodes[0].desc2.desc2}
-                              </p>
+                             
                         </div>
                         </Fade>
                    </Col>
@@ -152,9 +150,6 @@ const Layout = loadable(() => import('../components/layout'))
           }
           desc1 {
             desc1
-          }
-          desc2 {
-            desc2
           }
         }
       }

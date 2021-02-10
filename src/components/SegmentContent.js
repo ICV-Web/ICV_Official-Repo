@@ -12,9 +12,7 @@ const SegmentContent = () => {
           desc1 {
             desc1
           }
-          desc2 {
-            desc2
-          }
+          
           
         }
       }
@@ -64,9 +62,7 @@ const SegmentContent = () => {
                               <p>
                               {Segmentdata.allContentfulBusinessSegment.nodes[0].desc1.desc1}
                               </p>
-                              <p>
-                              {Segmentdata.allContentfulBusinessSegment.nodes[0].desc2.desc2}
-                              </p>
+                              
                         </div>
                         </Fade>
                    </Col>
