@@ -2,8 +2,8 @@ import React from 'react'
 import loadable from '@loadable/component'
 import { Container, Row, Col } from 'react-bootstrap'
 import { renderRichText } from "gatsby-source-contentful/rich-text"
+import {graphql } from "gatsby"
 import * as propTypes from "prop-types"
-import {graphql,Link } from "gatsby"
 import Fade from 'react-reveal/Fade';
 
 const Layout = loadable(() => import('../components/layout'))

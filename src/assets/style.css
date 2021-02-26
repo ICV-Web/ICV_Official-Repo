@@ -3026,6 +3026,7 @@ button.lang-button:hover {
 .navbar-main .nav > li > a {
   color: #222222;
   margin-right: 0px !important;
+  text-transform: uppercase;
 }
 .navbar-main .nav > li.active > a,
 .navbar-main .nav > li > a:hover,
@@ -4637,24 +4638,12 @@ nav.navbar-collapse.collapse.in li{
   background-attachment: inherit !important;
 }
 
-.test-left{
-  background: white;
-  color:black !important;
-}
-.test-left .description-wrapper h3{
-  color: black !important;
-}
-.test-right{
-  background: black;
-  color: white;
-}
+
 .test-right .description-wrapper{
   float: right;
   width: 50%;
 }
-.test-right .description-wrapper h3{
-  color: white !important;
-}
+
 
 .f-r{
   float: right;
@@ -4812,5 +4801,42 @@ a.navbar-brand img {
 .footer .footer-item .logo-bottom {
   max-width: 170px !important;
 }
+/*2/25/2021*/
+.white{
+  color: white !important;
+}
+.black{
+  color:black !important;
+}
+.black .description-wrapper h3{
+  color: black !important;
+}
+.white .description-wrapper h3{
+  color: white !important;
+}
+.disTemplate{
+  display: none;
+}
+.pageText{
+  padding-top: 50px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.help-block.with-errors {
+  font-size: 20px;
+  font-weight: bold;
+  background: #ff0000;
+  color: white;
+  border-radius: 5px;
+  padding: 7px;
+  margin-top: 20px;
+} 
 
 /*# sourceMappingURL=style.css.map */

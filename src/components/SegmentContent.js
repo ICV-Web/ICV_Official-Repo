@@ -17,7 +17,7 @@ const SegmentContent = () => {
         }
       }
 
-      allContentfulHomeServices {
+      allContentfulHomeServices(sort: { fields:sortingOrder, order: ASC }) {
       nodes {
           description {
             description
@@ -25,6 +25,7 @@ const SegmentContent = () => {
 
           servicesHeading
           addClassTestLefttestRight
+          textColor
           imgDesk {
             fluid(maxWidth:1356, quality: 100) {
               ...GatsbyContentfulFluid
@@ -75,7 +76,7 @@ const SegmentContent = () => {
               return(
                 <>
                     
-                   <section className={ `services banner-page about  b1-segment sz-bg bg-fx ${service.addClassTestLefttestRight}`  } style={{ backgroundImage:   `url(${service.imgDesk.fluid.src})` }}>
+                   <section className={ `services banner-page about  b1-segment sz-bg bg-fx ${service.textColor} ${service.addClassTestLefttestRight}`  } style={{ backgroundImage:   `url(${service.imgDesk.fluid.src})` }}>
                     <Fade bottom>   
                       <Container>
                             <Row>
@@ -116,7 +117,7 @@ const SegmentContent = () => {
               <Row>
                 <Col md={12}>
                   <div className="request-wrapper">
-                    <h1>{Segmentdata.contentfulRequestPdfIdentifierBs.bsRequestPdf.bsRequestPdf}</h1>
+                    <h3>{Segmentdata.contentfulRequestPdfIdentifierBs.bsRequestPdf.bsRequestPdf}</h3>
                     <Link  target="_blank" to="/contact" class="btn btn-danger resp-btn">Request PDF</Link>
                   </div>           
                 </Col>

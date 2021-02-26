@@ -75,7 +75,7 @@ const HomePageProjects = () => {
 						<Row>
                             <Col md={12}>
                                 <Carousel infinite={true}    transitionDuration={500}
- autoPlay={true} autoPlaySpeed={4000} responsive={responsive}>
+ autoPlay={true} autoPlaySpeed={2000} responsive={responsive}>
 
 
 

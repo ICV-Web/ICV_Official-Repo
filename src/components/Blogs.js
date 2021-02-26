@@ -9,7 +9,7 @@ const Blogs = () => {
 
 const getblogsdata = useStaticQuery(graphql`
     {
-      allContentfulBlogs {
+      allContentfulBlogs(sort: { fields:sortingOrder, order: ASC }) {
           nodes {
             slug
             title

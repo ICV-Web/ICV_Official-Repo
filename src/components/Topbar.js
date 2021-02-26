@@ -27,6 +27,11 @@ import { useStaticQuery, graphql } from "gatsby"
 			  src
 			}
 		  }
+		  chineseLang {
+        fluid {
+          src
+        }
+      }
 		  
       }
     }
@@ -34,6 +39,7 @@ import { useStaticQuery, graphql } from "gatsby"
     showIcon1
     showIcon2
     showIcon3
+	showIcon4
   }
   }
  
@@ -68,6 +74,11 @@ const Topbar = () => {
 								<div className={links.contentfulHeader.showIcon3 === true ? `tr` : `fal`}>
 									<Button className="lang-button">
 										<img src={links.allContentfulHeader.nodes[0].uaeLang.fluid.src}/>
+									</Button>
+								</div>
+								<div className={links.contentfulHeader.showIcon4 === true ? `tr` : `fal`}>
+									<Button className="lang-button">
+										<img src={links.allContentfulHeader.nodes[0].chineseLang.fluid.src}/>
 									</Button>
 								</div>
 							</div>

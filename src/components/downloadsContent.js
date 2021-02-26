@@ -14,7 +14,7 @@ const DownloadContent = () => {
           }
         }
       }
-      allContentfulDownloadPage {
+      allContentfulDownloadPage(sort: { fields:sortingOrder, order: ASC }) {
         nodes {
           featuredImg {
             fluid {

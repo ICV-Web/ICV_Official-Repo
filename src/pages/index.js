@@ -1,5 +1,4 @@
 import React from "react"
-
 import loadable from '@loadable/component'
 
 const Layout = loadable(() => import('../components/layout'))
@@ -9,7 +8,6 @@ const ServiceSection = loadable(() => import('../components/HomeServices'))
 const StatisticsSection = loadable(() => import('../components/Stats'))
 const Gallery = loadable(() => import('../components/HomePageProjects'))
 const Testimonials = loadable(() => import('../components/Testimonials'))
-const Ctaa = loadable(() => import('../components/HomeCTA'))
 const Blogs = loadable(() => import('../components/Blogs'))
 
 

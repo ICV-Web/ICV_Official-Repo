@@ -55,7 +55,7 @@ const products = ({data}) => {
                     return(
                       <>
                         
-                            <section className={ `services banner-page about  b1-segment bg-fx sz-bg ${projects.addClassTestLefttestRight}`  } style={{ backgroundImage:   `url(${projects.imgDesk.fluid.src})`  }}>
+                            <section className={ `services banner-page about  b1-segment bg-fx sz-bg  ${projects.textColor} ${projects.addClassTestLefttestRight}`  } style={{ backgroundImage:   `url(${projects.imgDesk.fluid.src})`  }}>
                             <Fade bottom>  
                             <Container>
                                     <Row>
@@ -97,7 +97,7 @@ const products = ({data}) => {
                       <Container>
                           <Row>
                             <Col md={12}>
-                              <h4>{headingpdf}</h4>
+                              <h3>{headingpdf}</h3>
                               <Link  target="_blank" to={linkpdf} class="btn btn-danger resp-btn">Download PDF</Link>
                               <Link  target="_blank" to="/contact" class="btn btn-danger resp-btn">Request PDF</Link>
                             </Col>
@@ -113,7 +113,7 @@ const products = ({data}) => {
 
 export const query = graphql`
   {
-    allContentfulProjects {
+    allContentfulProjects(sort: { fields:sortingOrder, order: ASC }){
       nodes {
         projectTitle
         description {
@@ -130,7 +130,7 @@ export const query = graphql`
           }
         }
         addClassTestLefttestRight
-        
+        textColor
       }
     }
     contentfulRequestPdfProduct {

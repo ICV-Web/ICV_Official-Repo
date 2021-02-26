@@ -78,7 +78,7 @@ const Layout = loadable(() => import('../components/layout'))
             </Container>
           </div>*/}
                    
-          <section className={ `services banner-page about  b1-segment sz-bg bg-fx ${core.addClassTestLefttestRight}`  } style={{ backgroundImage:   `url(${core.imgDesk.fluid.src})` }}>
+          <section className={ `services banner-page about  b1-segment sz-bg bg-fx ${core.textColor} ${core.addClassTestLefttestRight}`  } style={{ backgroundImage:   `url(${core.imgDesk.fluid.src})` }}>
           <Fade bottom>   
             <Container>
                   <Row>
@@ -122,12 +122,13 @@ const Layout = loadable(() => import('../components/layout'))
   export default PageTemplate
   export const pageQuery = graphql`
     query pageQuery{
-      allContentfulOurCorePageDescription {
+      allContentfulOurCorePageDescription (sort: { fields:sortingOrder, order: ASC }){
         nodes {
           addClassTestLefttestRight
           coreDescription {
             coreDescription
           }
+          textColor 
           coreTitle
           imgDesk {
             fluid(maxWidth:1356,quality: 100)  {

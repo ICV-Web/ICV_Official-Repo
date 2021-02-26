@@ -29,6 +29,16 @@ module.exports.createPages = async ({graphql,actions}) => {
 }
 
 `)
+const page = await graphql(
+  `query Getpage {
+pages: allContentfulPageTemplate {
+  nodes {
+    slug
+  }
+}
+}
+
+`)
 
 result.data.blogs.nodes.forEach((blog) => {
   createPage({
@@ -36,6 +46,17 @@ result.data.blogs.nodes.forEach((blog) => {
     component:path.resolve(`src/templates/blog-template.js`),
     context:{
       slug:blog.slug,
+    },
+  })
+})
+
+
+page.data.pages.nodes.forEach((page) => {
+  createPage({
+    path:`/${page.slug}`,
+    component:path.resolve(`./src/templates/page-template.js`),
+    context:{
+      slug:page.slug,
     },
   })
 })
