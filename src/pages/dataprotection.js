@@ -8,8 +8,8 @@ const Layout = loadable(() => import('../components/layout'))
 
 const dataprotection = ({ data }) => {
 
-    const {desc} = data.contentfulDataProtection;
-    const dataPbanner = data.contentfulDataProtection.bannerImg.fluid.src;
+    const {desc} = data.contentfulDataProtectionPage;
+    const dataPbanner = data.contentfulDataProtectionPage.bannerImg.fluid.src;
 
     return (
         <>
@@ -50,7 +50,7 @@ const dataprotection = ({ data }) => {
 export default dataprotection
 export const query = graphql`
   {
-    contentfulDataProtection {
+    contentfulDataProtectionPage {
       desc {
         raw
       }

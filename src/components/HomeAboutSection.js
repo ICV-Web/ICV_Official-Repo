@@ -6,7 +6,7 @@ import Fade from 'react-reveal/Fade';
 
 const aboutfeaturedata = graphql`
    {
-      allContentfulHomeAboutSection {
+      allContentfulHomePageAboutSection {
         nodes {
           aboutBox1Heading
           aboutBox1Description {
@@ -49,8 +49,8 @@ const HomeAboutSection = () => {
 					
 						<div className="box-icon-2">
 							<div className="body-content">
-								<div className="heading">{getdata.allContentfulHomeAboutSection.nodes[0].aboutBox1Heading}</div>
-							{getdata.allContentfulHomeAboutSection.nodes[0].aboutBox1Description.aboutBox1Description}
+								<div className="heading">{getdata.allContentfulHomePageAboutSection.nodes[0].aboutBox1Heading}</div>
+							{getdata.allContentfulHomePageAboutSection.nodes[0].aboutBox1Description.aboutBox1Description}
 							</div>
 						</div>
 					
@@ -59,8 +59,8 @@ const HomeAboutSection = () => {
 					
 						<div className="box-icon-2">
 							<div className="body-content">
-								<div className="heading">{getdata.allContentfulHomeAboutSection.nodes[0].aboutBox2Heading}</div>
-	{getdata.allContentfulHomeAboutSection.nodes[0].aboutBox2Description.aboutBox2Description}
+								<div className="heading">{getdata.allContentfulHomePageAboutSection.nodes[0].aboutBox2Heading}</div>
+	{getdata.allContentfulHomePageAboutSection.nodes[0].aboutBox2Description.aboutBox2Description}
 							</div>
 						</div>
 						
@@ -69,8 +69,8 @@ const HomeAboutSection = () => {
 					
 						<div className="box-icon-2">
 							<div className="body-content">
-								<div className="heading">{getdata.allContentfulHomeAboutSection.nodes[0].aboutBox3Heading}</div>
-	{getdata.allContentfulHomeAboutSection.nodes[0].aboutBox3Description.aboutBox3Description}
+								<div className="heading">{getdata.allContentfulHomePageAboutSection.nodes[0].aboutBox3Heading}</div>
+	{getdata.allContentfulHomePageAboutSection.nodes[0].aboutBox3Description.aboutBox3Description}
 							</div>
 						</div>
 					
@@ -82,7 +82,7 @@ const HomeAboutSection = () => {
 			
 				<Col sm={12} md={12}>
 					<h2 className="section-heading">
-						{getdata.allContentfulHomeAboutSection.nodes[0].aboutMainHeading}
+						{getdata.allContentfulHomePageAboutSection.nodes[0].aboutMainHeading}
 					</h2>
 				</Col>
 			</Row>
@@ -93,15 +93,15 @@ const HomeAboutSection = () => {
 					<Col sm={5} md={5}>
 						<Fade left>
 							<div className="jumbo-heading">
-								<h2>{getdata.allContentfulHomeAboutSection.nodes[0].aboutCaption}</h2>
+								<h2>{getdata.allContentfulHomePageAboutSection.nodes[0].aboutCaption}</h2>
 								<span className="fa fa-paper-plane-o"></span>
 							</div>
 						</Fade>
 					</Col>
 					<Col sm={7} md={7}>
 						<Fade bottom>
-							<p>{getdata.allContentfulHomeAboutSection.nodes[0].description.description}</p>
-							<p>{getdata.allContentfulHomeAboutSection.nodes[0].description2.description2}</p>
+							<p>{getdata.allContentfulHomePageAboutSection.nodes[0].description.description}</p>
+							<p>{getdata.allContentfulHomePageAboutSection.nodes[0].description2.description2}</p>
 						</Fade>
 					</Col>
 				

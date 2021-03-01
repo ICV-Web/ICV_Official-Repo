@@ -8,7 +8,7 @@ const PageBanner = () => {
 
 const data = useStaticQuery(graphql`
     {
-      allContentfulContact {
+      allContentfulContactUsPage {
         nodes {
           bannerImg {
             fluid(maxWidth:1356, maxHeight: 275,quality: 100) {
@@ -22,7 +22,7 @@ const data = useStaticQuery(graphql`
   
     return (
         <>
-        <div className="section banner-page about" style={{ backgroundImage:   `url(${data.allContentfulContact.nodes[0].bannerImg.fluid.src})`  }}>
+        <div className="section banner-page about" style={{ backgroundImage:   `url(${data.allContentfulContactUsPage.nodes[0].bannerImg.fluid.src})`  }}>
             <Container>
                 <Row>
                     <Col sm={12} md={12}>

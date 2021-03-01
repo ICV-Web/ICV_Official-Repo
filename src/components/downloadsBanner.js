@@ -9,7 +9,7 @@ const DownloadsBanner = () => {
 
    const data = useStaticQuery(graphql`
     {
-      allContentfulDownloads {
+      allContentfulDownloadPage {
         nodes {
           downloadsBanner {
             fluid(maxWidth:1356, maxHeight: 275,quality: 100) {
@@ -24,7 +24,7 @@ const DownloadsBanner = () => {
   
     return (
         <>
-        <div className="section banner-page about" style={{ backgroundImage:   `url(${data.allContentfulDownloads.nodes[0].downloadsBanner.fluid.src})`  }}>
+        <div className="section banner-page about" style={{ backgroundImage:   `url(${data.allContentfulDownloadPage.nodes[0].downloadsBanner.fluid.src})`  }}>
             <Container>
                 <Row>
                     <Col sm={12} md={12}>

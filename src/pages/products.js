@@ -11,11 +11,11 @@ const Layout = loadable(() => import('../components/layout'))
 const products = ({data}) => {
     
 
-    const {allContentfulProjects:{nodes: allprojects},} = data
+    const {allContentfulProductPageContentHomePageProductSection:{nodes: allprojects},} = data
 
-    const getbannerimage = data.allContentfulProductsPages.nodes[0].bannerImage.fluid.src
-    const linkpdf = data.contentfulRequestPdfProduct.downloadsPdf.file.url
-    const headingpdf = data.contentfulRequestPdfProduct.requestPdfHeading.requestPdfHeading
+    const getbannerimage = data.allContentfulProductPage.nodes[0].bannerImage.fluid.src
+    const linkpdf = data.contentfulDownloadPdfProduct.downloadsPdf.file.url
+    const headingpdf = data.contentfulDownloadPdfProduct.requestPdfHeading.requestPdfHeading
     return (
 
         <>
@@ -40,7 +40,7 @@ const products = ({data}) => {
                             <Fade left>
                             <div className="content">
                                   <p>
-                                  {data.allContentfulProductsPages.nodes[0].desc1.desc1}
+                                  {data.allContentfulProductPage.nodes[0].desc1.desc1}
                                   </p>
                                   
                             </div>
@@ -113,27 +113,27 @@ const products = ({data}) => {
 
 export const query = graphql`
   {
-    allContentfulProjects(sort: { fields:sortingOrder, order: ASC }){
-      nodes {
-        projectTitle
-        description {
-          description
+    allContentfulProductPageContentHomePageProductSection(sort: {fields: sortingOrder, order: ASC}) {
+    nodes {
+      textColor
+      addClassTestLefttestRight
+      imgDesk {
+        fluid {
+          src
         }
-        imgMob {
-          fluid {
-            src
-          }
-        }
-        imgDesk {
-          fluid(maxWidth:1356 quality: 100) {
-            ...GatsbyContentfulFluid
-          }
-        }
-        addClassTestLefttestRight
-        textColor
       }
+      imgMob {
+        fluid {
+          src
+        }
+      }
+      description {
+        description
+      }
+      projectTitle
     }
-    contentfulRequestPdfProduct {
+  }
+  contentfulDownloadPdfProduct {
       downloadsPdf {
         file {
           url
@@ -144,7 +144,7 @@ export const query = graphql`
       }
     }
 
-    allContentfulProductsPages {
+    allContentfulProductPage {
       nodes {
         bannerImage {
           fluid(maxWidth:1356, maxHeight: 275,quality: 100)  {

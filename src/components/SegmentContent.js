@@ -17,7 +17,7 @@ const SegmentContent = () => {
         }
       }
 
-      allContentfulHomeServices(sort: { fields:sortingOrder, order: ASC }) {
+      allContentfulBusinessSegmentPageHomePageContent(sort: { fields:sortingOrder, order: ASC }) {
       nodes {
           description {
             description
@@ -38,7 +38,7 @@ const SegmentContent = () => {
         }
         }
       }
-      contentfulRequestPdfIdentifierBs {
+      contentfulRequestPdfTextBusinessSegment {
         bsRequestPdf {
           bsRequestPdf
       }
@@ -47,7 +47,7 @@ const SegmentContent = () => {
   `)
 
 
-    const { allContentfulHomeServices: {nodes: getallservices} } = Segmentdata;
+    const { allContentfulBusinessSegmentPageHomePageContent: {nodes: getallservices} } = Segmentdata;
 
     console.log(getallservices)
 
@@ -117,7 +117,7 @@ const SegmentContent = () => {
               <Row>
                 <Col md={12}>
                   <div className="request-wrapper">
-                    <h3>{Segmentdata.contentfulRequestPdfIdentifierBs.bsRequestPdf.bsRequestPdf}</h3>
+                    <h3>{Segmentdata.contentfulRequestPdfTextBusinessSegment.bsRequestPdf.bsRequestPdf}</h3>
                     <Link  target="_blank" to="/contact" class="btn btn-danger resp-btn">Request PDF</Link>
                   </div>           
                 </Col>

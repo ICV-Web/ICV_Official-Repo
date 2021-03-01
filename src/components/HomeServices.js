@@ -9,7 +9,7 @@ const HomeServices = () => {
 
 const getservicesdata = useStaticQuery(graphql`
 {
-      allContentfulHomeServices(limit: 3) {
+      allContentfulBusinessSegmentPageHomePageContent(limit: 3) {
         nodes {
           servicesHeading
           serviceBoxImage {
@@ -29,7 +29,7 @@ const getservicesdata = useStaticQuery(graphql`
     }
   `)
 
-const { allContentfulHomeServices: {nodes: services }, } = getservicesdata;
+const { allContentfulBusinessSegmentPageHomePageContent: {nodes: services }, } = getservicesdata;
 
     return (
         <>

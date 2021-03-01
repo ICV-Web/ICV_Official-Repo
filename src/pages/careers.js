@@ -11,7 +11,7 @@ const careers = ({ data }) => {
     const {desc} = data.contentfulCareer;
     const careerbanner = data.contentfulCareer.bannerImg.fluid.src;
     const careertitle = data.contentfulCareer.careerTitle;
-    const { allContentfulCareerDesc: {nodes: getallcareers} } = data;
+    const { allContentfulCareerPageContent: {nodes: getallcareers} } = data;
     console.log(getallcareers)
 
 
@@ -108,7 +108,7 @@ export const query = graphql`
         }
       }
     }
-    allContentfulCareerDesc {
+    allContentfulCareerPageContent {
       nodes {
         applyBtn
         applyBtnLink

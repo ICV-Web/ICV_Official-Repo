@@ -7,7 +7,7 @@ const Slider = () => {
 
   const data = useStaticQuery(graphql`
     {
-      allContentfulSlider {
+      allContentfulHomePageBannerSlider {
         nodes {
           sliderButton1LInk
           sliderButton1Text
@@ -25,7 +25,7 @@ const Slider = () => {
     }
   `)
 
-  const { allContentfulSlider: {nodes: Sliders} } = data;
+  const { allContentfulHomePageBannerSlider: {nodes: Sliders} } = data;
   
   
   return (

@@ -8,14 +8,14 @@ import { renderRichText } from "gatsby-source-contentful/rich-text"
 
 const imprints = ( { data } ) => {
 
-    const {desc} = data.contentfulImprint
+    const {desc} = data.contentfulImprintPage
 
 
 
     return (
         <>
             <Layout>
-                <div className="section banner-page about" style={{ backgroundImage:   `url(${data.contentfulImprint.banner.fluid.src})`  }}>
+                <div className="section banner-page about" style={{ backgroundImage:   `url(${data.contentfulImprintPage.banner.fluid.src})`  }}>
                     <Container>
                         <Row>
                             <Col sm={12} md={12}>
@@ -36,7 +36,7 @@ const imprints = ( { data } ) => {
                                     <div className="item">
                                     <div className="box-image">
                                         <div className="client-img">
-                                            <img src={data.contentfulImprint.descImg.fluid.src} alt="" className="img-responsive"/>
+                                            <img src={data.contentfulImprintPage.descImg.fluid.src} alt="" className="img-responsive"/>
                                         </div>
                                     </div>
                                     <div className="box-info">
@@ -56,7 +56,7 @@ const imprints = ( { data } ) => {
 
 export const query = graphql`
   {
-  contentfulImprint {
+    contentfulImprintPage {
         desc {
             raw
         }

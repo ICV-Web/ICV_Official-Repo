@@ -9,8 +9,8 @@ const Layout = loadable(() => import('../components/layout'))
 
 const cookiepolicy = ({ data }) => {
 
-     const {desc} = data.contentfulCookiePolicy;
-     const cookiebanner = data.contentfulCookiePolicy.bannerImage.fluid.src;
+     const {desc} = data.contentfulCookiePolicyPage;
+     const cookiebanner = data.contentfulCookiePolicyPage.bannerImage.fluid.src;
 
 
     return (
@@ -55,7 +55,7 @@ export default cookiepolicy
 
 export const query = graphql`
   {
-    contentfulCookiePolicy {
+    contentfulCookiePolicyPage {
       desc {
         raw
       }

@@ -14,7 +14,7 @@ const blogs = ({data}) => {
     return (
         <>
             <Layout>
-                <div className="section banner-page about" style={{backgroundImage:   `url(${data.allContentfulBlogPageBanner.nodes[0].bannerIamge.fluid.src})`  }}>
+                <div className="section banner-page about" style={{backgroundImage:   `url(${data.allContentfulNewsPressReleasePage.nodes[0].bannerIamge.fluid.src})`  }}>
                     <Container>
                         <Row>
                             <Col sm={12} md={12}>
@@ -36,7 +36,7 @@ const blogs = ({data}) => {
 export default blogs
 export const query = graphql`
   {
-    allContentfulBlogPageBanner {
+    allContentfulNewsPressReleasePage {
       nodes {
         bannerIamge {
           fluid(maxWidth:1356, maxHeight: 275,quality: 100) {

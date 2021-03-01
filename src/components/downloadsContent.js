@@ -7,14 +7,14 @@ import Fade from 'react-reveal/Fade';
 const DownloadContent = () => {
     const data = useStaticQuery(graphql`
     {
-      allContentfulDownloads {
+      allContentfulDownloadPage {
         nodes {
           downloadsDesc {
             downloadsDesc
           }
         }
       }
-      allContentfulDownloadPage(sort: { fields:sortingOrder, order: ASC }) {
+      allContentfulDownloadPageContent(sort: { fields:sortingOrder, order: ASC }) {
         nodes {
           featuredImg {
             fluid {
@@ -31,7 +31,7 @@ const DownloadContent = () => {
       }
     }
   `)
-    const {allContentfulDownloadPage:{nodes: alldownload},} = data
+    const {allContentfulDownloadPageContent:{nodes: alldownload},} = data
 
     return (
         <>
@@ -42,7 +42,7 @@ const DownloadContent = () => {
                    <Fade left>
                        <div className="content">
                             <p className="section-heading-4">
-                              {data.allContentfulDownloads.nodes[0].downloadsDesc.downloadsDesc}
+                              {data.allContentfulDownloadPage.nodes[0].downloadsDesc.downloadsDesc}
                             </p>
                        </div>
                        </Fade>

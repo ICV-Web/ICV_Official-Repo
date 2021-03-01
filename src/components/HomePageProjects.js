@@ -13,7 +13,7 @@ const HomePageProjects = () => {
 
     const gethomepageprojects = useStaticQuery(graphql`
     {
-      allContentfulProjects {
+      allContentfulProductPageContentHomePageProductSection {
         nodes {
           projectTitle
           projectImage {
@@ -29,7 +29,7 @@ const HomePageProjects = () => {
     }
   `)
 
-  const { allContentfulProjects: {nodes: projects }, } = gethomepageprojects;
+  const { allContentfulProductPageContentHomePageProductSection: {nodes: projects }, } = gethomepageprojects;
 
 
 

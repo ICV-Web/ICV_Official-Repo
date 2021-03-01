@@ -7,7 +7,7 @@ const Testimonials = () => {
 
 const alltestimonials = useStaticQuery(graphql`
     {
-      allContentfulTestimonials {
+      allContentfulHomePageTestimonialSection {
         nodes {
           messageTitle
           userName
@@ -25,7 +25,7 @@ const alltestimonials = useStaticQuery(graphql`
     }
 `)
 
-const { allContentfulTestimonials: {nodes: testimonial}, } =  alltestimonials
+const { allContentfulHomePageTestimonialSection: {nodes: testimonial}, } =  alltestimonials
 
     return (
         <>

@@ -42,7 +42,7 @@ const Footer = () => {
         }
 	  }
 	  
-	  allContentfulProjects(limit: 5) {
+	  allContentfulProductPageContentHomePageProductSection(limit: 5) {
         nodes {
           projectTitle
         }
@@ -52,7 +52,7 @@ const Footer = () => {
   `)
 
 
-const { allContentfulProjects: {nodes: footerprojects }, } = footerdata;
+const { allContentfulProductPageContentHomePageProductSection: {nodes: footerprojects }, } = footerdata;
 
 
 const [formState, setFormState] = useState({

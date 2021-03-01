@@ -8,13 +8,13 @@ import VisibilitySensor from "react-visibility-sensor"
 const Stats = () => {
   const getstats = useStaticQuery(graphql`
     {
-      allContentfulStatistics {
+      allContentfulHomePageCounter {
         nodes {
           number
           title
         }
       }
-      allContentfulHomePageBackgroundImages {
+      allContentfulHomePageCounterBackgroundImage {
         nodes {
           statisticsSectionImage {
             fluid {
@@ -27,7 +27,7 @@ const Stats = () => {
   `)
 
   const {
-    allContentfulStatistics: { nodes: Statistics },
+    allContentfulHomePageCounter: { nodes: Statistics },
   } = getstats
 
   return (

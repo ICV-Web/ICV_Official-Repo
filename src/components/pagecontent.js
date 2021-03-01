@@ -7,14 +7,14 @@ import Fade from "react-reveal/Fade"
 const Pagecontent = () => {
   const contentdata = useStaticQuery(graphql`
     {
-      allContentfulContact {
+      allContentfulContactUsPage {
         nodes {
           contentDesc {
             contentDesc
           }
         }
       }
-      allContentfulContactInfo {
+      allContentfulContactUsInformation {
         nodes {
           companyBrochure {
             file {
@@ -66,7 +66,7 @@ const Pagecontent = () => {
       .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
       .join("&")
   }
-  const linkpdf = contentdata.allContentfulContactInfo.nodes[0].companyBrochure.file.url;
+  const linkpdf = contentdata.allContentfulContactUsInformation.nodes[0].companyBrochure.file.url;
   return (
     <>
       <div className="section contact">
@@ -77,7 +77,7 @@ const Pagecontent = () => {
                 <div className="content">
                   <p className="section-heading-3">
                     {
-                      contentdata.allContentfulContact.nodes[0].contentDesc
+                      contentdata.allContentfulContactUsPage.nodes[0].contentDesc
                         .contentDesc
                     }
                   </p>
@@ -207,7 +207,7 @@ const Pagecontent = () => {
                       <li>
                         <h4>
                           {
-                            contentdata.allContentfulContactInfo.nodes[0]
+                            contentdata.allContentfulContactUsInformation.nodes[0]
                               .country1
                           }
                         </h4>
@@ -218,7 +218,7 @@ const Pagecontent = () => {
                         </div>
                         <div className="info-text">
                           {
-                            contentdata.allContentfulContactInfo.nodes[0]
+                            contentdata.allContentfulContactUsInformation.nodes[0]
                               .address1
                           }
                         </div>
@@ -228,7 +228,7 @@ const Pagecontent = () => {
                           <FaPhoneAlt />
                         </div>
                         <div className="info-text">
-                          {contentdata.allContentfulContactInfo.nodes[0].phone1}
+                          {contentdata.allContentfulContactUsInformation.nodes[0].phone1}
                         </div>
                       </li>
                       <li>
@@ -236,7 +236,7 @@ const Pagecontent = () => {
                           <FaEnvelope />
                         </div>
                         <div className="info-text">
-                          {contentdata.allContentfulContactInfo.nodes[0].mail1}
+                          {contentdata.allContentfulContactUsInformation.nodes[0].mail1}
                         </div>
                       </li>
                     </ul>
@@ -244,7 +244,7 @@ const Pagecontent = () => {
                       <li>
                         <h4>
                           {
-                            contentdata.allContentfulContactInfo.nodes[0]
+                            contentdata.allContentfulContactUsInformation.nodes[0]
                               .country2
                           }
                         </h4>
@@ -255,7 +255,7 @@ const Pagecontent = () => {
                         </div>
                         <div className="info-text">
                           {
-                            contentdata.allContentfulContactInfo.nodes[0]
+                            contentdata.allContentfulContactUsInformation.nodes[0]
                               .address2
                           }
                         </div>
@@ -265,7 +265,7 @@ const Pagecontent = () => {
                           <FaPhoneAlt />
                         </div>
                         <div className="info-text">
-                          {contentdata.allContentfulContactInfo.nodes[0].phone2}
+                          {contentdata.allContentfulContactUsInformation.nodes[0].phone2}
                         </div>
                       </li>
                       <li>
@@ -273,7 +273,7 @@ const Pagecontent = () => {
                           <FaEnvelope />
                         </div>
                         <div className="info-text">
-                          {contentdata.allContentfulContactInfo.nodes[0].mail2}
+                          {contentdata.allContentfulContactUsInformation.nodes[0].mail2}
                         </div>
                       </li>
                     </ul>
@@ -281,7 +281,7 @@ const Pagecontent = () => {
                       <li>
                         <h4>
                           {
-                            contentdata.allContentfulContactInfo.nodes[0]
+                            contentdata.allContentfulContactUsInformation.nodes[0]
                               .country3
                           }
                         </h4>
@@ -292,7 +292,7 @@ const Pagecontent = () => {
                         </div>
                         <div className="info-text">
                           {
-                            contentdata.allContentfulContactInfo.nodes[0]
+                            contentdata.allContentfulContactUsInformation.nodes[0]
                               .address3
                           }
                         </div>
@@ -302,7 +302,7 @@ const Pagecontent = () => {
                           <FaPhoneAlt />
                         </div>
                         <div className="info-text">
-                          {contentdata.allContentfulContactInfo.nodes[0].phone3}
+                          {contentdata.allContentfulContactUsInformation.nodes[0].phone3}
                         </div>
                       </li>
                       <li>
@@ -310,7 +310,7 @@ const Pagecontent = () => {
                           <FaEnvelope />
                         </div>
                         <div className="info-text">
-                          {contentdata.allContentfulContactInfo.nodes[0].mail3}
+                          {contentdata.allContentfulContactUsInformation.nodes[0].mail3}
                         </div>
                       </li>
                     </ul>

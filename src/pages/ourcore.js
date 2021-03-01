@@ -15,7 +15,7 @@ const Layout = loadable(() => import('../components/layout'))
 
   function PageTemplate({data}) {
     
-    const { allContentfulOurCorePageDescription: {nodes: getallcores} } = data;
+    const { allContentfulOurCorePageContent: {nodes: getallcores} } = data;
     const banner = data.allContentfulOurCorePage.nodes[0].ourCoreBanner.fluid.src
     
     return (
@@ -122,7 +122,7 @@ const Layout = loadable(() => import('../components/layout'))
   export default PageTemplate
   export const pageQuery = graphql`
     query pageQuery{
-      allContentfulOurCorePageDescription (sort: { fields:sortingOrder, order: ASC }){
+      allContentfulOurCorePageContent (sort: { fields:sortingOrder, order: ASC }){
         nodes {
           addClassTestLefttestRight
           coreDescription {
