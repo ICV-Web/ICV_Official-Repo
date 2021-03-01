@@ -55,12 +55,12 @@ const Footer = () => {
 const { allContentfulProductPageContentHomePageProductSection: {nodes: footerprojects }, } = footerdata;
 
 
-const [formState, setFormState] = useState({
-	email: "",
+const [formState2, setFormState2] = useState({
+	email2: ""
 })
 const handleChange=e =>{
-	setFormState({
-		...formState,
+	setFormState2({
+		...formState2,
 		[e.target.name]:e.target.value,
 	})
 }
@@ -68,7 +68,7 @@ const handleSubmit=e =>{
  fetch("/", {
 	 method: "POST",
 	 headers: { "Content-Type": "application/x-www-form-urlencoded" },
-	 body: encode({ "form-name": "contact", ...formState })
+	 body: encode({ "form-name": "contact", ...formState2 })
    })
 	 .then(() => navigate("/validation"))
 	 .catch(error => console.log(error));
@@ -230,7 +230,7 @@ const encode = (data) => {
 						<Form action="#" className="footer-subscribe" data-toggle="validator" noValidate="true" onSubmit={handleSubmit} name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
 							<input type="hidden" name="form-name" value="contact" />
 							<Form.Group>
-								<Form.Control type="email" name="email" className="form-control" placeholder="enter your email" onChange={handleChange} value={formState.email}/>
+								<Form.Control type="email" name="email" className="form-control" placeholder="enter your email" onChange={handleChange} value={formState2.email2}/>
 							</Form.Group>
 							<Form.Group>
 								<Form.Control id="p_submit" type="submit" value="send"/>
