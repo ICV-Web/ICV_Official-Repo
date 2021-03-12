@@ -63,7 +63,7 @@ const Footer = () => {
   } = footerdata
 
   const [formState2, setFormState2] = useState({
-    email2: "",
+    email: "",
   })
   const handleChangeFooter = e => {
     setFormState2({
@@ -314,11 +314,11 @@ const Footer = () => {
                   <Form.Group>
                     <Form.Control
                       type="email"
-                      name="email2"
+                      name="email"
                       className="form-control"
                       placeholder="Email"
                       onChange={handleChangeFooter}
-                      value={formState2.email2}
+                      value={formState2.email}
                     />
                   </Form.Group>
                   <Form.Group>
