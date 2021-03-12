@@ -322,7 +322,7 @@ const Footer = () => {
                     />
                   </Form.Group>
                   <Form.Group>
-                    <Form.Control
+                    <Button
                       name="submit"
                       id="p_submit"
                       type="submit"
