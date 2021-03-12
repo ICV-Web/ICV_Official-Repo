@@ -4,6 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import statbannerimg from "../images/bgoverlay-1.jpg"
 import CountUp from "react-countup"
 import VisibilitySensor from "react-visibility-sensor"
+import { nanoid } from 'nanoid'
 
 const Stats = () => {
   const getstats = useStaticQuery(graphql`
@@ -40,7 +41,7 @@ const Stats = () => {
           <Row>
             {Statistics.map(allstats => {
               return (
-                <Col sm={3} md={3}>
+                <Col sm={3} md={3} key={nanoid()}>
                   <div className="counter-1">
                     <div className="counter-number">
                       <CountUp

@@ -3,6 +3,7 @@ import { useStaticQuery, graphql,navigate } from "gatsby"
 import {Container,Row,Col,Form} from "react-bootstrap"
 import { FaEnvelope,FaFacebookF,FaInstagram,FaLinkedinIn,FaTwitter } from "react-icons/fa";
 import { Link } from 'gatsby'
+import { nanoid } from 'nanoid'
 import Fade from 'react-reveal/Fade';
 
 const Footer = () => {
@@ -68,7 +69,7 @@ const handleSubmit=e =>{
  fetch("/", {
 	 method: "POST",
 	 headers: { "Content-Type": "application/x-www-form-urlencoded" },
-	 body: encode({ "form-name": "contact", ...formState2 })
+	 body: encode({ "form-name": "contact-footer", ...formState2 })
    })
 	 .then(() => navigate("/validation"))
 	 .catch(error => console.log(error));
@@ -142,36 +143,36 @@ const encode = (data) => {
 						<div className="footer-sosmed">
 							
 								
-									<Link to={footerdata.allContentfulFooter.nodes[0].socialLink1} title="">
+									<a href={footerdata.allContentfulFooter.nodes[0].socialLink1} target="_blank"  title="">
 										<div className="item">
 											<FaFacebookF/>
 										</div>
-									</Link>
+									</a>
 									
 								
 								
 								
-									<Link to={footerdata.allContentfulFooter.nodes[0].socialLink3} title="">
+									<a target="_blank" href={footerdata.allContentfulFooter.nodes[0].socialLink3} title="">
 										<div className="item">
 											<FaInstagram/>
 										</div>
-									</Link>
+									</a>
 									<div><p className="vis-fot">Visibility not shown</p></div>
 								
 									
-									<Link to={footerdata.allContentfulFooter.nodes[0].socialLink2} title="">
+									<a target="_blank" href={footerdata.allContentfulFooter.nodes[0].socialLink2} title="">
 										<div className="item">
 											<FaLinkedinIn/>
 										</div>
-									</Link>
+									</a>
 								
 								
 								
-									<Link to={footerdata.allContentfulFooter.nodes[0].socialLink4} title="">
+									<a target="_blank" href={footerdata.allContentfulFooter.nodes[0].socialLink4} title="">
 										<div className="item">
 											<FaTwitter/>
 										</div>
-									</Link>
+									</a>
 									
 							
 						</div>
@@ -189,7 +190,7 @@ const encode = (data) => {
 
 								return(
 									<>
-										<li><Link to="/products" title="">{footerprojectlink.projectTitle}</Link></li>
+										<li key={nanoid()}><Link to="/products" title="">{footerprojectlink.projectTitle}</Link></li>
 
 									</>
 								)
@@ -227,10 +228,10 @@ const encode = (data) => {
 							Subscribe
 						</div>
 						<p>{footerdata.allContentfulFooter.nodes[0].subscriptionText.subscriptionText}</p>
-						<Form action="#" className="footer-subscribe" data-toggle="validator" noValidate="true" onSubmit={handleSubmit} name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
-							<input type="hidden" name="form-name" value="contact" />
+						<Form action="#" className="footer-subscribe" data-toggle="validator" noValidate={true} onSubmit={handleSubmit} name="contact-footer" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+							<input type="hidden" name="form-name" value="contact-footer" />
 							<Form.Group>
-								<Form.Control type="email" name="email" className="form-control" placeholder="enter your email" onChange={handleChange} value={formState2.email2}/>
+								<Form.Control type="email" name="email" className="form-control" placeholder="Email" onChange={handleChange} value={formState2.email2}/>
 							</Form.Group>
 							<Form.Group>
 								<Form.Control id="p_submit" type="submit" value="send"/>

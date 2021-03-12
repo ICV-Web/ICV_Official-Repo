@@ -14,7 +14,6 @@ const products = ({data}) => {
     const {allContentfulProductPageContentHomePageProductSection:{nodes: allprojects},} = data
 
     const getbannerimage = data.allContentfulProductPage.nodes[0].bannerImage.fluid.src
-    const linkpdf = data.contentfulDownloadPdfProduct.downloadsPdf.file.url
     const headingpdf = data.contentfulDownloadPdfProduct.requestPdfHeading.requestPdfHeading
     return (
 
@@ -55,7 +54,7 @@ const products = ({data}) => {
                     return(
                       <>
                         
-                            <section className={ `services banner-page about  b1-segment bg-fx sz-bg  ${projects.textColor} ${projects.addClassTestLefttestRight}`  } style={{ backgroundImage:   `url(${projects.imgDesk.fluid.src})`  }}>
+                            <section className={ `productBg services banner-page about  b1-segment bg-fx sz-bg  ${projects.textColor} ${projects.addClassTestLefttestRight}`  } style={{ backgroundImage:   `url(${projects.imgDesk.fluid.src})`  }}>
                             <Fade bottom>  
                             <Container>
                                     <Row>
@@ -98,7 +97,7 @@ const products = ({data}) => {
                           <Row>
                             <Col md={12}>
                               <h3>{headingpdf}</h3>
-                              <Link  target="_blank" to={linkpdf} class="btn btn-danger resp-btn">Download PDF</Link>
+                              <Link  target="_blank" to="/downloads" class="btn btn-danger resp-btn">Download PDF</Link>
                               <Link  target="_blank" to="/contact" class="btn btn-danger resp-btn">Request PDF</Link>
                             </Col>
                           </Row>
@@ -118,8 +117,8 @@ export const query = graphql`
       textColor
       addClassTestLefttestRight
       imgDesk {
-        fluid {
-          src
+        fluid(maxWidth:1356, maxHeight: 275,quality: 100) {
+          ...GatsbyContentfulFluid
         }
       }
       imgMob {
@@ -134,11 +133,6 @@ export const query = graphql`
     }
   }
   contentfulDownloadPdfProduct {
-      downloadsPdf {
-        file {
-          url
-        }
-      }
       requestPdfHeading {
         requestPdfHeading
       }

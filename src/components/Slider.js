@@ -2,12 +2,13 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { Carousel, Container } from 'react-bootstrap'
 import Img from "gatsby-image"
+import { nanoid } from 'nanoid'
 const Slider = () => {
 
 
   const data = useStaticQuery(graphql`
     {
-      allContentfulHomePageBannerSlider {
+      allContentfulHomePageBannerSlider(sort: { fields:sortingOrder, order: ASC }) {
         nodes {
           sliderButton1LInk
           sliderButton1Text
@@ -33,7 +34,7 @@ const Slider = () => {
         <Carousel className="bannerslider">
             {Sliders.map((Slider) =>{
                 return (
-                    <Carousel.Item>
+                    <Carousel.Item key={nanoid()}>
                    { /* <img
                     //   className="d-block w-100"
                     //   src={Slider.sliderImage.fluid.src}

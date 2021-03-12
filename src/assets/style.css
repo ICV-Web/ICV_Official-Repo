@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+html,body{
+  height:100%;
+}
 .bolder {
   font-weight: 600;
 }
@@ -1715,11 +1718,12 @@ button.lang-button:hover {
 }
 
 .bgblue {
-  background: #51c0b7 !important;
+  background: #2b3990 !important;
+  
 }
 
 .bgblue:hover {
-  background: #2b3990 !important;
+  background:#51c0b7 !important;
 }
 
 .feature-box-8 .body {
@@ -4246,7 +4250,7 @@ button.lang-button {
 }
 
 .flip-box-back {
-  background-color: #3f51b5;
+  background-color: #2b3990;
   color: white;
   transform: rotateX(180deg);
   display: flex;
@@ -4291,7 +4295,7 @@ button.lang-button {
 }
 
 .flip-card-back {
-  background-color: #3f51b5;
+  background-color:#2b3990;
   color: white;
   transform: rotateX(180deg);
 }
@@ -4308,7 +4312,7 @@ button.lang-button {
 
 .flip-box-front span {
   width: 100%;
-  background: #3f51b5;
+  background: #2b3990;
   bottom: 0;
   position: absolute;
   margin: 0 auto;
@@ -4659,7 +4663,7 @@ nav.navbar-collapse.collapse.in li{
   width: 160px;
   margin: 0 !important;
   border-radius: 15px;
-  background-color: #51C0B7 !important;  
+  background-color: #2b3990 !important;  
 }
 .Title-location h5{
   border: 1px solid #DCDDE1;
@@ -4838,5 +4842,20 @@ input[type=number] {
   padding: 7px;
   margin-top: 20px;
 } 
+/*3/11/2021 Update*/
+.blogContainer{
+  padding-bottom: 0px !important;
+}
+.media.gbr img {
+  width: 100%;
+}
+/*Still testing*/
+/* .productBg{
+  background-size: auto 100% !important;
+    background-repeat: no-repeat;
+} */
+
+
+
 
 /*# sourceMappingURL=style.css.map */

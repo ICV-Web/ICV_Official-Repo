@@ -2,6 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { Carousel, Container , Row , Col } from 'react-bootstrap'
 import Fade from 'react-reveal/Fade';
+import { nanoid } from 'nanoid'
 const Testimonials = () => {
 
 
@@ -29,7 +30,7 @@ const { allContentfulHomePageTestimonialSection: {nodes: testimonial}, } =  allt
 
     return (
         <>
-        <div class="section testimony bglight">
+        <div className="section testimony bglight">
             <Container>
                 <Fade bottom>
                 <Row>
@@ -41,7 +42,7 @@ const { allContentfulHomePageTestimonialSection: {nodes: testimonial}, } =  allt
 
                                 return(
 
-                                        <div className="testimonial-3">
+                                        <div className="testimonial-3" key={nanoid()}>
                                             <div className="media">
                                           
                                             

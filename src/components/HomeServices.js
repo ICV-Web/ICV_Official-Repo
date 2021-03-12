@@ -3,7 +3,7 @@ import { Container , Row , Col  } from 'react-bootstrap'
 import { useStaticQuery, graphql } from "gatsby"
 import { Link } from "gatsby"
 import Fade from 'react-reveal/Fade';
-
+import { nanoid } from 'nanoid'
 
 const HomeServices = () => {
 
@@ -51,7 +51,7 @@ const { allContentfulBusinessSegmentPageHomePageContent: {nodes: services }, } =
 			{services.map((service) => {
 
 				return (
-				<Col sm={6} md={4}>
+				<Col sm={6} md={4} key={nanoid()}>
 					<Fade bottom>
 						<div className="feature-box-8">
 							<div className="media">

@@ -171,7 +171,7 @@ const Pagecontent = () => {
                       <textarea
                         className="form-control"
                         id="p_message"
-                        rows="11"
+                        rows="6"
                         placeholder="Write message"
                         name="message"
                         onChange={handleChange}

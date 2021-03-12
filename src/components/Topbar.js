@@ -92,16 +92,16 @@ const Topbar = () => {
 							</ul>*/}
 							<ul className="topbar-sosmed">
 							<li>
-								<Link to={links.allContentfulHeader.nodes[0].facebookLink}><FaFacebookF/></Link>
+								<a href={links.allContentfulHeader.nodes[0].facebookLink} target="_blank"><FaFacebookF/></a>
 							</li>
 							<li>
-								<Link to={links.allContentfulHeader.nodes[0].twitterLink}><FaInstagram/></Link>
+								<a href={links.allContentfulHeader.nodes[0].twitterLink} target="_blank"><FaInstagram/></a>
 							</li>
 							<li>
-								<Link to={links.allContentfulHeader.nodes[0].instagramLink}><FaLinkedinIn/></Link>
+								<a href={links.allContentfulHeader.nodes[0].instagramLink} target="_blank"><FaLinkedinIn/></a>
 							</li>
 							<li>
-								<Link to={links.allContentfulHeader.nodes[0].pinterestLink}><FaTwitter/></Link>
+								<a href={links.allContentfulHeader.nodes[0].pinterestLink} target="_blank"><FaTwitter/></a>
 							</li>
 							</ul>
 						</div>

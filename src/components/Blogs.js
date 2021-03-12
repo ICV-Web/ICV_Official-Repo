@@ -13,7 +13,7 @@ const getblogsdata = useStaticQuery(graphql`
           nodes {
             slug
             title
-            featuredImage {
+            thumbnailImage {
               fluid {
                 src
               }
@@ -32,7 +32,7 @@ const { allContentfulBlogs: {nodes: blogs}, } = getblogsdata
     return (
         <>
 	<div className="section blog">
-		<Container>
+		<Container className="blogContainer">
 			<Row>
 				
 				<Col sm={12} md={12}>
@@ -48,13 +48,13 @@ const { allContentfulBlogs: {nodes: blogs}, } = getblogsdata
 
                     return(
                           
-                        	<Col sm={6} md={4}>
+                        	<Col sm={6} md={4} key={blog.id}>
                           
-                          <article key={blog.id}>
+                          <article >
                                 <Slide right>
                                   <div className="box-news-1">
                                       <div className="media gbr">
-                                          <img src={blog.featuredImage.fluid.src} alt="" className="img-responsive"/>
+                                          <img src={blog.thumbnailImage.fluid.src} alt="" className="img-responsive"/>
                                           <div className="overlay">
                                               <i><FaExternalLinkAlt/></i>
                                           </div>        

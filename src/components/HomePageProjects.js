@@ -5,7 +5,7 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { useStaticQuery, graphql, Link } from "gatsby"
 import Fade from 'react-reveal/Fade';
-
+import { nanoid } from 'nanoid'
 
 
 
@@ -58,7 +58,7 @@ const HomePageProjects = () => {
     return (
         <>
 
-				<div class="section section-projects">
+				<div className="section section-projects">
 
 					<Container>
 
@@ -82,16 +82,15 @@ const HomePageProjects = () => {
                                     {projects.map((project) => {
 
                                         return(
-                                            <div className="item">
-                                                <div class="flip-box">
-                                                    <div class="flip-box-inner">
-                                                        <div class="flip-box-front" style={{ background: `url(${project.projectImage.fluid.src})`  }}>
+                                            <div className="item" key={nanoid()}>
+                                                <div className="flip-box">
+                                                    <div className="flip-box-inner">
+                                                        <div className="flip-box-front" style={{ background: `url(${project.projectImage.fluid.src})`  }}>
                                                             <div  className="project-image-wrapper">
-
                                                             </div>
                                                             <span  className="title">{project.projectTitle}</span>
                                                         </div>
-                                                        <div class="flip-box-back">
+                                                        <div className="flip-box-back">
                                                             <p>{project.productText.productText}</p>
                                                         </div>
                                                     </div>
