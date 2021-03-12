@@ -75,7 +75,7 @@ const Footer = () => {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "Contact-Form-Footer", ...formState2 }),
+      body: encode({ "form-name": "contact v2", ...formState2 }),
     })
       .then(() => navigate("/validation"))
       .catch(error => console.log(error))
@@ -301,7 +301,7 @@ const Footer = () => {
                   data-toggle="validator"
                   noValidate="true"
                   onSubmit={handleSubmit}
-                  name="Contact-Form-Footer"
+                  name="contact v2"
                   method="post"
                   data-netlify="true"
                   data-netlify-honeypot="bot-field"
@@ -309,7 +309,7 @@ const Footer = () => {
                   <input
                     type="hidden"
                     name="form-name"
-                    value="Contact-Form-Footer"
+                    value="contact v2"
                   />
                   <Form.Group>
                     <Form.Control

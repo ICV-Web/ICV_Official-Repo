@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import { Container, Row, Col, Form, Button } from "react-bootstrap"
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa"
 import { useStaticQuery, graphql, Link, navigate } from "gatsby"
+
 import Fade from "react-reveal/Fade"
 
 const Pagecontent = () => {
@@ -120,11 +121,12 @@ const Pagecontent = () => {
                         id="p_name"
                         name="name"
                         type="text"
+                        required
                         placeholder="Full Name..."
-                        required=""
+                        
                         onChange={handleChange}
                         value={formState.name}
-                        required
+                      
                       />
       
                     </Form.Group>
@@ -133,11 +135,12 @@ const Pagecontent = () => {
                         id="p_email"
                         name="email"
                         type="email"
+                        required
                         placeholder="Enter Email Address..."
-                        required=""
+                        
                         onChange={handleChange}
                         value={formState.email}
-                        required
+                        
                       />
       
                     </Form.Group>
@@ -159,11 +162,12 @@ const Pagecontent = () => {
                         id="p_subject"
                         name="subject"
                         type="text"
+                        required
                         placeholder="Enter Subject..."
-                        required=""
+                        
                         onChange={handleChange}
                         value={formState.subject}
-                        required
+                        
                       />
                       
                     </Form.Group>
