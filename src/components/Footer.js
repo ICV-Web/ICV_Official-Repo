@@ -231,10 +231,10 @@ const encode = (data) => {
 						<Form action="#" className="footer-subscribe" data-toggle="validator" noValidate={true} onSubmit={handleSubmit} name="contact-footer" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
 							<input type="hidden" name="form-name" value="contact-footer" />
 							<Form.Group>
-								<Form.Control type="email" name="email" className="form-control" placeholder="Email" onChange={handleChange} value={formState2.email2}/>
+								<Form.Control type="email" name="email2" className="form-control" placeholder="Email" onChange={handleChange} value={formState2.email2}/>
 							</Form.Group>
 							<Form.Group>
-								<Form.Control id="p_submit" type="submit" value="send"/>
+								<Form.Control name="submit" id="p_submit" type="submit" value="send"/>
 			              		<label for="p_submit"><FaEnvelope/></label>
 							</Form.Group>
 			              	
