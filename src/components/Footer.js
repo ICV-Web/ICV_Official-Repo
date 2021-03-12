@@ -75,14 +75,14 @@ const Footer = () => {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name2": "Contact Form Footer", ...formState2 }),
+      body: encode2({ "form-name": "Contact Form Footer", ...formState2 }),
     })
       .then(() => navigate("/validation"))
       .catch(error => console.log(error))
 
     e.preventDefault()
   }
-  const encode = data => {
+  const encode2 = data => {
     return Object.keys(data)
       .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
       .join("&")
@@ -308,7 +308,7 @@ const Footer = () => {
                 >
                   <input
                     type="hidden"
-                    name="form-name2"
+                    name="form-name"
                     value="Contact Form Footer"
                   />
                   <Form.Group>
