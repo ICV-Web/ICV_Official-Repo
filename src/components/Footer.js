@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { useStaticQuery, graphql, navigate } from "gatsby"
-import { Container, Row, Col, Form } from "react-bootstrap"
+import { Container, Row, Col, Form,Buttton } from "react-bootstrap"
 import {
   FaEnvelope,
   FaFacebookF,
@@ -71,18 +71,18 @@ const Footer = () => {
       [e.target.name]: e.target.value,
     })
   }
-  const handleSubmitFooter = e => {
+  const handleSubmit = e => {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode2({ "form-name": "Contact Form Footer", ...formState2 }),
+      body: encode({ "form-name": "Contact-Form-Footer", ...formState2 }),
     })
       .then(() => navigate("/validation"))
       .catch(error => console.log(error))
 
     e.preventDefault()
   }
-  const encode2 = data => {
+  const encode = data => {
     return Object.keys(data)
       .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
       .join("&")
@@ -300,8 +300,8 @@ const Footer = () => {
                   className="footer-subscribe"
                   data-toggle="validator"
                   noValidate="true"
-                  onSubmit={handleSubmitFooter}
-                  name="Contact Form Footer"
+                  onSubmit={handleSubmit}
+                  name="Contact-Form-Footer"
                   method="post"
                   data-netlify="true"
                   data-netlify-honeypot="bot-field"
@@ -309,7 +309,7 @@ const Footer = () => {
                   <input
                     type="hidden"
                     name="form-name"
-                    value="Contact Form Footer"
+                    value="Contact-Form-Footer"
                   />
                   <Form.Group>
                     <Form.Control
@@ -322,7 +322,7 @@ const Footer = () => {
                     />
                   </Form.Group>
                   <Form.Group>
-                    <Button
+                    <Form.Control
                       name="submit"
                       id="p_submit"
                       type="submit"

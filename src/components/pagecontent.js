@@ -54,7 +54,7 @@ const Pagecontent = () => {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact v2", ...formState }),
+      body: encode({ "form-name": "contactUs-form", ...formState }),
     })
       .then(() => navigate("/validation"))
       .catch(error => console.log(error))
@@ -109,12 +109,12 @@ const Pagecontent = () => {
                     data-toggle="validator"
                     noValidate="true"
                     onSubmit={handleSubmit}
-                    name="contact v2"
+                    name="contactUs-form"
                     method="post"
                     data-netlify="true"
                     data-netlify-honeypot="bot-field"
                   >
-                    <input type="hidden" name="form-name" value="contact v2" />
+                    <input type="hidden" name="form-name" value="contactUs-form" />
                     <Form.Group>
                       <Form.Control
                         id="p_name"
