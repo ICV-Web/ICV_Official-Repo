@@ -76,7 +76,7 @@ const SegmentContent = () => {
               return(
                 <>
                     
-                   <section className={ `services banner-page about  b1-segment sz-bg bg-fx ${service.textColor} ${service.addClassTestLefttestRight}`  } style={{ backgroundImage:   `url(${service.imgDesk.fluid.src})` }}>
+                   <section className={ `services banner-page about  b1-segment sz-bg bg-fx ${service.textColor} ${service.addClassTestLefttestRight}`  } style={{ backgroundSize: '100% 100%', backgroundImage:   `url(${service.imgDesk.fluid.src})` }}>
                     <Fade bottom>   
                       <Container>
                             <Row>

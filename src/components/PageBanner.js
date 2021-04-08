@@ -22,7 +22,7 @@ const data = useStaticQuery(graphql`
   
     return (
         <>
-        <div className="section banner-page about" style={{ backgroundImage:   `url(${data.allContentfulContactUsPage.nodes[0].bannerImg.fluid.src})`  }}>
+        <div className="section banner-page about" style={{ backgroundSize: '100% 100%', backgroundImage:   `url(${data.allContentfulContactUsPage.nodes[0].bannerImg.fluid.src})`  }}>
             <Container>
                 <Row>
                     <Col sm={12} md={12}>

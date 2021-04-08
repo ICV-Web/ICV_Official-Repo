@@ -13,7 +13,7 @@ const HomePageProjects = () => {
 
     const gethomepageprojects = useStaticQuery(graphql`
     {
-      allContentfulProductPageContentHomePageProductSection {
+      allContentfulProductPageContentHomePageProductSection (sort: { fields: sortingOrder, order: ASC }) {
         nodes {
           projectTitle
           projectImage {

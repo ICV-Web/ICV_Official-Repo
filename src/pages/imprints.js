@@ -15,7 +15,7 @@ const imprints = ( { data } ) => {
     return (
         <>
             <Layout>
-                <div className="section banner-page about" style={{ backgroundImage:   `url(${data.contentfulImprintPage.banner.fluid.src})`  }}>
+                <div className="section banner-page about" style={{ backgroundSize: '100% 100%', backgroundImage:   `url(${data.contentfulImprintPage.banner.fluid.src})`  }}>
                     <Container>
                         <Row>
                             <Col sm={12} md={12}>

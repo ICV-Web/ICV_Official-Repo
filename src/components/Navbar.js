@@ -21,7 +21,7 @@ const logosrc = graphql`
         id
         }
       }
-      allContentfulNavigationMenu(sort: { fields: updatedAt, order: DESC }) {
+      allContentfulNavigationMenu(sort: { fields: sortingOrder, order: ASC }) {
         nodes {
           text
           link
