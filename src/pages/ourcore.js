@@ -102,7 +102,7 @@ const Layout = loadable(() => import('../components/layout'))
                     <Col md={12}>
                         <div className="description-wrapper">
                             <h3>{core.coreTitle}</h3>
-                            <ReadMoreText text={core.coreDescription.coreDescription}></ReadMoreText>
+                            <ReadMoreText text={core.coreDescription.coreDescription} ></ReadMoreText>
                             {/* <p>{core.coreDescription.coreDescription}</p>       */}
                         </div>
                     </Col>
