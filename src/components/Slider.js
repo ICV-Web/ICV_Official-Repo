@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import { useStaticQuery, graphql } from "gatsby"
 import { Carousel, Container } from 'react-bootstrap'
 import Img from "gatsby-image"
@@ -32,7 +33,7 @@ const Slider = () => {
   return (
       <>
         <Carousel className="bannerslider">
-            {Sliders.map((Slider) =>{
+            {Sliders.map((Slider) => {
                 return (
                     <Carousel.Item key={nanoid()}>
                    { /* <img
@@ -52,8 +53,14 @@ const Slider = () => {
                                     <h2 className="caption-heading">
                                       {Slider.sliderHeading}
                                     </h2>
-                                    <p className="excerpt">{Slider.sliderCaption}</p>	
-                                    <linK to={Slider.sliderButton1LInk} className="btn btn-primary" title="LEARN MORE">{Slider.sliderButton1Text}</linK> <linK to={Slider.sliderButton2Link} class="btn btn-secondary" title="CONTACT US">{Slider.sliderButton2Text}</linK>
+                                    <p className="excerpt">{Slider.sliderCaption}</p>
+                                    {Slider.sliderButton1Text != null && (
+                                      <Link to={Slider.sliderButton1LInk} className="btn btn-primary" title="LEARN MORE">{Slider.sliderButton1Text}</Link> 
+                                    )}
+
+                                       {Slider.sliderButton1Text != null && (
+                                      <Link to={Slider.sliderButton2Link} class="btn btn-secondary" title="CONTACT US">{Slider.sliderButton2Text}</Link>
+                                    )}
                                 </div>
                             </Container>
                         </Carousel.Caption>
