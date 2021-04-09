@@ -93,7 +93,7 @@ const HomeAboutSection = () => {
 					<Col sm={5} md={5}>
 						<Fade left>
 							<div className="jumbo-heading">
-								<h2>{getdata.allContentfulHomePageAboutSection.nodes[0].aboutCaption}</h2>
+								<h4>{getdata.allContentfulHomePageAboutSection.nodes[0].aboutCaption}</h4>
 								<span className="fa fa-paper-plane-o"></span>
 							</div>
 						</Fade>

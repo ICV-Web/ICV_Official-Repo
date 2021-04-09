@@ -18,7 +18,7 @@ const careers = ({ data }) => {
     return (
         <>
              <Layout>
-                 <div className="section  banner-page imprint about" style={{ backgroundImage:    `url(${careerbanner})`  }}>
+                 <div className="section  banner-page imprint about" style={{ backgroundSize: '100% 100%', backgroundImage:    `url(${careerbanner})`  }}>
                     <div className="container"><div className="row">
                     <div className="col-sm-12 col-md-12">
                         <div className="title-page"> Careers</div>

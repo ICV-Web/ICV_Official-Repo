@@ -14,7 +14,7 @@ const dataprotection = ({ data }) => {
     return (
         <>
           <Layout>
-               <div className="section banner-page imprint about" style={{ backgroundImage:   `url(${dataPbanner})`  }}>
+               <div className="section banner-page imprint about" style={{ backgroundSize: '100% 100%', backgroundImage:   `url(${dataPbanner})`  }}>
                     <Container>
                         <Row>
                             <Col sm={12} md={12} >

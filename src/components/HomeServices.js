@@ -9,7 +9,7 @@ const HomeServices = () => {
 
 const getservicesdata = useStaticQuery(graphql`
 {
-      allContentfulBusinessSegmentPageHomePageContent(limit: 3) {
+      allContentfulBusinessSegmentPageHomePageContent(sort: { fields: sortingOrder, order: ASC }, limit: 3) {
         nodes {
           servicesHeading
           serviceBoxImage {

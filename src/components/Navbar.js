@@ -21,7 +21,14 @@ const logosrc = graphql`
         id
         }
       }
+      allContentfulNavigationMenu(sort: { fields: sortingOrder, order: ASC }) {
+        nodes {
+          text
+          link
+        }
+      }
     }
+    
 `
 
 const Navbar = () => {
@@ -34,7 +41,7 @@ const Navbar = () => {
 
   const logourl = useStaticQuery(logosrc)
   const {allContentfulPageTemplate: { nodes: pageTemplate },} = logourl
-
+  const {allContentfulNavigationMenu: { nodes: navItems },} = logourl
   return (
     <>
       <div className="navbar navbar-main">
@@ -60,84 +67,24 @@ const Navbar = () => {
 
             <nav className="navbar-collapse collapse">
               <ul className="nav navbar-nav navbar-left">
-                <li className="dropdown">
-                  <Link
-                    to="/"
+              {navItems.map((navItem) =>{
+                return (
+                  <li className="dropdown">
+<Link
+                    to={navItem.link}
                     data-toggle="dropdown"
                     data-hover="dropdown"
                     role="button"
                     aria-haspopup="true"
                     aria-expanded="false"
                   >
-                    HOME
+                    {navItem.text}
                   </Link>
-                </li>
-
-                <li className="dropdown">
-                  <Link
-                    to="/ourcore"
-                    data-toggle="dropdown"
-                    data-hover="dropdown"
-                    role="button"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                  >
-                    OUR CORE<span className="caret"></span>
-                  </Link>
-                </li>
-
-                <li className="dropdown">
-                  <Link
-                    to="/businesssegment"
-                    data-toggle="dropdown"
-                    data-hover="dropdown"
-                    role="button"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                  >
-                    BUSINESS SEGMENTS<span className="caret"></span>
-                  </Link>
-                </li>
-
-                <li className="dropdown">
-                  <Link
-                    to="/products"
-                    data-toggle="dropdown"
-                    data-hover="dropdown"
-                    role="button"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                  >
-                    PRODUCTS<span className="caret"></span>
-                  </Link>
-                </li>
-
-                <li className="dropdown">
-                  <Link
-                    to="/blogs"
-                    data-toggle="dropdown"
-                    data-hover="dropdown"
-                    role="button"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                  >
-                    NEWS / PRESS RELEASE
-                  </Link>
-                </li>
-
-                <li className="dropdown">
-                  <Link
-                    to="/contact"
-                    data-toggle="dropdown"
-                    data-hover="dropdown"
-                    role="button"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                  >
-                    CONTACT US
-                  </Link>
-                </li>
-                {pageTemplate.map(page => {
+                  </li>
+                    
+                    )
+            })}
+                {/* {pageTemplate.map(page => {
                   return (
                         <li className="dropdown" key={page.id}>
                           <Link
@@ -152,7 +99,7 @@ const Navbar = () => {
                           </Link>
                         </li>
                   )
-                })}
+                })} */}
               </ul>
             </nav>
           </div>

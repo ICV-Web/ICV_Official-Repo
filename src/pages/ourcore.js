@@ -4,6 +4,7 @@ import * as propTypes from "prop-types"
 import {Container,Row,Col} from "react-bootstrap"
 import Fade from 'react-reveal/Fade';
 import loadable from '@loadable/component'
+import ReadMoreText from "../components/ReadMoreText.js"
 
 
 // Import the new rendering and the render node definitions
@@ -22,13 +23,13 @@ const Layout = loadable(() => import('../components/layout'))
       <>
       <Layout>
 
-          <div className="section banner-page imprint about" style={{ backgroundImage:   `url(${banner})`  }}>
+          <div className="section banner-page imprint about" style={{ backgroundSize: '100% 100%',backgroundImage:   `url(${banner})`  }}>
             <div className="container"><div className="row">
               <div className="col-sm-12 col-md-12">
-                <div className="title-page"> Our Core</div>
+                <div className="title-page"> Discover Us</div>
                   <ol className="breadcrumb">
                     <li><Link to="/">Home /  &nbsp; </Link></li>
-                      <li className="active"> Our Core</li>
+                      <li className="active"> Discover Us</li>
                   </ol>
                 </div>
               </div>
@@ -94,21 +95,21 @@ const Layout = loadable(() => import('../components/layout'))
          </section>
       
       
-      <section className="services banner-page about  b2-segment">
-        <Fade bottom>
-         <Container>
-           <Row>
-             <Col md={12}>
-                 <div className="description-wrapper">
-                     <h3>{core.coreTitle}</h3>
-                     <p>{core.coreDescription.coreDescription}</p>
-                     <img src={core.imgMob.fluid.src}/>
-                 </div>
-             </Col>
-           </Row>
-         </Container>
-         </Fade>
-        </section>
+      <section className={ `services banner-page about b2-segment sz-bg bg-fx ${core.textColor} ${core.addClassTestLefttestRight}`  } style={{ backgroundImage:   `url(${core.imgDesk.fluid.src})` }}>
+          <Fade bottom>   
+            <Container>
+                  <Row>
+                    <Col md={12}>
+                        <div className="description-wrapper">
+                            <h3>{core.coreTitle}</h3>
+                            <ReadMoreText text={core.coreDescription.coreDescription}></ReadMoreText>
+                            {/* <p>{core.coreDescription.coreDescription}</p>       */}
+                        </div>
+                    </Col>
+                  </Row>
+              </Container>
+            </Fade>
+         </section>
           </>
           )
         })}

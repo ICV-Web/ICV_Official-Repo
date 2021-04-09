@@ -19,7 +19,7 @@ const products = ({data}) => {
 
         <>
             <Layout>
-                <div className="section banner-page about" style={{  backgroundImage:   `url(${getbannerimage})`   }}>
+                <div className="section banner-page about" style={{  backgroundSize: '100% 100%', backgroundImage:   `url(${getbannerimage})`   }}>
                     <Container>
                         <Row>
                             <Col sm={12} md={12}>

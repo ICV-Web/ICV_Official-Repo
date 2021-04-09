@@ -48,7 +48,7 @@ const Footer = () => {
         }
       }
 
-      allContentfulProductPageContentHomePageProductSection(limit: 5) {
+      allContentfulProductPageContentHomePageProductSection(sort: { fields: sortingOrder, order: ASC }, limit: 5) {
         nodes {
           projectTitle
         }
