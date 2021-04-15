@@ -14,7 +14,7 @@ module.exports = {
       options: {
         spaceId: `mobi4te0npts`,
         // Learn about environment variables: https://gatsby.dev/env-vars
-        accessToken: process.env.ACCESS_TOKEN,
+        accessToken: "Fw49coGp_zcnPCDJ83VgzdxIGhBp9af1XtHpqZTe2CY",
       },
     },
 
@@ -53,6 +53,20 @@ module.exports = {
         failOnError: true,
       },
     },
+    {
+      resolve: "gatsby-plugin-firebase",
+      options: {
+        credentials: {
+          apiKey: "AIzaSyD9gs80sZG2xgAo2t6CsOgT7MSlF-yzh_U",
+          authDomain: "icvreact.firebaseapp.com",
+          databaseURL: "https://icvreact-default-rtdb.firebaseio.com/",
+          projectId: "icvreact",
+          storageBucket: "icvreact.appspot.com",
+          messagingSenderId: "189094855320",
+          appId: "1:189094855320:web:7025c86b7a4239a51c46ed"
+        }
+      }
+    }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

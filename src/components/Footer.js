@@ -11,6 +11,7 @@ import {
 import { Link } from "gatsby"
 import { nanoid } from "nanoid"
 import Fade from "react-reveal/Fade"
+import firebase from "gatsby-plugin-firebase"
 
 const Footer = () => {
   const footerdata = useStaticQuery(graphql`
@@ -72,13 +73,26 @@ const Footer = () => {
     })
   }
   const handleSubmit = e => {
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact v2", ...formState2 }),
-    })
+
+    var emailNode = firebase
+      .database()
+      .ref("/subscribed")
+      .push()
+
+      emailNode
+      .set(formState2.email)
       .then(() => navigate("/validation"))
       .catch(error => console.log(error))
+
+      
+      
+    // fetch("/", {
+    //   method: "POST",
+    //   headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    //   body: encode({ "form-name": "contact v2", ...formState2 }),
+    // })
+    //   .then(() => navigate("/validation"))
+    //   .catch(error => console.log(error))
 
     e.preventDefault()
   }
