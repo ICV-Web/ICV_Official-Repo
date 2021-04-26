@@ -19,6 +19,7 @@ const Layout = loadable(() => import('../components/layout'))
     const { allContentfulOurCorePageContent: {nodes: getallcores} } = data;
     const banner = data.allContentfulOurCorePage.nodes[0].ourCoreBanner.fluid.src
     
+    console.log(getallcores)
     return (
       <>
       <Layout>
@@ -79,31 +80,32 @@ const Layout = loadable(() => import('../components/layout'))
             </Container>
           </div>*/}
                    
-          <section className={ `services banner-page about  b1-segment sz-bg bg-fx ${core.textColor} ${core.addClassTestLefttestRight}`  } style={{ backgroundImage:   `url(${core.imgDesk.fluid.src})` }}>
-          <Fade bottom>   
-            <Container>
-                  <Row>
+          <section className={ `services banner-page about  b1-segment sz-bg bg-fx ${core.textColor} 
+          ${core.addClassTestLefttestRight}`  } >
+            <Fade bottom>   
+              <Container fluid style={{ backgroundImage:`url(${core.imgDesk.fluid.src})`, backgroundPosition: '80% 70%', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}>
+                <Row>
                     <Col md={12}>
                         <div className="description-wrapper">
                             <h3>{core.coreTitle}</h3>
                             <p>{core.coreDescription.coreDescription}</p>      
                         </div>
                     </Col>
-                  </Row>
+                </Row>
               </Container>
             </Fade>
          </section>
       
       
-      <section className={ `services banner-page about b2-segment sz-bg bg-fx ${core.textColor} ${core.addClassTestLefttestRight}`  } style={{ backgroundImage:   `url(${core.imgDesk.fluid.src})` }}>
-          <Fade bottom>   
+      <section className={ `services banner-page about b2-segment`  }>
+          <Fade bottom>
             <Container>
                   <Row>
                     <Col md={12}>
                         <div className="description-wrapper">
                             <h3>{core.coreTitle}</h3>
-                            <ReadMoreText text={core.coreDescription.coreDescription} ></ReadMoreText>
-                            {/* <p>{core.coreDescription.coreDescription}</p>       */}
+                            <p>{core.coreDescription.coreDescription}</p>
+                     <img src={core.imgMob.fluid.src}/>
                         </div>
                     </Col>
                   </Row>
