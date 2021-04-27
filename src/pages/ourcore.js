@@ -80,19 +80,40 @@ const Layout = loadable(() => import('../components/layout'))
             </Container>
           </div>*/}
                    
-          <section className={ `services banner-page about  b1-segment sz-bg bg-fx ${core.textColor} 
-          ${core.addClassTestLefttestRight}`  } >
+          <section className={ `services banner-page about  b1-segment sz-bg bg-fx ${core.textColor} `  } >
             <Fade bottom>   
-              <Container fluid style={{ backgroundImage:`url(${core.imgDesk.fluid.src})`, backgroundPosition: '80% 70%', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}>
-                <Row>
-                    <Col md={12}>
+              <Container fluid className="services-description" /*style={{ backgroundImage:`url(${core.imgDesk.fluid.src})`}}*/>
+              
+                
+                  {core.addClassTestLefttestRight == 'test-right' && (
+                    <Row>
+                      <Col md={6} style={{paddingLeft: '0px'}}>
+                        <img src={core.imgDesk.fluid.src} style={{height: '380px'}}/>
+                      </Col>
+                      <Col md={6}>
                         <div className="description-wrapper">
                             <h3>{core.coreTitle}</h3>
                             <p>{core.coreDescription.coreDescription}</p>      
                         </div>
-                    </Col>
-                </Row>
-              </Container>
+                      </Col>
+                    </Row>
+                  )}
+                
+                {core.addClassTestLefttestRight == 'test-left' && (
+                    <Row>                     
+                      <Col md={6}>
+                        <div className="description-wrapper">
+                            <h3>{core.coreTitle}</h3>
+                            <p>{core.coreDescription.coreDescription}</p>      
+                        </div>
+                      </Col>
+                      <Col md={6} style={{paddingRight: '0px'}}>
+                        <img src={core.imgDesk.fluid.src} style={{height: '380px'}}/>
+                      </Col>
+                    </Row>
+                  )}
+                
+                </Container>
             </Fade>
          </section>
       
@@ -134,7 +155,7 @@ const Layout = loadable(() => import('../components/layout'))
           textColor 
           coreTitle
           imgDesk {
-            fluid(maxWidth:1356,quality: 100)  {
+            fluid(quality: 100)  {
               ...GatsbyContentfulFluid
             }
           }
