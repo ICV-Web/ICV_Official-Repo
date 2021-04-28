@@ -80,7 +80,7 @@ const Layout = loadable(() => import('../components/layout'))
             </Container>
           </div>*/}
                    
-          <section className={ `services banner-page about  b1-segment sz-bg bg-fx ${core.textColor} `  } >
+          <section className={ `services banner-page  b1-segment sz-bg bg-fx ${core.textColor} `  } >
             <Fade bottom>   
               <Container fluid className="services-description" /*style={{ backgroundImage:`url(${core.imgDesk.fluid.src})`}}*/>
               
@@ -118,7 +118,7 @@ const Layout = loadable(() => import('../components/layout'))
          </section>
       
       
-      <section className={ `services banner-page about b2-segment`  }>
+      <section className={ `services banner-page b2-segment`  }>
           <Fade bottom>
             <Container>
                   <Row>
