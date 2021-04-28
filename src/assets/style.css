@@ -3207,6 +3207,7 @@ button.lang-button:hover {
   /* background: url("../images/banner-page.jpg") bottom center no-repeat; */
   /* background-attachment: fixed; */
   background-size: cover;
+  height: 260px !important;
 }
 
 .director-image {
