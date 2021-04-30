@@ -4816,11 +4816,11 @@ a.navbar-brand img {
 /*2/25/2021*/
 .white {
   color: white !important;
-  background-color: black !important;
+  background-color: #0f0f0f !important;
 }
 .black {
   color: black !important;
-  background-color: white !important;
+  background-color: #e6e7e9 !important;
 }
 .black .description-wrapper h3 {
   color: black !important;

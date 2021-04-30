@@ -87,10 +87,10 @@ const Layout = loadable(() => import('../components/layout'))
                 
                   {core.addClassTestLefttestRight == 'test-right' && (
                     <Row>
-                      <Col md={6} style={{paddingLeft: '0px'}}>
+                      <Col md={7} style={{paddingLeft: '0px'}}>
                         <img src={core.imgDesk.fluid.src} style={{height: '380px'}}/>
                       </Col>
-                      <Col md={6}>
+                      <Col md={5}>
                         <div className="description-wrapper">
                             <h3>{core.coreTitle}</h3>
                             <p>{core.coreDescription.coreDescription}</p>      
@@ -101,13 +101,13 @@ const Layout = loadable(() => import('../components/layout'))
                 
                 {core.addClassTestLefttestRight == 'test-left' && (
                     <Row>                     
-                      <Col md={6}>
+                      <Col md={5}>
                         <div className="description-wrapper">
                             <h3>{core.coreTitle}</h3>
                             <p>{core.coreDescription.coreDescription}</p>      
                         </div>
                       </Col>
-                      <Col md={6} style={{paddingRight: '0px'}}>
+                      <Col md={7} style={{paddingRight: '0px'}}>
                         <img src={core.imgDesk.fluid.src} style={{height: '380px'}}/>
                       </Col>
                     </Row>
