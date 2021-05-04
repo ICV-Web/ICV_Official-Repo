@@ -86,11 +86,11 @@ const Layout = loadable(() => import('../components/layout'))
               
                 
                   {core.addClassTestLefttestRight == 'test-right' && (
-                    <Row>
-                      <Col md={7} style={{paddingLeft: '0px'}}>
-                        <img src={core.imgDesk.fluid.src} style={{height: '380px'}}/>
+                    <Row className="description-image" style={{ backgroundPosition: 'left', paddingLeft: '0px', backgroundImage:`url(${core.imgDesk.fluid.src})`}}>
+                      <Col lg={4} md={5} >
+                        { <img src={core.imgDesk.fluid.src} style={{objectFit: 'cover', display: 'none'}}/> }
                       </Col>
-                      <Col md={5}>
+                      <Col lg={8} md={7}>
                         <div className="description-wrapper">
                             <h3>{core.coreTitle}</h3>
                             <p>{core.coreDescription.coreDescription}</p>      
@@ -100,15 +100,15 @@ const Layout = loadable(() => import('../components/layout'))
                   )}
                 
                 {core.addClassTestLefttestRight == 'test-left' && (
-                    <Row>                     
-                      <Col md={5}>
+                    <Row className="description-image" style={{ backgroundPosition: 'right', paddingRight: '0px', backgroundImage:`url(${core.imgDesk.fluid.src})`}}>                     
+                      <Col lg={8} md={7}>
                         <div className="description-wrapper">
                             <h3>{core.coreTitle}</h3>
                             <p>{core.coreDescription.coreDescription}</p>      
                         </div>
                       </Col>
-                      <Col md={7} style={{paddingRight: '0px'}}>
-                        <img src={core.imgDesk.fluid.src} style={{height: '380px'}}/>
+                      <Col lg={4} md={5} >
+                        { <img src={core.imgDesk.fluid.src} style={{objectFit: 'cover', display: 'none'}}/> }
                       </Col>
                     </Row>
                   )}

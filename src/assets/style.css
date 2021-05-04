@@ -947,7 +947,7 @@ ul.circle li:before {
 
 .banner-page {
   background-position: center !important;
-  height: 380px !important;
+  /*height: 380px !important;*/
   display: block;
   background-color: #000;
   -webkit-background-size: cover;
@@ -4820,7 +4820,7 @@ a.navbar-brand img {
 }
 .black {
   color: black !important;
-  background-color: #e6e7e9 !important;
+  background-color: white !important;
 }
 .black .description-wrapper h3 {
   color: black !important;
@@ -4866,3 +4866,9 @@ input[type="number"] {
 } */
 
 /*# sourceMappingURL=style.css.map */
+
+.description-image {
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 300px;
+}
