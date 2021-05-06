@@ -76,19 +76,41 @@ const SegmentContent = () => {
               return(
                 <>
                     
-                   <section className={ `services banner-page about  b1-segment sz-bg bg-fx ${service.textColor} ${service.addClassTestLefttestRight}`  } style={{ backgroundSize: '100% 100%', backgroundImage:   `url(${service.imgDesk.fluid.src})` }}>
+                   <section className={ `services banner-page business-segment-banners  b1-segment sz-bg bg-fx ${service.textColor} `}>
                     <Fade bottom>   
-                      <Container>
-                            <Row>
-                              <Col md={12}>
-                                  <div className="description-wrapper">
-                                      <h3>{service.servicesHeading}</h3>
-                                      <p>{service.description.description}</p>      
-                                  </div>
-                              </Col>
-                            </Row>
-                        </Container>
-                      </Fade>
+                      <Container fluid>
+
+                      {service.addClassTestLefttestRight == 'test-right' && (
+                        <Row className="description-image" style={{ backgroundPosition: 'left', paddingLeft: '0px', backgroundImage:`url(${service.imgDesk.fluid.src})`}}>
+                        <Col lg={4} md={5} >
+                          { <img src={service.imgDesk.fluid.src} style={{objectFit: 'cover', display: 'none'}}/> }
+                        </Col>
+                        <Col lg={8} md={7}>
+                          <div className="description-wrapper">
+                             <h3>{service.servicesHeading}</h3>
+                             <p>{service.description.description}</p>      
+                          </div>
+                        </Col>
+                      </Row>
+                      )}
+
+                      {service.addClassTestLefttestRight == 'test-left' && (
+                        <Row className="description-image" style={{ backgroundPosition: 'right', paddingLeft: '0px', backgroundImage:`url(${service.imgDesk.fluid.src})`}}>
+                        
+                        <Col lg={8} md={7}>
+                          <div className="description-wrapper">
+                             <h3>{service.servicesHeading}</h3>
+                             <p>{service.description.description}</p>      
+                          </div>
+                        </Col>
+                        <Col lg={4} md={5} >
+                          { <img src={service.imgDesk.fluid.src} style={{objectFit: 'cover', display: 'none'}}/> }
+                        </Col>
+                      </Row>
+                      )}
+                        
+                      </Container>
+                    </Fade>
                    </section>
                 
                 
