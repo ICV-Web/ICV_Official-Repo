@@ -606,8 +606,8 @@ dfn {
   position: relative;
 }
 .section > .container {
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 60px;
+  padding-bottom: 74px;
 }
 .section.overlap {
   /*transform: translateY(-125px);*/
@@ -3206,8 +3206,10 @@ button.lang-button:hover {
 .banner-page.about {
   /* background: url("../images/banner-page.jpg") bottom center no-repeat; */
   /* background-attachment: fixed; */
-  background-size: cover;
-  height: 260px !important;
+  background-size: contain !important;
+  background-position: right !important;
+  background-repeat: no-repeat;
+  
 }
 
 .director-image {
@@ -4870,5 +4872,5 @@ input[type="number"] {
 .description-image {
   background-repeat: no-repeat;
   background-size: contain;
-  height: 320px;
+  height: 335px;
 }
