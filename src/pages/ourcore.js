@@ -24,7 +24,7 @@ const Layout = loadable(() => import('../components/layout'))
       <>
       <Layout>
 
-          <div className="section banner-page imprint about" style={{ backgroundSize: '100% 100%',backgroundImage:   `url(${banner})`  }}>
+          <div className="section banner-page imprint about" style={{ backgroundImage:   `url(${banner})`  }}>
             <div className="container"><div className="row">
               <div className="col-sm-12 col-md-12">
                 <div className="title-page"> Discover Us</div>
@@ -169,7 +169,7 @@ const Layout = loadable(() => import('../components/layout'))
       allContentfulOurCorePage {
         nodes {
           ourCoreBanner {
-            fluid(maxWidth:1356, maxHeight: 275,quality: 100) {
+            fluid(quality: 100) {
               ...GatsbyContentfulFluid
             }
           }
