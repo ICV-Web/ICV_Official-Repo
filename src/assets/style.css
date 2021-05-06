@@ -4659,6 +4659,11 @@ nav.navbar-collapse.collapse.in li {
   width: 50%;
 }
 
+.test-left .description-wrapper {
+  float: left;
+  width: 50%;
+}
+
 .f-r {
   float: right;
 }
@@ -4873,4 +4878,18 @@ input[type="number"] {
   background-repeat: no-repeat;
   background-size: contain;
   height: 335px;
+}
+
+.test-right {
+  background-position: left !important;
+}
+
+.test-left {
+  background-position: right !important;
+}
+
+.business-segment-banners {
+
+  background-size: contain;
+  background-repeat: no-repeat;
 }
