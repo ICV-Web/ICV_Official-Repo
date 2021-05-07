@@ -53,7 +53,7 @@ const HomePageProjects = () => {
         }
     };
 
-
+console.log(projects)
 
     return (
         <>

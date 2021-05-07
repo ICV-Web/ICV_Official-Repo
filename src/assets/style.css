@@ -3206,7 +3206,7 @@ button.lang-button:hover {
 .banner-page.about {
   /* background: url("../images/banner-page.jpg") bottom center no-repeat; */
   /* background-attachment: fixed; */
-  background-size: contain !important;
+  background-size: cover !important;
   background-position: right !important;
   background-repeat: no-repeat;
   
