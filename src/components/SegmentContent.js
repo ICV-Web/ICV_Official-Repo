@@ -82,11 +82,9 @@ const SegmentContent = () => {
 
                       {service.addClassTestLefttestRight == 'test-right' && (
                         <Row className="description-image" style={{ backgroundPosition: 'left', paddingLeft: '0px', backgroundImage:`url(${service.imgDesk.fluid.src})`}}>
-                        <Col lg={4} md={5} >
-                          { <img src={service.imgDesk.fluid.src} style={{objectFit: 'cover', display: 'none'}}/> }
-                        </Col>
-                        <Col lg={8} md={7}>
-                          <div className="description-wrapper">
+                        
+                        <Col lg={{span: 8, offset: 4}} md={{span: 7, offset: 5}}>
+                          <div className="description-wrapper" style={{paddingLeft: '60px'}}>
                              <h3>{service.servicesHeading}</h3>
                              <p>{service.description.description}</p>      
                           </div>
@@ -102,9 +100,6 @@ const SegmentContent = () => {
                              <h3>{service.servicesHeading}</h3>
                              <p>{service.description.description}</p>      
                           </div>
-                        </Col>
-                        <Col lg={4} md={5} >
-                          { <img src={service.imgDesk.fluid.src} style={{objectFit: 'cover', display: 'none'}}/> }
                         </Col>
                       </Row>
                       )}

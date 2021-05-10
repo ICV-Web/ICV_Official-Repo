@@ -59,11 +59,9 @@ const products = ({data}) => {
                                 <Container fluid>
                                   {projects.addClassTestLefttestRight == 'test-right' && (
                                     <Row className="description-image" style={{ backgroundPosition: 'left', paddingLeft: '0px', backgroundImage:`url(${projects.imgDesk.fluid.src})`}}>
-                                      <Col lg={4} md={5} >
-                                        { <img src={projects.imgDesk.fluid.src} style={{objectFit: 'cover', display: 'none'}}/> }
-                                      </Col>
-                                      <Col lg={8} md={7}>
-                                        <div className="description-wrapper">
+                                      
+                                      <Col lg={{span: 8, offset: 4}} md={{span: 7, offset: 5}}>
+                                        <div className="description-wrapper" style={{paddingLeft: '10px'}}>
                                           <h3>{projects.projectTitle}</h3>
                                           <p>{projects.description.description}</p>      
                                         </div>
@@ -80,9 +78,7 @@ const products = ({data}) => {
                                          <p>{projects.description.description}</p>      
                                       </div>
                                     </Col>
-                                    <Col lg={4} md={5} >
-                                      { <img src={projects.imgDesk.fluid.src} style={{objectFit: 'cover', display: 'none'}}/> }
-                                    </Col>
+                                    
                                   </Row>                                    
                                     )}
                                 </Container>
