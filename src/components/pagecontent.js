@@ -204,7 +204,7 @@ const Pagecontent = () => {
               <Fade top>
                 <div className="widget contact-info-sidebar contact-resp">
                   <div className="cont-mob">
-                    <div className="widget-title title-change">
+                    <div className="widget-title title-change" style={{marginTop: 0, marginBottom: 28}}>
                       Contact Info
                     </div>
                     <ul className="list-info list-change">

@@ -173,7 +173,7 @@ const Footer = () => {
                   />
                 </div>
 
-                <p>
+                <p style={{marginTop: 27}}>
                   {
                     footerdata.allContentfulFooter.nodes[0].footerDesc
                       .footerDesc
@@ -341,12 +341,12 @@ const Footer = () => {
         <div className="fcopy">
           <Container>
             <Row>
-              <Col md={6} sm={12}>
+              <Col md={5} sm={12}>
                 <p className="ftex resp-ftex">
                   {footerdata.allContentfulFooter.nodes[0].copyright}
                 </p>
               </Col>
-              <Col md={6} sm={12}>
+              <Col md={7} sm={12}>
                 <div className="topbar-right">
                   <ul className="topbar-menu">
                     <li>

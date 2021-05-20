@@ -50,7 +50,9 @@ const HomeAboutSection = () => {
 						<div className="box-icon-2">
 							<div className="body-content">
 								<div className="heading">{getdata.allContentfulHomePageAboutSection.nodes[0].aboutBox1Heading}</div>
-							{getdata.allContentfulHomePageAboutSection.nodes[0].aboutBox1Description.aboutBox1Description}
+								<span>
+									{getdata.allContentfulHomePageAboutSection.nodes[0].aboutBox1Description.aboutBox1Description}
+								</span>
 							</div>
 						</div>
 					
@@ -93,7 +95,7 @@ const HomeAboutSection = () => {
 					<Col sm={5} md={5}>
 						<Fade left>
 							<div className="jumbo-heading">
-								<h4>{getdata.allContentfulHomePageAboutSection.nodes[0].aboutCaption}</h4>
+								<h4 style={{marginTop: 0}}>{getdata.allContentfulHomePageAboutSection.nodes[0].aboutCaption}</h4>
 								<span className="fa fa-paper-plane-o"></span>
 							</div>
 						</Fade>

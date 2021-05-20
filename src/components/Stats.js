@@ -37,7 +37,7 @@ const Stats = () => {
         className="section statistic bgsection"
         style={{ backgroundImage: `url(${statbannerimg})` }}
       >
-        <Container>
+        <Container fluid>
           <Row>
             {Statistics.map(allstats => {
               return (

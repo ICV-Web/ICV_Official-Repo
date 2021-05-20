@@ -609,6 +609,12 @@ dfn {
   padding-top: 60px;
   padding-bottom: 74px;
 }
+
+.section > .container-fluid {
+  padding-top: 60px;
+  padding-bottom: 74px;
+}
+
 .section.overlap {
   /*transform: translateY(-125px);*/
   position: relative;
@@ -1449,7 +1455,9 @@ button.lang-button:hover {
 /* 2.5. BOX ICON 4 */
 .box-icon-4 {
   margin-bottom: 20px;
-  padding: 30px 30px 30px 30px;
+  /*padding: 30px 30px 30px 30px;*/
+  display: flex;
+  align-items: center;
   background-color: #eff3f6;
   border: 1px solid #dcdde1;
   text-align: center;
@@ -1699,7 +1707,7 @@ button.lang-button:hover {
   background-color: #2b3990 !important;
   color: #ffffff;
   margin-bottom: 30px;
-  height: 390px;
+  height: 340px;
 }
 .feature-box-8 .media {
   width: 100%;
@@ -1713,7 +1721,7 @@ button.lang-button:hover {
 }
 
 .feature-box-8 .media img {
-  height: 250px;
+  height: 220px;
   vertical-align: middle;
   width: 100%;
 }
@@ -1729,7 +1737,8 @@ button.lang-button:hover {
 .feature-box-8 .body {
   position: relative;
   text-align: center;
-  padding: 30px 40px 30px;
+  padding-top: 13px;
+  /*padding: 30px 40px 30px;*/
 }
 .feature-box-8 .body .icon-holder {
   position: absolute;
@@ -2581,7 +2590,7 @@ button.lang-button:hover {
 .box-news-1 .body .title {
   font-weight: 700;
 }
-.box-news-1 .body .title a {
+.box-news-1 .body .title {
   color: #2b3990;
 }
 .box-news-1 .body .title a:hover {
@@ -3208,6 +3217,15 @@ button.lang-button:hover {
   /* background-attachment: fixed; */
   background-size: cover !important;
   background-position: right !important;
+  background-repeat: no-repeat;
+  
+}
+
+.banner-page.blog {
+  /* background: url("../images/banner-page.jpg") bottom center no-repeat; */
+  /* background-attachment: fixed; */
+  background-size: 100% 100% !important;
+  background-position: center !important;
   background-repeat: no-repeat;
   
 }
@@ -4479,7 +4497,7 @@ nav.navbar-collapse.collapse.in {
 .blog-img {
   margin-top: 50px;
   width: 100%;
-  height: 500px;
+  /*height: 500px;*/
 }
 .blog-img img {
   width: 100%;
@@ -4620,6 +4638,7 @@ nav.navbar-collapse.collapse.in li {
     height: 100% !important;
     background-color: #262626;
   }
+
   .b2-segment h3 {
     color: white !important;
   }
@@ -4635,11 +4654,24 @@ nav.navbar-collapse.collapse.in li {
   }
 }
 
+
 /*Update 1/20/2021*/
 @media screen and (max-width: 1199px) {
   .box-icon-2 {
+    height: 350px;
+    overflow: hidden;
+    /* 
     min-height: 300px;
     max-height: 300px;
+    overflow-x: auto;
+    */
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .box-icon-2 {
+    min-height: 250px;
+    max-height: 250px;
     overflow-x: auto;
   }
 }
@@ -4818,7 +4850,7 @@ a.navbar-brand img {
 
 /*2/2/2021*/
 .footer .footer-item .logo-bottom {
-  max-width: 170px !important;
+  max-width: 140px !important;
 }
 /*2/25/2021*/
 .white {
