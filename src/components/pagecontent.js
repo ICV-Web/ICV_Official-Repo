@@ -93,8 +93,9 @@ const Pagecontent = () => {
                     target="_blank"
                     to={linkpdf}
                     class="btn btn-secondary btn-block btn-sidebar"
+                    style={{padding: '20px 0px'}}
                   >
-                    <span class="fa  fa-file-pdf-o"></span> Company Brochure
+                    <span class="fa fa-file-pdf-o"></span> Company Brochure
                   </Link>
                 </div>
               </Fade>

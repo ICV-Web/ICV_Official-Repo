@@ -34,11 +34,7 @@ const imprints = ( { data } ) => {
                             <Col sm={12} md={12}>
                                 <div className="box-partner">
                                     <div className="item">
-                                    <div className="box-image">
-                                        <div className="client-img">
-                                            <img src={data.contentfulImprintPage.descImg.fluid.src} alt="" className="img-responsive"/>
-                                        </div>
-                                    </div>
+                                    
                                     <div className="box-info">
                                         {desc && renderRichText(desc)}
                                     </div>
