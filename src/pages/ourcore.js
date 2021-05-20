@@ -164,10 +164,10 @@ const Layout = loadable(() => import('../components/layout'))
       allContentfulOurCorePage {
         nodes {
           ourCoreBanner {
-            fluid(quality: 100) {
+            fluid(maxWidth:1356,quality: 100) {
               ...GatsbyContentfulFluid
             }
-          }
+          } 
           desc1 {
             desc1
           }

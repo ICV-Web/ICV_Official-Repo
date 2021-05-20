@@ -16,7 +16,7 @@ const blogTemplate = ({data}) => {
     return (
         <>
         <Layout>
-            <div className="section banner-page imprint about" style={{ backgroundImage:   `url(${data.contentfulBlogs.bannerImg.fluid.src})`  }}>
+            <div className="section banner-page imprint blog" style={{backgroundImage:`url(${data.contentfulBlogs.bannerImg.fluid.src})`, backgroundSize: 'contain'}}>
                 <div className="container">
                     <div className="row">
                         <div className="col-sm-12 col-md-12">
@@ -39,9 +39,9 @@ const blogTemplate = ({data}) => {
                                     <img src={data.contentfulBlogs.featuredImage.fluid.src} alt="" className="img-responsive"/>  
                                 </div>
                                 {description1 && renderRichText(description1)}
-                                <div className="box-news-1 blog-img">
+                                {/* <div className="box-news-1 blog-img">
                                     <img src={data.contentfulBlogs.footerImg.fluid.src} alt="" className="img-responsive"/>  
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                         </Fade>

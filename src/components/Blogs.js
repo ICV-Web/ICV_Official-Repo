@@ -9,7 +9,7 @@ const Blogs = () => {
 
 const getblogsdata = useStaticQuery(graphql`
     {
-      allContentfulBlogs(sort: { fields:sortingOrder, order: ASC }) {
+      allContentfulBlogs(sort: { fields:createdAt, order: DESC }) {
           nodes {
             slug
             title
@@ -53,19 +53,19 @@ const { allContentfulBlogs: {nodes: blogs}, } = getblogsdata
                           <article >
                                 <Slide right>
                                   <div className="box-news-1">
+                                    <Link to={`/blogs/${blog.slug}`} title="">
                                       <div className="media gbr">
                                           <img src={blog.thumbnailImage.fluid.src} alt="" className="img-responsive"/>
-                                          <div className="overlay">
-                                              <i><FaExternalLinkAlt/></i>
-                                          </div>        
+                                                
                                       </div>
                                       <div className="body">
-                                          <div className="title"><Link to={`/blogs/${blog.slug}`} title="">{blog.title}</Link></div>
+                                          <div className="title">{blog.title}</div>
                                           <div className="meta">
                                               <span className="date"><i className="fa fa-clock-o"></i> {blog.date}</span>
                                               <span className="comments"><i className="fa fa-comment-o"></i> 0 Comments</span>
                                           </div>
                                       </div>
+                                    </Link>
                                   </div>
                                 </Slide>
                                 </article>
