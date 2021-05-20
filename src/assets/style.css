@@ -1456,7 +1456,7 @@ button.lang-button:hover {
 .box-icon-4 {
   margin-bottom: 20px;
   /*padding: 30px 30px 30px 30px;*/
-  display: flex;
+  display: grid;
   align-items: center;
   background-color: #eff3f6;
   border: 1px solid #dcdde1;
@@ -4403,7 +4403,7 @@ section.services .description-wrapper h3 {
 }
 
 .section.overlap-bottom {
-  margin-top: 90px;
+  /*margin-top: 90px;*/
 }
 
 @media (min-width: 768px) {
