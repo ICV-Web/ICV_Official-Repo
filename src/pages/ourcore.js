@@ -19,11 +19,12 @@ const Layout = loadable(() => import('../components/layout'))
     const { allContentfulOurCorePageContent: {nodes: getallcores} } = data;
     const banner = data.allContentfulOurCorePage.nodes[0].ourCoreBanner.fluid.src
     
+    console.log(getallcores)
     return (
       <>
       <Layout>
 
-          <div className="section banner-page imprint about" style={{ backgroundSize: '100% 100%',backgroundImage:   `url(${banner})`  }}>
+          <div className="section banner-page imprint about" style={{ backgroundImage:   `url(${banner})`  }}>
             <div className="container"><div className="row">
               <div className="col-sm-12 col-md-12">
                 <div className="title-page"> Discover Us</div>
@@ -79,31 +80,48 @@ const Layout = loadable(() => import('../components/layout'))
             </Container>
           </div>*/}
                    
-          <section className={ `services banner-page about  b1-segment sz-bg bg-fx ${core.textColor} ${core.addClassTestLefttestRight}`  } style={{ backgroundImage:   `url(${core.imgDesk.fluid.src})` }}>
-          <Fade bottom>   
-            <Container>
-                  <Row>
-                    <Col md={12}>
+          <section className={ `services banner-page  b1-segment sz-bg bg-fx ${core.textColor} `  } >
+            <Fade bottom>   
+              <Container fluid className="services-description" /*style={{ backgroundImage:`url(${core.imgDesk.fluid.src})`}}*/>
+              
+                
+                  {core.addClassTestLefttestRight == 'test-right' && (
+                    <Row className="description-image" style={{ backgroundPosition: 'left', paddingLeft: '0px', backgroundImage:`url(${core.imgDesk.fluid.src})`}}>
+                      
+                      <Col lg={{span: 8, offset: 4}} md={{span: 7, offset: 5}}>
+                        <div className="description-wrapper" style={{paddingLeft: '35px'}}>
+                            <h3>{core.coreTitle}</h3>
+                            <p>{core.coreDescription.coreDescription}</p>      
+                        </div>
+                      </Col>
+                    </Row>
+                  )}
+                
+                {core.addClassTestLefttestRight == 'test-left' && (
+                    <Row className="description-image" style={{ backgroundPosition: 'right', paddingRight: '0px', backgroundImage:`url(${core.imgDesk.fluid.src})`}}>                     
+                      <Col lg={8} md={7}>
                         <div className="description-wrapper">
                             <h3>{core.coreTitle}</h3>
                             <p>{core.coreDescription.coreDescription}</p>      
                         </div>
-                    </Col>
-                  </Row>
-              </Container>
+                      </Col>                     
+                    </Row>
+                  )}
+                
+                </Container>
             </Fade>
          </section>
       
       
-      <section className={ `services banner-page about b2-segment sz-bg bg-fx ${core.textColor} ${core.addClassTestLefttestRight}`  } style={{ backgroundImage:   `url(${core.imgDesk.fluid.src})` }}>
-          <Fade bottom>   
+      <section className={ `services banner-page b2-segment`  }>
+          <Fade bottom>
             <Container>
                   <Row>
                     <Col md={12}>
                         <div className="description-wrapper">
                             <h3>{core.coreTitle}</h3>
-                            <ReadMoreText text={core.coreDescription.coreDescription} ></ReadMoreText>
-                            {/* <p>{core.coreDescription.coreDescription}</p>       */}
+                            <p>{core.coreDescription.coreDescription}</p>
+                     <img src={core.imgMob.fluid.src}/>
                         </div>
                     </Col>
                   </Row>
@@ -132,7 +150,7 @@ const Layout = loadable(() => import('../components/layout'))
           textColor 
           coreTitle
           imgDesk {
-            fluid(maxWidth:1356,quality: 100)  {
+            fluid(quality: 100)  {
               ...GatsbyContentfulFluid
             }
           }
@@ -146,10 +164,10 @@ const Layout = loadable(() => import('../components/layout'))
       allContentfulOurCorePage {
         nodes {
           ourCoreBanner {
-            fluid(maxWidth:1356, maxHeight: 275,quality: 100) {
+            fluid(maxWidth:1356,quality: 100) {
               ...GatsbyContentfulFluid
             }
-          }
+          } 
           desc1 {
             desc1
           }
@@ -157,4 +175,3 @@ const Layout = loadable(() => import('../components/layout'))
       }
     }
   `
-  

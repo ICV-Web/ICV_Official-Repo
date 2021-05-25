@@ -58,7 +58,7 @@ const Slider = () => {
                                       <Link to={Slider.sliderButton1LInk} className="btn btn-primary" title="LEARN MORE">{Slider.sliderButton1Text}</Link> 
                                     )}
 
-                                       {Slider.sliderButton1Text != null && (
+                                       {Slider.sliderButton2Text != null && (
                                       <Link to={Slider.sliderButton2Link} class="btn btn-secondary" title="CONTACT US">{Slider.sliderButton2Text}</Link>
                                     )}
                                 </div>

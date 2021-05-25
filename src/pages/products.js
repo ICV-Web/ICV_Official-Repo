@@ -54,17 +54,33 @@ const products = ({data}) => {
                     return(
                       <>
                         
-                            <section className={ `productBg services banner-page about  b1-segment bg-fx sz-bg  ${projects.textColor} ${projects.addClassTestLefttestRight}`  } style={{ backgroundImage:   `url(${projects.imgDesk.fluid.src})`  }}>
-                            <Fade bottom>  
-                            <Container>
-                                    <Row>
-                                    <Col md={12}>
-                                        <div className="description-wrapper">
-                                            <h3>{projects.projectTitle}</h3>
-                                            <p>{projects.description.description}</p>
+                            <section className={ `productBg services banner-page about  b1-segment bg-fx sz-bg  ${projects.textColor}`}>
+                              <Fade bottom>  
+                                <Container fluid>
+                                  {projects.addClassTestLefttestRight == 'test-right' && (
+                                    <Row className="description-image" style={{ backgroundPosition: 'left', paddingLeft: '0px', backgroundImage:`url(${projects.imgDesk.fluid.src})`}}>
+                                      
+                                      <Col lg={{span: 8, offset: 4}} md={{span: 7, offset: 5}}>
+                                        <div className="description-wrapper" style={{paddingLeft: '10px'}}>
+                                          <h3>{projects.projectTitle}</h3>
+                                          <p>{projects.description.description}</p>      
                                         </div>
+                                      </Col>
+                                   </Row>
+                                  )}
+
+                                  {projects.addClassTestLefttestRight == 'test-left' && (
+                                    <Row className="description-image" style={{ backgroundPosition: 'right', paddingLeft: '0px', backgroundImage:`url(${projects.imgDesk.fluid.src})`}}>
+                        
+                                    <Col lg={8} md={7}>
+                                      <div className="description-wrapper">
+                                         <h3>{projects.projectTitle}</h3>
+                                         <p>{projects.description.description}</p>      
+                                      </div>
                                     </Col>
-                                    </Row>
+                                    
+                                  </Row>                                    
+                                    )}
                                 </Container>
                                 </Fade>
                             </section>
