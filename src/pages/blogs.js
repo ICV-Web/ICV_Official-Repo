@@ -18,10 +18,10 @@ const blogs = ({data}) => {
                     <Container>
                         <Row>
                             <Col sm={12} md={12}>
-                                <div className="title-page">News</div>
+                                <div className="title-page">Insights</div>
                                 <ol className="breadcrumb">
                                     <li><Link to="index.html">Home/</Link></li>
-                                    <li className="active">News</li>
+                                    <li className="active">Insights</li>
                                 </ol>
                             </Col>
                         </Row>

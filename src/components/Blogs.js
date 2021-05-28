@@ -38,7 +38,7 @@ const { allContentfulBlogs: {nodes: blogs}, } = getblogsdata
 				<Col sm={12} md={12}>
           <Fade left>
             <h2 className="section-heading">
-              News / Press Release
+              Insights
             </h2>
           </Fade>
 				</Col>
