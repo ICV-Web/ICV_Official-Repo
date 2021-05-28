@@ -184,6 +184,7 @@ const Footer = () => {
                     href={footerdata.allContentfulFooter.nodes[0].socialLink1}
                     target="_blank"
                     title=""
+                    style={{marginRight: 0}}
                   >
                     <div className="item">
                       <FaFacebookF />
@@ -194,12 +195,13 @@ const Footer = () => {
                     target="_blank"
                     href={footerdata.allContentfulFooter.nodes[0].socialLink3}
                     title=""
+                    style={{marginRight: 0}}
                   >
                     <div className="item">
                       <FaInstagram />
                     </div>
                   </a>
-                  <div>
+                  <div style={{display: 'none'}}>
                     <p className="vis-fot">Visibility not shown</p>
                   </div>
 
@@ -207,6 +209,7 @@ const Footer = () => {
                     target="_blank"
                     href={footerdata.allContentfulFooter.nodes[0].socialLink2}
                     title=""
+                    style={{marginRight: 0}}
                   >
                     <div className="item">
                       <FaLinkedinIn />
@@ -217,6 +220,7 @@ const Footer = () => {
                     target="_blank"
                     href={footerdata.allContentfulFooter.nodes[0].socialLink4}
                     title=""
+                    style={{marginRight: 0}}
                   >
                     <div className="item">
                       <FaTwitter />
@@ -260,7 +264,7 @@ const Footer = () => {
                 <ul className="list">
                   <li>
                     <Link to="/ourcore" title="">
-                      Our Core
+                      Discover Us
                     </Link>
                   </li>
                   <li>
@@ -270,7 +274,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link to="/blogs" title="">
-                      News / Press Release
+                      Insights
                     </Link>
                   </li>
                   <li>
