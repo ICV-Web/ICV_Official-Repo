@@ -1707,7 +1707,7 @@ button.lang-button:hover {
   background-color: #2b3990 !important;
   color: #ffffff;
   margin-bottom: 30px;
-  height: 340px;
+  height: 310px;
 }
 .feature-box-8 .media {
   width: 100%;
@@ -1721,7 +1721,7 @@ button.lang-button:hover {
 }
 
 .feature-box-8 .media img {
-  height: 220px;
+  height: 180px;
   vertical-align: middle;
   width: 100%;
 }
