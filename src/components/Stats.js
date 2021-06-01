@@ -37,11 +37,11 @@ const Stats = () => {
         className="section statistic bgsection"
         style={{ backgroundImage: `url(${statbannerimg})` }}
       >
-        <Container fluid>
+        <Container>
           <Row>
             {Statistics.map(allstats => {
               return (
-                <Col sm={3} md={3} key={nanoid()}>
+                <Col lg={3} sm={6} md={3} key={nanoid()}>
                   <div className="counter-1">
                     <div className="counter-number">
                       <CountUp
