@@ -57,7 +57,6 @@ const Stats = () => {
                       </CountUp>
                     </div>
                     <div className="counter-title">
-                      Offices
                       <br /> {allstats.title}{" "}
                     </div>
                   </div>
